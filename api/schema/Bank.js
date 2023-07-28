@@ -1,7 +1,7 @@
 import { mongoose } from '../mongo.js'
 
 const data = {};
-data.name = "Users";
+data.name = "Bank";
 data.collection = "uchis_bank";
 
 const standartDate = {
@@ -31,8 +31,13 @@ data.get = async function () {
     return await query.exec();
 }
 
-data.set = async function () {
-
+data.set = async function ({insert = {}}) {
+    if (action == "insert") {
+        let record = new model();
+        Object.assign(record, insert)
+        const result = await record.save()
+        return result
+    }
 };
 
 export default data
