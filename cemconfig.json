@@ -22,7 +22,8 @@
       "url": "/universities",
       "front": [
         "header",
-        "universities"
+        "universities",
+        "footer"
       ]
     },
     {

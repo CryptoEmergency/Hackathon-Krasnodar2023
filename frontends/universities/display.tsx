@@ -16,7 +16,7 @@ const universitiesCards =[
         id: 2,
         title: "Санкт-Петербургский филиал Национального исследовательского университета «Высшая школа экономики»",
         city: "Санкт-Петербург",
-        price_from: "360",
+        price_from: "360 000",
         programms_number: "43",
         desc: "Дизайн; реставрация и ещё 9 направлений",
         picture: {}
@@ -37,7 +37,7 @@ export const display = function () {
         <main class="home page">
             <div class="wrapper">
                 <h2 class="section_title">Вузы</h2>
-                    <section class="universities">
+                    <section class="univer">
                         <div class="universities_list">
                             {
                             universitiesCards.map((item, index)=>{
@@ -48,11 +48,12 @@ export const display = function () {
                                         <h2>{item.title}</h2>
                                         <span>{item.city}</span>
                                         <p>{item.price_from}</p>
+                                        <a href="">{item.programms_number}</a>
                                     </div>
 
                                 </div>
                             )
-                            }) 
+                            })
                             }
                         </div>
                 </section> 

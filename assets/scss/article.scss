@@ -1,4 +1,5 @@
 @import 'utils/variables.scss';
+
 .wrapper h1 {
     text-align: center;
     margin-top: 50px;
@@ -54,14 +55,20 @@
 
 
 // article page
-article_content{
-    padding: 20px;
-    background: blue;
+.article_content{
+    padding: 30px;
+    background: #F8FBFF;
     margin: 20px;
     border-radius: $borderR;
+
+    h2 {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .publish_date{
+        margin-top: 10px;
+    }
 }
-
-
 
 
 @media(max-width: 992px) {
