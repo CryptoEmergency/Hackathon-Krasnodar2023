@@ -103,22 +103,54 @@
 
 .header{
     position: fixed;
-    height: 80px;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 15;
+    overflow: hidden;
+    box-shadow: 0.25em 0.25em 2em rgba(0, 0, 0, 0.25);
 
     &_inner{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 10px 0;
+        // height: 80px;
+    }
+
+
+    &_education{
+        display: flex;  
+        flex-direction: column;
+        gap: 10px;
+
+        &_item{
+            border-radius: $borderR;
+            border: 1px solid $primary;
+            padding: 8px 10px;
+            text-align: center;
+            transition: all ease-in-out 0.35s;
+
+            &_active{
+                background: $primary;
+                color: $white;
+            }
+        }
+    }
+
+    &_icon{
+        width: 30px;
+        height: 30px;
     }
 
     &_menu{
+        display: flex;
+        align-items: center;
+
         &_list{
             display: flex;
-            gap: 15px;
+            gap: 25px;
+            padding-right: 35px;
 
             &_item{
                 font-size: 16px;
@@ -127,4 +159,33 @@
             }
         }
     }
+
+    &_details{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &_search_box{
+        position: relative;
+
+        .btn{
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translate(0, -50%);
+
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .search_box{
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            
+        }
+    }
+
 }

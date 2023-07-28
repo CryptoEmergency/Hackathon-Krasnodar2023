@@ -61,7 +61,8 @@ p {
 }
 
 a {
-    color: $white;
+    color: $main-text;
+    text-decoration: none;
 }
 
 ul, ol{
@@ -74,5 +75,13 @@ ul, ol{
 }
 
 .page{
-    padding-top: 80px;
+    padding-top: 100px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: $grey;
+    
 }
