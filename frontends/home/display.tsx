@@ -12,11 +12,11 @@ import psychology from '@svg/courses/psychology.svg'
 import universe1 from '@svg/universe/1.svg'
 import universe2 from '@svg/universe/2.svg'
 import universe3 from '@svg/universe/3.svg'
-import universe4 from '@svg/universe/4.png'
-import universe5 from '@svg/universe/5.png'
-import universe6 from '@svg/universe/6.png'
-import universe7 from '@svg/universe/7.png'
-import universe8 from '@svg/universe/8.png'
+import universe4 from '@images/universe/4.png'
+import universe5 from '@images/universe/5.png'
+import universe6 from '@images/universe/6.png'
+import universe7 from '@images/universe/7.png'
+import universe8 from '@images/universe/8.png'
 
 const courses = [
     {
@@ -95,6 +95,21 @@ const universe = [
     {
         img: universe3,
     },
+    {
+        img: universe4,
+    },
+    {
+        img: universe5,
+    },
+    {
+        img: universe6,
+    },
+    {
+        img: universe7,
+    },
+    {
+        img: universe8,
+    },
 ]
 
 export const display = function () {
@@ -102,13 +117,21 @@ export const display = function () {
         <main class="home page">
             <div class="wrapper">
                 <div class="home_inner">
+                    <h2 class="section_title">Вузы</h2>
                     <section class="universities">
-                        <h2 class="section_title">Вузы</h2>
                         <div class="universities_wrap">
                             <button class="universities_prev"></button>
                             <button class="universities_next"></button>
                             <div class="universities_carousel">
-
+                                {
+                                   universe.map((item, index)=>{
+                                    return(
+                                        <div class="universities_item">
+                                            <img src={item.img}></img>
+                                        </div>
+                                    )
+                                   }) 
+                                }
                             </div>
                         </div>
                     </section> 
