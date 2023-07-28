@@ -65,6 +65,18 @@
       ]
     },
     {
+      "url": "/personal/bank",
+      "front": [
+        "adminBank"
+      ]
+    },
+    {
+      "url": "/personal/university",
+      "front": [
+        "adminUniversity"
+      ]
+    },
+    {
       "url": "/personal",
       "front": [
         "adminLogin"
