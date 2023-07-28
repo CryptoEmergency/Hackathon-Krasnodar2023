@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "cemjs-all": "^1.0.3",
-    "esbuild": "^0.18.6"
+    "esbuild": "^0.18.6",
+    "express": "^4.18.2"
   },
   "devDependencies": {
-    "esbuild-sass-plugin": "^2.10.0",
     "autoprefixer": "^10.4.14",
+    "esbuild-sass-plugin": "^2.10.0",
     "path": "^0.12.7",
     "postcss": "^8.4.24"
   },
