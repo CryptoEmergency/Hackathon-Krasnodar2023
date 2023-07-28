@@ -45,7 +45,7 @@ export const display = function () {
                                 <div class="universities_item">
                                     <img src={item.picture}></img>
                                     <div class="item_about">
-                                        <h2>{item.title}</h2>
+                                        <a>{item.title}</a>
                                         <span>{item.city}</span>
                                         <p>{item.price_from}</p>
                                         <a href="">{item.programms_number}</a>

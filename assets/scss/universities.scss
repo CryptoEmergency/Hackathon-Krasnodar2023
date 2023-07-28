@@ -1,3 +1,11 @@
 @import 'utils/variables.scss';
 
 
+.universities_list{
+    display: grid;
+    grid-template-columns: repeat(1, 500px);
+
+    .universities_item{
+        min-height: 208px;
+    }
+}
