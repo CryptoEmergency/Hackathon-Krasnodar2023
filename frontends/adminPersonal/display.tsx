@@ -8,9 +8,9 @@ export const display = function () {
         <div class="admin">
             <div class="admin__container">
                 <h2>Административная панель</h2>
-                <div class="c__wrapper">
+                <div class="admin__wrapper">
                     <h4>Банки</h4>
-                    <ul class="admin__bank_list">
+                    <ul class="admin-bank_list">
                         {
                             bank.map((item, index) => {
                                 return (
@@ -18,13 +18,14 @@ export const display = function () {
                                         <span>{item}</span>
                                         <input 
                                             type="checkbox" 
+                                            id={`bank-${index}`}
                                             ref={`${index}`}
                                             checked={this.Ref[index]?.checked}
                                             onclick={() => {
                                                 console.log(this.Ref[index])
                                             }}
                                         />
-                                        <label></label>
+                                        <label for={`bank-${index}`}></label>
                                     </li> 
                                 )
                             })
