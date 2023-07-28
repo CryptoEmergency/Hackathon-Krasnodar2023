@@ -3,3 +3,4 @@
 node_modules
 public
 frontends.json
+package-lock.json
