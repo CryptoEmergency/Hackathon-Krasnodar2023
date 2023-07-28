@@ -4,9 +4,12 @@ export const display = function () {
     return (
         <div class="admin">
             <div class="admin__container">
-                <h2>Административная панель</h2>
+                <h2 style="padding-bottom:20px">Административная панель</h2>
                 <div class="admin__wrapper">
-                    <h4 class="bank__name">Альфа банк</h4>
+                <div  class="input_login" id="auth-label1">
+                        <label  class="auth-label" >Название банка</label>
+                        <input class="auth-input" type="text" placeholder="Введите назвнание банка"></input>
+                    </div>
                     <div  class="input_login" id="auth-label1">
                         <label  class="auth-label" >Название кредита</label>
                         <input class="auth-input" type="text" placeholder="Введите назвнание кредита"></input>

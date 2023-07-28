@@ -5,12 +5,44 @@ export const display = function () {
         <div class="admin">
             <div class="admin__container">
                 <h2>Административная панель</h2>
-                <div class="admin__wrapper">
-                    <h4>Банки</h4>
-                </div>
-                <div class="admin__wrapper">
-                    <h4>Университеты</h4>
-                </div>
+                <div  class="input_login" id="auth-label1">
+                        <label  class="auth-label" >Название университета</label>
+                        <input class="auth-input" type="text" placeholder="Введите назвнание университета"></input>
+                    </div>
+                    <div  class="input_login" id="auth-label1">
+                        <label  class="auth-label" >Город</label>
+                        <input class="auth-input" type="text" placeholder="Введите назвнание города"></input>
+                    </div>
+                    <div  class="input_login" id="auth-label1">
+                        <label  class="auth-label" >Название факультета</label>
+                        <input class="auth-input" type="text" placeholder="Введите назвнание факультета"></input>
+                    </div>
+                    <div class="btn_enter_2" id='auth-label2'>
+                    <button class="btn_enter1">
+                        Внести данные
+                    </button>
+                </div>   
+                    <div  class="input_login" id="auth-label1">
+                        <label  class="auth-label" >Специализация</label>
+                        <input class="auth-input" type="text" placeholder="Введите назвнание специализации"></input>
+                    </div>
+                    <div  class="input_login" id="auth-label1">
+                        <label  class="auth-label" >Количество мест</label>
+                        <input class="auth-input" type="number" placeholder="Введите количество мест"></input>
+                    </div>
+                    <div  class="input_login" id="auth-label1">
+                        <label  class="auth-label" >Форма обучения</label>
+                        <input class="auth-input" type="text" placeholder="Введите форму обучния"></input>
+                    </div>
+                    <div  class="input_login" id="auth-label1">
+                        <label  class="auth-label" >Время обучения</label>
+                        <input class="auth-input" type="number" placeholder="Введите время обучения"></input>
+                    </div>
+                    <div  class="input_login" id="auth-label1">
+                        <label  class="auth-label" >Стоимость</label>
+                        <input class="auth-input" type="number" placeholder="Введите стоимость"></input>
+                    </div>
+
             </div>
         </div>
     )
