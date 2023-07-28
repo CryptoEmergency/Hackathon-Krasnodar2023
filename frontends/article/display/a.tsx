@@ -7,7 +7,6 @@ export default
     <div class="wrapper">
         <div class="article_header">
             <div class="title "><h1>Всё что абитуриенту нужно знать про образовательный кредит</h1></div>
-            <div class="publish_date">28.07.2023</div>
         </div>
         <div class="article_content">
             <p>
@@ -32,6 +31,7 @@ export default
             согласие родителей на кредит и заполненная ими анкета;
             свидетельство о рождении.
             </p>
+            <div class="publish_date">28.07.2023</div>
         </div>
     </div>
 </div>
