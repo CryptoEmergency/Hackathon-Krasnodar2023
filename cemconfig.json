@@ -15,7 +15,15 @@
         "header",
         "footer"
       ]
+    },
+    {
+      "url": "/article/a",
+      "front": [
+        "header",
+        "article"
+      ]
     }
+    
   ],
   "hook": {
     "proxyWeb": [
