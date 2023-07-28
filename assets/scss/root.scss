@@ -54,7 +54,10 @@ body {
     }
 }
 
-
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+}
 
 p {
     margin: 0;
@@ -79,6 +82,12 @@ ul, ol{
     padding-top: 100px;
 }
 
+.f-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .dropdown{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -89,10 +98,32 @@ ul, ol{
     outline: none;
     background: transparent;
     color: $main-text;
-    font-weight: 700;
+    // font-weight: 700;
     font-size: 18px;
     line-height: 24px;
     cursor: pointer;
+    transition: all ease-in-out 0.35s;
+    padding: 20px 35px;
+}
+
+.btn_default{
+    border-radius: 100px;
+    border: 1px solid $primary;
+    display: flex;
+    align-items: center;
+
+    span{
+        margin-right: 20px;
+    }
+
+    &:hover{
+        background: $primary;
+        color: $white;
+
+        img{
+            filter: invert(100%) sepia(5%) saturate(7478%) hue-rotate(124deg) brightness(107%) contrast(96%);;
+        }
+    }
 }
 
 .dropdown{
