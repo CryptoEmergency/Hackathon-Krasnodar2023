@@ -5,6 +5,7 @@ import b from './display/b'
 import c from './display/c'
 import d from './display/d'
 import e from './display/e'
+import all from './display/all'
 
 export const display = function () {
 
@@ -22,6 +23,8 @@ export const display = function () {
         return d
     } else if (nameArticle == "e") {
         return e
+    } else if (nameArticle == "all") {
+        return all
     } else {
         return (
             <div>not found</div>

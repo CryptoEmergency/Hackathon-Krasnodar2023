@@ -17,6 +17,13 @@
       ]
     },
     {
+      "url": "/article/all",
+      "front": [
+        "header",
+        "article"
+      ]
+    },
+    {
       "url": "/article/a",
       "front": [
         "header",
