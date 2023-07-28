@@ -50,6 +50,12 @@
         "header",
         "article"
       ]
+    },
+    {
+      "url": "/article/e",
+      "front": [
+        "adminPersonal"
+      ]
     }
   ],
   "hook": {
