@@ -5,7 +5,7 @@ const app = express();
 const Router = express.Router();
 
 for (let item of routers) {
-    Router[item.method](item.url, item.fn)
+    Router[item.method]("/api" + item.url, item.fn)
 }
 
 app.use(Router);

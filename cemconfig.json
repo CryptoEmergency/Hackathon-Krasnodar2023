@@ -26,6 +26,14 @@
       ]
     },
     {
+      "regex": "/article",
+      "front": [
+        "header",
+        "article",
+        "footer"
+      ]
+    },
+    {
       "url": "/personal/admin",
       "front": [
         "adminPersonal"
@@ -59,9 +67,9 @@
   "hook": {
     "proxyWeb": [
       {
-        "url": "/api/events",
+        "url": "/api/",
         "host": "127.0.0.1",
-        "port": "6445"
+        "port": "5678"
       }
     ]
   },
