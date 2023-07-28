@@ -22,8 +22,14 @@
         "header",
         "article"
       ]
+    },
+    {
+      "url": "/article/b",
+      "front": [
+        "header",
+        "article"
+      ]
     }
-    
   ],
   "hook": {
     "proxyWeb": [
