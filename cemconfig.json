@@ -19,6 +19,13 @@
       ]
     },
     {
+      "url": "/universities",
+      "front": [
+        "header",
+        "universities"
+      ]
+    },
+    {
       "url": "/article/all",
       "front": [
         "header",
