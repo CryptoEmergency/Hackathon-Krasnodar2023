@@ -6,7 +6,7 @@ export const display = function () {
             <div class="admin_login">
             <form class="auto-form">
                 <h2 class="auth-title">
-                   Авторизация 
+                   Регистрация
                 </h2>
                 <div class="input_login" id="auth-label1">
                     <label class="auth-label" >E-mail</label>
@@ -18,9 +18,15 @@ export const display = function () {
                    
                     ></input>
                 </div>
+                <div  class="input_login" >
+                    <label  class="auth-label" >Подтвердите пароль</label>
+                    <input class="auth-input" type="password" placeholder="Введите ваш пароль(повторно)" 
+                   
+                    ></input>
+                </div>
                 <div class="btn_enter" id='auth-label2'>
                     <button class="btn_enter1">
-                        Войти
+                        Зарегестрироваться
                     </button>
                 </div>
             </form>
