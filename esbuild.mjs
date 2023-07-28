@@ -100,8 +100,8 @@ const start = async function () {
         }
     }
 
-    const microFrontends = await checkFrontend(dirFrontends, nameFront);
-    fs.writeFileSync('microFrontends.json', JSON.stringify(microFrontends));
+    const frontends = await checkFrontend(dirFrontends, nameFront);
+    fs.writeFileSync('frontends.json', JSON.stringify(frontends));
 
     const ctx = await esbuild.context(options).catch(() => process.exit(1))
     console.log("⚡ Build complete! ⚡")
