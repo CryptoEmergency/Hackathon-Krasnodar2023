@@ -13,17 +13,17 @@ export const display = function () {
     let nameArticle = window.location.pathname.split("/article/")[1]
 
     if (nameArticle == "a") {
-        return a
+        return a.bind(this)()
     } else if (nameArticle == "b") {
-        return b
+        return b.bind(this)()
     } else if (nameArticle == "c") {
-        return c
+        return c.bind(this)()
     } else if (nameArticle == "d") {
-        return d
+        return d.bind(this)()
     } else if (nameArticle == "e") {
-        return e
+        return e.bind(this)()
     } else if (nameArticle == "" || !nameArticle) {
-        return all
+        return all.bind(this)()
     } else {
         return (
             <div>not found</div>
