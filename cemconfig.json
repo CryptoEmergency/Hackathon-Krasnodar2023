@@ -26,54 +26,6 @@
       ]
     },
     {
-      "url": "/article/all",
-      "front": [
-        "header",
-        "article",
-        "footer"
-      ]
-    },
-    {
-      "url": "/article/a",
-      "front": [
-        "header",
-        "article",
-        "footer"
-      ]
-    },
-    {
-      "url": "/article/b",
-      "front": [
-        "header",
-        "article",
-        "footer"
-      ]
-    },
-    {
-      "url": "/article/c",
-      "front": [
-        "header",
-        "article",
-        "footer"
-      ]
-    },
-    {
-      "url": "/article/d",
-      "front": [
-        "header",
-        "article",
-        "footer"
-      ]
-    },
-    {
-      "url": "/article/e",
-      "front": [
-        "header",
-        "article",
-        "footer"
-      ]
-    },
-    {
       "url": "/personal/admin",
       "front": [
         "adminPersonal"
