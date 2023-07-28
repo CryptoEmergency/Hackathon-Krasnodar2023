@@ -1,8 +1,8 @@
 import { mongoose } from '../mongo.js'
 
 const data = {};
-data.name = "Users";
-data.collection = "uchis_users";
+data.name = "Organization";
+data.collection = "uchis_organization";
 
 const standartDate = {
     timestamps: { createdAt: "dateCreate", updatedAt: "dateUpdate" },
@@ -12,13 +12,8 @@ const standartDate = {
 data.schema = new mongoose.Schema(
     {
         name: { type: String },
-        email: { type: String },
-        password: { type: String, maxLength: 32 },
-        description: { type: String },
-        age: { type: Number },
-        city: { type: String },
-        profession: { type: String },
-        speciality: { type: String },
+        type: { type: String },
+        verification: { type: Boolean },
     },
     standartDate
 );
