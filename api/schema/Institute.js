@@ -11,7 +11,12 @@ const standartDate = {
 
 data.schema = new mongoose.Schema(
     {
-        name: { type: String },
+        title: { type: String },
+        description: { type: String },
+        city: { type: String },
+        price_from: { type: Number },
+        programms: [],
+        orgId: { type: mongoose.Schema.Types.ObjectId, ref: "uchis_organization" },
     },
     standartDate
 );
