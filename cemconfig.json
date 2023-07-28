@@ -1,0 +1,31 @@
+{
+  "ver": "1.0.0",
+  "port": 3000,
+  "pages": [
+    {
+      "url": "/",
+      "front": [
+        "header",
+        "home",
+        "footer"
+      ]
+    },
+    {
+      "url": "/about/",
+      "front": [
+        "header",
+        "footer"
+      ]
+    }
+  ],
+  "hook": {
+    "proxyWeb": [
+      {
+        "url": "/api/events",
+        "host": "127.0.0.1",
+        "port": "6445"
+      }
+    ]
+  },
+  "microFrontends": {}
+}

@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "jsxFactory": "Cemjsx",
+        "jsxFragmentFactory": "CemjsxFragment",
+        "module": "ES2022",
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "@src/*": [
+                "./src/*"
+            ],
+            "@assets/*": [
+                "./assets/*"
+            ],
+            "@images/*": [
+                "./assets/images/*"
+            ],
+            "@svg/*": [
+                "./assets/svg/*.svg"
+            ],
+        },
+    },
+    "include": [
+        "global.d.ts",
+        "./frontends/**/*"
+    ]
+}
