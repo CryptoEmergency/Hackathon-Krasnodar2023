@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import schemaLists from './schema/lists.js'
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -33,7 +34,7 @@ db.on('disconnected', function () {
 db.on('open', function () {
     console.log('mongo db open');
 })
-console.log("Подключено к базе", 'mongodb://' + process.env.MDNAME + '@' + process.env.MDSERVER + '/' + process.env.MDBASE)
+
 const connectMongo = async function () {
     mongoose.connect('mongodb://' + process.env.MDNAME + '@' + process.env.MDSERVER + '/' + process.env.MDBASE, options).then(() => {
         console.log("Подключено к базе")
@@ -43,20 +44,20 @@ const connectMongo = async function () {
         return false
     });
 }
+const schemaMongo = async function () {
+    Object.keys(schemaLists).map((key) => {
+        Api[`get${key}`] = {}
+        Api[`set${key}`] = {}
+        if (schemaLists[key].get) {
+            Api[`get${key}`] = schemaLists[key].get
+        }
+        if (schemaLists[key].set) {
+            Api[`set${key}`] = schemaLists[key].set
+        }
+    })
 
-// const schemaMongo = async function () {
-//     Object.keys(schemaLists).map((key) => {
-//         Api[`get${key}`] = {}
-//         Api[`set${key}`] = {}
-//             if (schemaLists[key].get) {
-//                 Api[`get${key}`] = schemaLists[key].get
-//             }
-//             if (schemaLists[key].set) {
-//                 Api[`set${key}`] = schemaLists[key].set
-//             }
-//     })
-
-//     return true
-// }
+    return true
+}
+schemaMongo()
 
 export { Api, connectMongo, mongoose }
