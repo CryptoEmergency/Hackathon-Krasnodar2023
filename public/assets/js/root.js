@@ -505,11 +505,11 @@ var cemconfig_default = {
   microFrontends: {}
 };
 
-// microFrontends.json
-var microFrontends_default = { header: { front: true, name: "header", path: { css: "/assets/css/header.css" } } };
+// frontends.json
+var frontends_default = { header: { front: true, name: "header", path: { js: "/assets/js/header.js", css: "/assets/css/header.css" }, ver: "1.0.0", visable: true }, home: { front: true, name: "home", path: { js: "/assets/js/home.js", css: "/assets/css/home.css" }, ver: "1.0.0", visable: true }, modalCity: { front: true, name: "modalCity", path: { js: "/assets/js/modalCity.js" }, ver: "1.0.0", visable: true } };
 
 // app.ts
-cemconfig_default.microFrontends = microFrontends_default;
+cemconfig_default.microFrontends = frontends_default;
 function app_default() {
   initMap(cemconfig_default);
 }

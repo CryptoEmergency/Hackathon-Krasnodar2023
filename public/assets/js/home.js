@@ -1,7 +1,5 @@
 // frontends/home/loader.ts
 var loader = function() {
-  this.Static.text = "Framework CemJS!!!";
-  this.initAuto("text");
 };
 
 // node_modules/cemjs-core/libs/jsx.js
@@ -38,12 +36,12 @@ var checkNofing = function(data) {
 
 // frontends/home/display.tsx
 var display2 = function() {
-  return /* @__PURE__ */ Cemjsx("div", { class: "home home_container" }, /* @__PURE__ */ Cemjsx("h2", { class: "home_title" }, this.Static.text));
+  return /* @__PURE__ */ Cemjsx("main", { class: "home" }, /* @__PURE__ */ Cemjsx("div", { class: "wrapper" }, "home page"));
 };
 
 // frontends/home/index.ts
 var micro = {
-  name: "MicroTest",
+  name: "home",
   loader,
   display: display2
 };
