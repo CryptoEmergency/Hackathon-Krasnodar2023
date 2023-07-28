@@ -18,6 +18,9 @@ import universe6 from '@images/universe/6.png'
 import universe7 from '@images/universe/7.png'
 import universe8 from '@images/universe/8.png'
 
+import arrowPrev from '@svg/icons/arrowPrev.svg'
+import arrowNext from '@svg/icons/arrowNext.svg'
+
 const courses = [
     {
         title: 'Веб дизайнер',
@@ -112,58 +115,123 @@ const universe = [
     },
 ]
 
+let isDragging = false;
+let startX, startScrollLeft;
+let x1 = null;
+let y1 = null;
+
 export const display = function () {
     return (
         <main class="home page">
+            
+          
+        <h2 class="section_title">Вузы</h2>
+        <section class="universities">
             <div class="wrapper">
-                <div class="home_inner">
-                    <h2 class="section_title">Вузы</h2>
-                    <section class="universities">
-                        <div class="universities_wrap">
-                            <button class="universities_prev"></button>
-                            <button class="universities_next"></button>
-                            <div class="universities_carousel">
-                                {
-                                   universe.map((item, index)=>{
-                                    return(
-                                        <div class="universities_item">
-                                            <img src={item.img}></img>
-                                        </div>
-                                    )
-                                   }) 
+                <div class="universities_wrap">
+                    <button 
+                        class="btn universities_prev"
+                        onclick={()=>{
+                            this.Ref.universeCarousel.scrollLeft -= this.Ref.universeSlide.offsetWidth + 20;
+                        }}
+                    >
+                        <img src={arrowPrev}></img>
+                    </button>
+                    <button 
+                        class="btn universities_next"
+                        onclick={()=>{
+                            this.Ref.universeCarousel.scrollLeft += this.Ref.universeSlide.offsetWidth + 20;
+                        }}
+                    >
+                        <img src={arrowNext}></img>
+                    </button>
+                    <div 
+                        class="universities_carousel"
+                        ref="universeCarousel"
+                        onmousedown={(e) => {
+                            isDragging = true;
+                            startX = e.pageX;
+                            startScrollLeft = this.Ref.universeCarousel.scrollLeft;
+
+                        }}
+                        onmousemove={(e) => {
+                            if (!isDragging) return;
+                            e.preventDefault();
+                            this.Ref.universeCarousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+                        }}
+                        onmouseup={(e) => {
+                            isDragging = false;
+                        }}
+                        ontouchstart={(e) => {
+                            console.log('=d004e1=', e)
+                            const firstTouch = e.touches[0];
+                            x1 = firstTouch.clientX;
+                            y1 = firstTouch.clientY;
+                        }}
+                        ontouchmove={(e) => {
+                            if (!x1 || !y1) return false;
+                            let x2 = e.touches[0].clientX;
+                            let y2 = e.touches[0].clientY;
+                            let xDiff = x2 - x1;
+                            let yDiff = y2 - y1;
+
+                            if (Math.abs(xDiff) > Math.abs(yDiff)) {
+                                if (xDiff > 0) {
+                                    this.Ref.universeCarousel.scrollLeft -= this.Ref.universeSlide.offsetWidth + 35;
                                 }
-                            </div>
-                        </div>
-                    </section> 
-                    <section class="courses">
-                        <h2 class="section_title">Курсы</h2>
-                        <div class="courses_wrap">
-                            {
-                                courses.map((item, index)=>{
-                                    return(
-                                        <div class={["course", `course_${index}`]}>
-                                            <h5 class="course_title">{item.title}</h5>
-                                            <span class="course_price">{item.price}</span>
-                                            <ul class="course_desc">
-                                                <li>{item.direction}</li>
-                                                <li>{`${item.lessons} уроков`}</li>
-                                                <li>{`${item.tasks} заданий`}</li>
-                                            </ul>
-                                            <img class="course_img" src={item.img}></img>
-                                        </div>
-                                    )
-                                })
+                                else {
+                                    this.Ref.universeCarousel.scrollLeft += this.Ref.universeSlide.offsetWidth + 35;
+                                }
                             }
-                            <div class="f-center">
-                                <button class="btn btn_default">
-                                    <span>Посмотреть все курсы</span>
-                                    <img src={arrowBtn}></img>
-                                </button>
-                            </div>
-                        </div>
-                    </section>
+                            x1 = null;
+                            y1 = null;
+                        }}
+                    >
+                        {
+                            universe.map((item, index)=>{
+                            return(
+                                <div class="universities_item" ref="universeSlide">
+                                    <img src={item.img}></img>
+                                </div>
+                            )
+                            }) 
+                        }
+                    </div>
                 </div>
             </div>
+            
+        </section> 
+        <section class="courses">
+            <div class="wrapper">
+                <h2 class="section_title">Курсы</h2>
+                <div class="courses_wrap">
+                    {
+                        courses.map((item, index)=>{
+                            return(
+                                <div class={["course", `course_${index}`]}>
+                                    <h5 class="course_title">{item.title}</h5>
+                                    <span class="course_price">{item.price}</span>
+                                    <ul class="course_desc">
+                                        <li>{item.direction}</li>
+                                        <li>{`${item.lessons} уроков`}</li>
+                                        <li>{`${item.tasks} заданий`}</li>
+                                    </ul>
+                                    <img class="course_img" src={item.img}></img>
+                                </div>
+                            )
+                        })
+                    }
+                    <div class="f-center">
+                        <button class="btn btn_default">
+                            <span>Посмотреть все курсы</span>
+                            <img src={arrowBtn}></img>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+          
+          
         </main>
     )
 

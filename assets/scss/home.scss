@@ -13,21 +13,53 @@ $backCourses: (
 
 .universities{
   background: $primary;
+  padding: 50px 0;
   
   &_wrap{
     position: relative;
-    
+  }
+
+  &_prev, &_next{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: $ellipse;
+    padding: 15px;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      width: 30px;
+      height: 30px;
+    }
+
+    // &:hover{
+    //   box-shadow: 0 10px 30px #c7c7c7;
+    // }
+
+  }
+
+  &_prev{
+    left: 0;
+  }
+
+  &_next{
+    right: 0;
   }
 
   &_carousel{
     display: flex;
-    gap: 50px;
+    gap: 35px;
     white-space: nowrap;
     overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: 0;
     transition: all 0.4s linear;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   &_item{

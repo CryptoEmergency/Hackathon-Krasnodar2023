@@ -6,13 +6,15 @@
       "url": "/",
       "front": [
         "header",
-        "home"
+        "home",
+        "footer"
       ]
     },
     {
-      "url": "/about/",
+      "url": "/test/",
       "front": [
         "header",
+        "test",
         "footer"
       ]
     },
@@ -20,42 +22,48 @@
       "url": "/article/all",
       "front": [
         "header",
-        "article"
+        "article",
+        "footer"
       ]
     },
     {
       "url": "/article/a",
       "front": [
         "header",
-        "article"
+        "article",
+        "footer"
       ]
     },
     {
       "url": "/article/b",
       "front": [
         "header",
-        "article"
+        "article",
+        "footer"
       ]
     },
     {
       "url": "/article/c",
       "front": [
         "header",
-        "article"
+        "article",
+        "footer"
       ]
     },
     {
       "url": "/article/d",
       "front": [
         "header",
-        "article"
+        "article",
+        "footer"
       ]
     },
     {
       "url": "/article/e",
       "front": [
         "header",
-        "article"
+        "article",
+        "footer"
       ]
     },
     {
