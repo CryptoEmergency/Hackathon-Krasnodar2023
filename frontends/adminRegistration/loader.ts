@@ -1,4 +1,4 @@
 export const loader = function () {
-    this.Static.direction = "bank"
+    this.Static.direction = ""
     this.initAuto("direction")
 }
