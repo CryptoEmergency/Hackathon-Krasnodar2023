@@ -1,0 +1,22 @@
+@import 'utils/variables.scss';
+
+.article_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 600px;
+    gap: 10px
+}
+.article_item{
+    background-color: #F8FBFF;
+    border-radius: $borderR;
+    padding: 15px;
+
+    &h1{
+        color: #1454F2;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; 
+    }
+}
