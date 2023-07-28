@@ -125,7 +125,9 @@ export const display = function () {
         <main class="home page">
             
           
-        <h2 class="section_title">Вузы</h2>
+        <div class="wrapper">
+            <h2 class="section_title">Вузы</h2>
+        </div>
         <section class="universities">
             <div class="wrapper">
                 <div class="universities_wrap">
