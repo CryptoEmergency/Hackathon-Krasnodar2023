@@ -59,9 +59,15 @@
       ]
     },
     {
-      "url": "/admin",
+      "url": "/personal/admin",
       "front": [
         "adminPersonal"
+      ]
+    },
+    {
+      "url": "/personal",
+      "front": [
+        "adminLogin"
       ]
     }
   ],
