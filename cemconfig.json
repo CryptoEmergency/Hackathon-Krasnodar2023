@@ -77,9 +77,15 @@
       ]
     },
     {
-      "url": "/personal",
+      "url": "/personal/authorization",
       "front": [
         "adminLogin"
+      ]
+    },
+    {
+      "url": "/personal/registration",
+      "front": [
+        "adminRegistration"
       ]
     }
   ],
