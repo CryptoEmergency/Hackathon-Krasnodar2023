@@ -76,7 +76,12 @@ ul, ol{
 }
 
 .page{
-    padding-top: 100px;
+    padding-top: 120px;
+}
+
+.dropdown{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .btn{
@@ -95,6 +100,7 @@ ul, ol{
     // display: flex;
     // align-items: center;
     padding: 8px 10px;
+    border: 1px solid $grey;
 
     &_header{
         // border: ;
@@ -122,4 +128,20 @@ ul, ol{
     }
 
 
+}
+
+.search_blue{
+    // border-radius: $borderR;
+    background: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+    
+    img{
+        width: 20px;
+        height: 20px;
+    }
 }

@@ -1,6 +1,7 @@
 import { Cemjsx } from "cemjs-all"
-import logo from '@svg/logo.svg'
+import logo from '@images/logo.jpg'
 import search from '@svg/icons/search.svg'
+import searchWhite from '@svg/icons/searchWhite.svg'
 import close from '@svg/icons/close.svg'
 
 const universe = [
@@ -131,6 +132,9 @@ export const display = function () {
                             placeholder="Что Вас интересует ?" 
                             class="header_input_search"
                         ></input>
+                        <button class="btn search_blue">
+                            <img src={searchWhite}></img>
+                        </button>
                     </div>
                     <button 
                         class="btn btn_close"
