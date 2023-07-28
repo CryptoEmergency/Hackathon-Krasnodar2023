@@ -1,9 +1,12 @@
 @import 'utils/variables.scss';
 
-
+.univer{
+    display: flex;
+    justify-content: center;
+}
 .universities_list{
     display: grid;
-    grid-template-columns: repeat(1, 500px);
+    grid-template-columns: repeat(1, 1000px);
 
     .universities_item{
         min-height: 208px;

@@ -1,5 +1,8 @@
 import { Cemjsx } from "cemjs-all"
 import arrowBtn from '@svg/icons/arrowBtn.svg'
+import university1 from '@images/universities/1.jpg'
+import university2 from '@images/universities/2.jpg'
+import university3 from '@images/universities/3.jpg'
 
 
 const universitiesCards =[
@@ -10,7 +13,7 @@ const universitiesCards =[
         price_from: "100 000",
         programms_number: "16",
         desc: "Дизайн; реставрация и ещё 9 направлений",
-        picture: {}
+        picture: {university1}
     },
     {
         id: 2,
@@ -19,7 +22,7 @@ const universitiesCards =[
         price_from: "360 000",
         programms_number: "43",
         desc: "Дизайн; реставрация и ещё 9 направлений",
-        picture: {}
+        picture: {university2}
     },
     {
         id: 3,
@@ -28,7 +31,7 @@ const universitiesCards =[
         price_from: "80 000",
         programms_number: "16",
         desc: "Дизайн; реставрация и ещё 9 направлений",
-        picture: {}
+        picture: {university3}
     },
 ]
 
