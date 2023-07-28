@@ -29,6 +29,27 @@
         "header",
         "article"
       ]
+    },
+    {
+      "url": "/article/c",
+      "front": [
+        "header",
+        "article"
+      ]
+    },
+    {
+      "url": "/article/d",
+      "front": [
+        "header",
+        "article"
+      ]
+    },
+    {
+      "url": "/article/e",
+      "front": [
+        "header",
+        "article"
+      ]
     }
   ],
   "hook": {

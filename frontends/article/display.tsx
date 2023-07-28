@@ -2,6 +2,9 @@ import { Cemjsx } from "cemjs-all"
 
 import a from './display/a'
 import b from './display/b'
+import c from './display/c'
+import d from './display/d'
+import e from './display/e'
 
 export const display = function () {
 
@@ -13,6 +16,12 @@ export const display = function () {
         return a
     } else if (nameArticle == "b") {
         return b
+    } else if (nameArticle == "c") {
+        return c
+    } else if (nameArticle == "d") {
+        return d
+    } else if (nameArticle == "e") {
+        return e
     } else {
         return (
             <div>not found</div>
