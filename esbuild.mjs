@@ -5,7 +5,8 @@ import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
 import path from 'path'
 import fs from 'fs'
-import { ServerStart } from './api.js'
+// import { ServerStart } from './api.js'
+import './api.js'
 let nameFront
 const runServe = process.argv.includes("--runServe")
 const runFront = process.argv.includes("--runFront")
@@ -108,7 +109,6 @@ const start = async function () {
     if (runServe) {
         const serve = await ctx.serve({ servedir: "public" })
         console.log(`\nWeb: http://127.0.0.1:${cemconfig.port}`)
-        ServerStart(5678)
 
         http.createServer((req, res) => {
 

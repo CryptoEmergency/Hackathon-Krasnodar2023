@@ -9,7 +9,6 @@ mongoose.set('strictQuery', true);
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    keepAlive: true,
     connectTimeoutMS: 10000
 }
 
