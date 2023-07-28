@@ -21,7 +21,22 @@ $backCourses: (
 
 
     .course{
+      position: relative;
       border-radius: $borderR;
+      padding: 15px;
+
+      &_title, &_price, &_course_desc{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+
+      &_desc{
+        font-weight: 400;
+        font-size: 12px;
+        display: flex;
+        gap: 15px;
+      }
     }
 
     @each $index,
