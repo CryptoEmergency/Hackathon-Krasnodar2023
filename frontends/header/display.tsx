@@ -3,6 +3,26 @@ import logo from '@svg/logo.svg'
 import search from '@svg/icons/search.svg'
 import close from '@svg/icons/close.svg'
 
+const universe = [
+    {
+        name: 'Вузы',
+    },
+    {
+        name: 'Бакалавриат',
+    },
+    {
+        name: 'Магистратура',
+    },
+    {
+        name: 'Программы',
+    },
+    {
+        name: 'Специальности',
+    },
+]
+
+
+
 export const display = function () {
     return (
         <header class="header">
@@ -50,7 +70,12 @@ export const display = function () {
                             </ul>
                         </nav>
                         <div class="header_details">
-                            <div class="header_icon">
+                            <div 
+                                class="header_icon" 
+                                onclick={()=>{
+                                    this.Static.search = !this.Static.search;
+                                    this.init();
+                                }}>
                                 <img src={search}></img>
                             </div>
                             <div class="header_education">
@@ -78,16 +103,44 @@ export const display = function () {
                         </div>
                     </div>
                 </div>
-                <div class="header_search_box">
+                <div class={["header_search_box", this.Static.search ? "header_search_box_active" : null]}>
                     <div class="search_box">
-                        <div class="dropdown">
-                            <span>Выбрать вуз</span>
-                            
+                        <div 
+                            class="dropdown"
+                            onclick={()=>{
+                                this.Static.dropdown = !this.Static.dropdown;
+                                this.init();
+                            }} 
+                        >
+                            <div class="dropdown_header">{this.Static.dropdownHeader}</div>
+                            <ul 
+                                class={["dropdown_list", 
+                                this.Static.dropdown ? "dropdown_list_open" : null]}
+                            >
+                                {
+                                    universe.map((item, index)=>{
+                                        return(
+                                            <li class="dropdown_list_item">{item.name}</li>
+                                        )
+                                    })
+                                }
+                            </ul>
                         </div>
-                        <input type="search">Что Вас интересует ?</input>
+                        <input 
+                            type="search"
+                            placeholder="Что Вас интересует ?" 
+                            class="header_input_search"
+                        ></input>
                     </div>
-                    <button class="btn btn_close">
-                        <img src={close}></img>
+                    <button 
+                        class="btn btn_close"
+                        onclick={()=>{
+                            this.Static.search = !this.Static.search;
+                            this.init();
+                        }}
+                    >
+                        {/* <img src={close}></img> */}
+                        X
                     </button>
                 </div>
             </div>

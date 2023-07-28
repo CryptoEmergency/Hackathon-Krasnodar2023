@@ -29,8 +29,8 @@ export const display = function () {
     }
 
     return (
-        <div class="article ">
-            <div class="article_header"  >
+        <div class="article page">
+            <div class="article_header">
                 <div class="title "><h1>Всё что абитуриенту нужно знать про образовательный кредит</h1></div>
                 <div class="publish_date">28.07.2023</div>
             </div>
