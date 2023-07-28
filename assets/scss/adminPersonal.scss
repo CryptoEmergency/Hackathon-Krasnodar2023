@@ -15,5 +15,68 @@
             text-align: center;
         }
     }
+
+    &__wrapper {
+        h4 {
+            padding-top: 30px;
+        }
+    }
+
+    &-bank {
+
+        &_item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            padding-bottom: 10px;
+
+            span {
+                padding-right: 6px;
+                font-size: 18px;
+            }
+
+            input[type=checkbox] {
+                height: 0;
+                width: 0;
+                visibility: hidden;
+    
+                &:checked+label {
+                    background: #bada55;
+                }
+    
+                &:checked + label:after {
+                    left: calc(100% - 3px);
+                    transform: translateX(-100%);
+                }
+            }
+
+            label {
+                cursor: pointer;
+                text-indent: -9999px;
+                width: 50px;
+                height: 23px;
+                background: #808080;
+                display: block;
+                border-radius: 50px;
+                position: relative;
+    
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    width: 17px;
+                    height: 17px;
+                    background: #ffffff;
+                    border-radius: 90px;
+                    transition: 0.3s;
+                }
+    
+                &:active:after {
+                    width: 54px;
+                }
+            }
+        }
+    }
     
 }
