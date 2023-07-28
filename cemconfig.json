@@ -11,10 +11,10 @@
       ]
     },
     {
-      "url": "/article/a",
+      "url": "/about/",
       "front": [
         "header",
-        "article"
+        "footer"
       ]
     }
   ],
