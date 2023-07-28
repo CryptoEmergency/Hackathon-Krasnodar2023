@@ -1,4 +1,6 @@
 @import 'utils/variables.scss';
+// @import 'utils/globalClass.scss';
+
 
 
 // .header {
@@ -101,6 +103,7 @@
 
 .header{
     position: fixed;
+    height: 80px;
     top: 0;
     left: 0;
     width: 100%;
@@ -109,5 +112,19 @@
     &_inner{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    &_menu{
+        &_list{
+            display: flex;
+            gap: 15px;
+
+            &_item{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;;
+            }
+        }
     }
 }

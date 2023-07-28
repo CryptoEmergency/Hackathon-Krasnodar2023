@@ -24,13 +24,13 @@ export const display = function () {
                             <span></span>
                         </div>
                         <nav>
-                            <ul class="header_menu">
-                                <li>Вузы</li>
-                                <li>Банки</li>
-                                <li>Программы</li>
-                                <li>Тесты</li>
-                                <li>Абиетурентам</li>
-                                <li>Статьи</li>
+                            <ul class="header_menu_list">
+                                <li class="header_menu_list_item">Вузы</li>
+                                <li class="header_menu_list_item">Банки</li>
+                                <li class="header_menu_list_item">Программы</li>
+                                <li class="header_menu_list_item">Тесты</li>
+                                <li class="header_menu_list_item">Абиетурентам</li>
+                                <li class="header_menu_list_item">Статьи</li>
                             </ul>
                         </nav>
                     </div>

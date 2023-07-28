@@ -31,9 +31,6 @@ body {
     padding: 0 !important;
     overflow: overlay;
     color: $main-text;
-    // background-image: url('images/background/back.jpg');
-    background-position: center center;
-    background-size: cover;
     width: 100%;
     font-family: 'Montserrat';
 
@@ -74,4 +71,8 @@ ul, ol{
 .wrapper{
     max-width: 1240px;
     margin: 0 auto;
+}
+
+.page{
+    padding-top: 80px;
 }
