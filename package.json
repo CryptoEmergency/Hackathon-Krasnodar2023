@@ -17,5 +17,17 @@
     "autoprefixer": "^10.4.14",
     "path": "^0.12.7",
     "postcss": "^8.4.24"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CryptoEmergency/Hackathon-Krasnodar2023.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CryptoEmergency/Hackathon-Krasnodar2023/issues"
+  },
+  "homepage": "https://github.com/CryptoEmergency/Hackathon-Krasnodar2023#readme",
+  "description": ""
 }

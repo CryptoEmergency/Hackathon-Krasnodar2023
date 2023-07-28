@@ -482,8 +482,7 @@ var cemconfig_default = {
       url: "/",
       front: [
         "header",
-        "home",
-        "footer"
+        "home"
       ]
     },
     {
@@ -507,7 +506,7 @@ var cemconfig_default = {
 };
 
 // microFrontends.json
-var microFrontends_default = { footer: { front: true, name: "footer", path: { js: "/assets/js/footer.js", css: "/assets/css/footer.css" }, ver: "1.0.0", visable: true }, header: { front: true, name: "header", path: { js: "/assets/js/header.js", css: "/assets/css/header.css" }, ver: "1.0.0", visable: true }, home: { front: true, name: "home", path: { js: "/assets/js/home.js", css: "/assets/css/home.css" }, ver: "1.0.0", visable: true } };
+var microFrontends_default = { header: { front: true, name: "header", path: { css: "/assets/css/header.css" } } };
 
 // app.ts
 cemconfig_default.microFrontends = microFrontends_default;
