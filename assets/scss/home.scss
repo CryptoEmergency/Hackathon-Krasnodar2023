@@ -11,9 +11,24 @@ $backCourses: (
   7: $course8,
 );
 
-@each $index,
-$back in $backCourses {
-  .courses_item-#{$index} {
-    background: $back;
+
+
+.courses{
+  &_wrap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+
+    .course{
+      border-radius: $borderR;
+    }
+
+    @each $index,
+    $back in $backCourses {
+      .course_#{$index} {
+        background: $back;
+      }
+    }
   }
 }
