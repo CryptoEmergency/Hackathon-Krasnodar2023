@@ -17,13 +17,17 @@ $backCourses: (
   &_wrap{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat();
     gap: 15px;
-
-
+  
     .course{
       position: relative;
       border-radius: $borderR;
       padding: 15px;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       &_title, &_price, &_course_desc{
         font-size: 18px;
@@ -36,6 +40,13 @@ $backCourses: (
         font-size: 12px;
         display: flex;
         gap: 15px;
+      }
+
+      &_img{
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translate(0, -50%);
       }
     }
 
