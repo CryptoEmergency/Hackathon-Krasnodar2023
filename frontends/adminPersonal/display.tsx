@@ -9,13 +9,13 @@ export const display = function () {
             <div class="admin__container">
                 <h2>Административная панель</h2>
                 <div class="admin__wrapper">
-                    <h4>Банки</h4>
+                    <h4 class="title__name">Банки</h4>
                     <ul class="admin-bank_list">
                         {
                             bank.map((item, index) => {
                                 return (
                                     <li class="admin-bank_item">
-                                        <span>{item}</span>
+                                        <span class="text__name">{item}</span>
                                         <input 
                                             type="checkbox" 
                                             id={`bank-${index}`}
@@ -33,7 +33,28 @@ export const display = function () {
                     </ul>
                 </div>
                 <div class="admin__wrapper">
-                    <h4>Университеты</h4>
+                    <h4 class="title__name">Университеты</h4>
+                    <ul class="admin-bank_list">
+                        {
+                            university.map((item, index) => {
+                                return (
+                                    <li class="admin-bank_item">
+                                        <span class="text__name">{item}</span>
+                                        <input 
+                                            type="checkbox" 
+                                            id={`university-${index}`}
+                                            ref={`${index}`}
+                                            checked={this.Ref[index]?.checked}
+                                            onclick={() => {
+                                                console.log(this.Ref[index])
+                                            }}
+                                        />
+                                        <label for={`university-${index}`}></label>
+                                    </li> 
+                                )
+                            })
+                        }
+                    </ul>
                 </div>
             </div>
         </div>
