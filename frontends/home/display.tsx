@@ -9,6 +9,14 @@ import frontend from '@svg/courses/frontend.svg'
 import food from '@svg/courses/food.svg'
 import psychology from '@svg/courses/psychology.svg'
 
+import universe1 from '@svg/universe/1.svg'
+import universe2 from '@svg/universe/2.svg'
+import universe3 from '@svg/universe/3.svg'
+import universe4 from '@svg/universe/4.png'
+import universe5 from '@svg/universe/5.png'
+import universe6 from '@svg/universe/6.png'
+import universe7 from '@svg/universe/7.png'
+import universe8 from '@svg/universe/8.png'
 
 const courses = [
     {
@@ -77,13 +85,25 @@ const courses = [
     },
 ]
 
+const universe = [
+    {
+        img: universe1,
+    },
+    {
+        img: universe2,
+    },
+    {
+        img: universe3,
+    },
+]
+
 export const display = function () {
     return (
         <main class="home page">
             <div class="wrapper">
                 <div class="home_inner">
-                    {/* <section class="universities">
-                        <h2>Вузы</h2>
+                    <section class="universities">
+                        <h2 class="section_title">Вузы</h2>
                         <div class="universities_wrap">
                             <button class="universities_prev"></button>
                             <button class="universities_next"></button>
@@ -91,7 +111,7 @@ export const display = function () {
 
                             </div>
                         </div>
-                    </section>  */}
+                    </section> 
                     <section class="courses">
                         <h2 class="section_title">Курсы</h2>
                         <div class="courses_wrap">
