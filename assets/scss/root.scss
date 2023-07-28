@@ -66,3 +66,12 @@ p {
 a {
     color: $white;
 }
+
+ul, ol{
+    list-style-type: none;
+}
+
+.wrapper{
+    max-width: 1240px;
+    margin: 0 auto;
+}
