@@ -1,4 +1,10 @@
 @import 'utils/variables.scss';
+.wrapper h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .article_wrapper{
     display: flex;
     justify-content: center;
@@ -34,11 +40,14 @@
         font-style: normal;
         font-weight: 400;
         line-height: 22px;
+        margin-top: 5px;
+        margin-bottom: 25px;
     }
     .button-date{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
     }
 }
 
