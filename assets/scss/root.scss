@@ -25,6 +25,20 @@ html {
     scrollbar-width: thin;
 }
 
+p {
+    margin: 0;
+}
+
+a {
+    color: $main-text;
+    text-decoration: none;
+}
+
+ul, ol{
+    list-style-type: none;
+    padding-left: 0;
+}
+
 body {
     height: 100%;
     margin: 0px;
@@ -59,18 +73,8 @@ h1, h2, h3, h4, h5, h6{
     padding: 0;
 }
 
-p {
-    margin: 0;
-}
-
-a {
-    color: $main-text;
-    text-decoration: none;
-}
-
-ul, ol{
-    list-style-type: none;
-    padding-left: 0;
+section{
+    margin-bottom: 30px;
 }
 
 .section_title{
