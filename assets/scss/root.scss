@@ -73,6 +73,13 @@ ul, ol{
     padding-left: 0;
 }
 
+.section_title{
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px; 
+    margin-bottom: 40px;
+}
+
 .wrapper{
     max-width: 1240px;
     margin: 0 auto;
@@ -169,6 +176,7 @@ ul, ol{
     align-items: center;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    padding: 8px 10px;
     
     
     img{

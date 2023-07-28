@@ -93,7 +93,7 @@ export const display = function () {
                         </div>
                     </section>  */}
                     <section class="courses">
-                        <h2>Курсы</h2>
+                        <h2 class="section_title">Курсы</h2>
                         <div class="courses_wrap">
                             {
                                 courses.map((item, index)=>{
@@ -106,7 +106,7 @@ export const display = function () {
                                                 <li>{`${item.lessons} уроков`}</li>
                                                 <li>{`${item.tasks} заданий`}</li>
                                             </ul>
-                                            <img></img>
+                                            <img class="course_img" src={item.img}></img>
                                         </div>
                                     )
                                 })
