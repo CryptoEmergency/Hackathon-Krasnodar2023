@@ -2,7 +2,7 @@ import { mongoose } from '../mongo.js'
 
 const data = {};
 data.name = "Users";
-data.collection = "uchis_users";
+data.collection = "uchis_bank";
 
 const standartDate = {
     timestamps: { createdAt: "dateCreate", updatedAt: "dateUpdate" },
