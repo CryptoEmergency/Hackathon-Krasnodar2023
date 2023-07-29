@@ -27,6 +27,14 @@
       ]
     },
     {
+      "url": "/vuz/recommendation",
+      "front": [
+        "header",
+        "recommendation",
+        "footer"
+      ]
+    },
+    {
       "url": "/vuz",
       "front": [
         "header",
