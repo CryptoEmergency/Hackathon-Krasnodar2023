@@ -92,6 +92,12 @@ section{
         line-height: 32px;
         margin-bottom: 10px;
     }
+
+    @media (max-width: 600px){
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 15px;
+    }
 }
 
 .wrapper{

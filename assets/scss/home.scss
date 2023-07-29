@@ -11,6 +11,24 @@ $backCourses: (
   7: $course8,
 );
 
+$backUniverse:(
+  0: url('images/universe/1.png'),
+  1: url('images/universe/2.png'),
+  2: url('images/universe/3.png'),
+  3: url('images/universe/4.png'),
+  4: url('images/universe/5.png'),
+  5: url('images/universe/6.png'),
+  6: url('images/universe/7.png'),
+  7: url('images/universe/8.png'),
+  8: url('images/universe/10.png'),
+  9: url('images/universe/11.png'),
+  10: url('images/universe/12.png'),
+  11: url('images/universe/13.png'),
+  12: url('images/universe/14.png'),
+  13: url('images/universe/15.png'),
+  14: url('images/universe/16.png'),
+);
+
 .main{
   box-sizing: border-box;
   min-height: 100vh;
@@ -92,15 +110,22 @@ $backCourses: (
   }
 
   &_item{
-    padding: 15px;
+    padding: 40px;
     border: $borderR;
+    width: 75px;
+    height: 75px;
+   
+  }
+}
 
-    img{
-      width: 70px;
+@each $index,
+  $back in $backUniverse {
+    .universities_item_#{$index} {
+      background: $back;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
-
-}
 
 .banks{
   &_inner{

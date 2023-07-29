@@ -9,15 +9,6 @@ import frontend from '@svg/courses/frontend.svg'
 import food from '@svg/courses/food.svg'
 import psychology from '@svg/courses/psychology.svg'
 
-import universe1 from '@svg/universe/1.svg'
-import universe2 from '@svg/universe/2.svg'
-import universe3 from '@svg/universe/3.svg'
-import universe4 from '@images/universe/4.png'
-import universe5 from '@images/universe/5.png'
-import universe6 from '@images/universe/6.png'
-import universe7 from '@images/universe/7.png'
-import universe8 from '@images/universe/8.png'
-
 import arrowPrev from '@svg/icons/arrowPrev.svg'
 import arrowNext from '@svg/icons/arrowNext.svg'
 
@@ -92,28 +83,46 @@ const courses = [
 
 const universe = [
     {
-        img: universe1,
+        alt: 'Санкт-Петербургский государственный университет промышленных технологий и дизайна',
     },
     {
-        img: universe2,
+        alt: 'Московский государственный университет имени М.В. Ломоносова (МГУ)',
     },
     {
-        img: universe3,
+        alt: 'Санкт-Петербургский государственный университет (СПбГУ)',
     },
     {
-        img: universe4,
+        alt: 'Национальный исследовательский университет "Высшая школа экономики" (НИУ ВШЭ)',
     },
     {
-        img: universe5,
+        alt: 'Московский физико-технический институт (МФТИ)',
     },
     {
-        img: universe6,
+        alt: ' Московский институт физики и технологии (МИФИ)',
     },
     {
-        img: universe7,
+        alt: 'Новосибирский государственный университет (НГУ)',
     },
     {
-        img: universe8,
+        alt: 'Уральский федеральный университет (УрФУ)',
+    },
+    {
+        alt: 'Казанский федеральный университет (КФУ)',
+    },
+    {
+        alt: 'Сибирский федеральный университет (СФУ)',
+    },
+    {
+        alt: 'Российский государственный гуманитарный университет (РГГУ)',
+    },
+    {
+        alt: 'Санкт-Петербургский политехнический университет (СПбПУ)',
+    },
+    {
+        alt: 'Московский государственный технический университет имени Н.Э. Баумана (МГТУ им. Баумана)',
+    },
+    {
+        alt: 'Санкт-Петербургский государственный университет аэрокосмического приборостроения (СПбГУАП)',
     },
 ]
 
@@ -236,8 +245,8 @@ export const display = function () {
                             {
                                 universe.map((item, index)=>{
                                 return(
-                                    <div class="universities_item" ref="universeSlide">
-                                        <img src={item.img}></img>
+                                    <div class={["universities_item", `universities_item_${index}`]} ref="universeSlide">
+                                        {/* <img src={item.img}></img> */}
                                     </div>
                                 )
                                 }) 
