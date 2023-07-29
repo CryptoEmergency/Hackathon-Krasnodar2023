@@ -1,10 +1,10 @@
 .spinner {
     position: absolute;
-    right: 50px;
+    right: 30px;
     top: 10px;
     width: 30px;
     height: 30px;
-    padding: 6px;
+    padding: 4px;
     aspect-ratio: 1;
     border-radius: 50%;
     background: #1E90FF;
@@ -16,28 +16,53 @@
     -webkit-mask-composite: source-out;
             mask-composite: subtract;
     animation: s3 1s infinite linear;
+
+    &_pending {
+        top: 0;
+    }
 }
 @keyframes s3 {to{transform: rotate(1turn)}}
 
 .modal {
     &__bank {
+        margin-top: 50px;
+        position: relative;
         display: flex;
         justify-content: center;
-        align-items: center;
-        
+
         &_item {
-            margin-top: 20px;
-            
-            font-size: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
             font-weight: 600;
+        }
+
+        &_img {
+            position: absolute;
+            right: 30px;
+            width: 32px;
         }
 
         span {
             margin-right: 30px;
         }
         
-        img {
+        &_logo {
             width: 80px;
+        }
+
+        &_pending {
+            padding-top: 30px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                font-size: 18px;
+                font-weight: 600;
+            }
         }
     }
 }
