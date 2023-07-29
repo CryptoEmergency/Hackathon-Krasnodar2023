@@ -5,11 +5,16 @@
     text-align: center;
     font-size: xxx-large;
 }
+
+
 .univer{
     display: flex;
     justify-content: center;
     margin-inline: 15px;
 }
+
+
+
 .universities_list{
     display: grid;
     grid-template-columns: repeat(1, 1000px);
@@ -22,8 +27,6 @@
         box-shadow: 5px 10px 20px rgba(0,0,0,0.25);
         border-radius: $borderR ;
         
-
-    
     img{
         height:200px;
         float:left;
@@ -41,6 +44,10 @@
         .price-offer{
             display: flex;
             justify-content: space-between;
+
+            p span{
+                color: #1454F2;
+            }
         }
 
 
@@ -49,6 +56,7 @@
             font-style: normal;
             font-weight: 600;
             line-height: 24px;
+            cursor: pointer;
         }
     }
 }   
@@ -58,6 +66,9 @@
 
 
 @media(max-width: 992px) {
+    .univer{
+        margin-inline: 10px
+    }
     .universities_list{
         gap: 15px;
         grid-template-columns: repeat(2, 1fr); 
@@ -82,6 +93,9 @@
 }
 
   @media(max-width: 767px) {
+    .univer{
+        margin-inline: 10px
+    }
     .universities_list{
         grid-template-columns: repeat(1, 1fr); 
         .university_item{
