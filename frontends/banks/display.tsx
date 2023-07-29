@@ -1,10 +1,10 @@
 import { Cemjsx } from "cemjs-all"
 import arrowBtn from '@svg/icons/arrowBtn.svg'
 import sber from '@svg/banks/sber.svg'
-import alfa from '@svg/banks/alfa.png'
+import alfa from '@svg/banks/alfa1.png'
 import rnkb from '@svg/banks/rnkb.svg'
 import vtb from '@svg/banks/vtb.png'
-import raiffeisen from '@svg/banks/raiff.png'
+import raiffeisen from '@svg/banks/raiff2.png'
 
 // const universitiesCards =[
 //     {
