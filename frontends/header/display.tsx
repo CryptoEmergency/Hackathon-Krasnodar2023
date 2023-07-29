@@ -67,13 +67,13 @@ export const display = function () {
                                     <a href="/banks" onclick={this.Fn.link}>Банки</a>
                                 </li>
                                 <li class="header_menu_list_item">
-                                    <a href="/training"  onclick={this.Fn.link}>Повышение квалификации</a>
+                                    <a href="/training" onclick={this.Fn.link}>Повышение квалификации</a>
                                 </li>
                                 <li class="header_menu_list_item">
                                     <a href="/vuz/find" onclick={this.Fn.link}>Подобрать вуз</a>
                                 </li>
                                 <li class="header_menu_list_item">
-                                    <a href="/article" onclick={this.Fn.link}>Абиетурентам</a>
+                                    <a href="/article" onclick={this.Fn.link}>Абитуриентам</a>
                                 </li>
                             </ul>
                         </nav>
