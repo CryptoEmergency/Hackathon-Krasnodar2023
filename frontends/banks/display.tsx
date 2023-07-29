@@ -107,14 +107,14 @@ export const display = function () {
                                     // console.log(index)
                                     return (
                                         
-                                        <div class="bank_item">
+                                    <div class="bank_item">
                 
-                                            <a href=""><img src={sber}></img></a>
+                                        <a href=""><img src={sber}></img></a>
                                     <div class="item_about">
-                                        <h2><a>{item.name}</a></h2>
+                                        <span>{item.name}</span>
                                         <a>{item.credit[0].nameCredit}</a>
                                         
-                                        <a>Валюта: {item.credit[0].currency}</a>
+                                        {/* <a>Валюта: {item.credit[0].currency}</a> */}
                                         <a>Срок: {item.credit[0].creditTerm}</a>
                                         <a>Процентная ставка: {item.credit[0].interestRate}</a>
                                         <a>Сумма кредита: {item.credit[0].amountOfCredit}</a>
