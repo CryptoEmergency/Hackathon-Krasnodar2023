@@ -10,13 +10,9 @@ export const display = function () {
                 <div class="admin__container admin__bank">
                     <h2 style="padding-bottom:20px">Административная панель</h2>
                     <div class="admin__wrapper">
-                        <div class="admin__bank_input white">
-                            <label  class="auth-label">Название банка</label>
-                            <input class="auth-input" type="text" placeholder="Введите назвнание банка"
-                                oninput={(e) => {
-                                    this.Static.bank.name = e.target.value
-                                }}
-                            ></input>
+                        <div class="admin__bank_title">
+                            <span class="admin__bank_name">Название банка:</span>
+                            <span class="admin__bank_name">{this.records[0].name}</span>
                         </div>
                         <button class="admin__bank_add"
                             onclick={ async() => {

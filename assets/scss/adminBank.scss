@@ -11,6 +11,19 @@
         }
     }
 
+    &_title {
+        display: flex;
+    }
+
+    &_name {
+        font-size: 22px;
+        font-weight: 600;
+
+        &:first-child {
+            margin-right: 20px;
+        }
+    }
+
     &_add {
         margin: 20px 0;
         padding: 6px 20px;

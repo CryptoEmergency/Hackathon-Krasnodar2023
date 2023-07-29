@@ -16,17 +16,18 @@ export const loader = function () {
         name: "",
         credit: []
     }
-    // const iv = crypto.getRandomValues(new Uint8Array(16));
+    
     console.log(makeid(16))
-    // fetch("/api/user/bank/set", {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({ filter: {} }),
-    // })
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         console.log(data);
-    //     });
+    fetch("/api/open/Bank", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ filter: {} }),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            this.records = data
+            this.init()
+        });
 }

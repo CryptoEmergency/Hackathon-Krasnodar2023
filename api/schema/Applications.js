@@ -11,9 +11,10 @@ const standartDate = {
 
 data.schema = new mongoose.Schema(
     {
+        bank: { type: String },
         fullName: { type: String },
         mail: { type: String },
-        phone: { type: String }
+        phone: { type: String },
     },
     standartDate
 );
