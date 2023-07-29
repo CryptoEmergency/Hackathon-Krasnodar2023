@@ -17,6 +17,11 @@
         background: #ffffff;
         border: 1px solid;
         border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
         
         span {
             font-size: 16px;
@@ -41,6 +46,24 @@
             &:hover {
                 opacity: 0.5;
             }
+        }
+    }
+
+    &_button {
+        margin: 10px 20px 20px 40px;
+        padding: 8px 30px;
+        border-radius: 8px;
+        background-color: #4a89dc;
+        border: 0;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        span {
+            font-size: 16px;
+            color: #ffffff;
         }
     }
 }

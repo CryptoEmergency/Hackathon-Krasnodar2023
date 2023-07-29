@@ -1,6 +1,5 @@
 import { Api } from '../../mongo.js';
 
-
 let data = {
     method: "post",
     url: "/user/Org/:type",
@@ -10,6 +9,5 @@ let data = {
         return res.json(await Api.getBank({}));
     }
 }
-
 
 export default data
