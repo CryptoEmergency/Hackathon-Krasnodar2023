@@ -31,8 +31,8 @@ export const display = function () {
                         </div>
                         <div class="footer_social_wrap">
                             {
-                                socials.map((item, index)=>{
-                                    return(
+                                socials.map((item, index) => {
+                                    return (
                                         <a class="footer_social_item" href="#">
                                             <img src={item.src} alt={item.alt}></img>
                                         </a>
@@ -40,7 +40,7 @@ export const display = function () {
                                 })
                             }
                         </div>
-                        
+
                     </div>
                     <div class="footer_general">
                         <span class="footer_subtitle">Основное</span>
@@ -65,7 +65,28 @@ export const display = function () {
                                 {/* <img src={email}></img> */}
                                 <span>uchim.support@info.com</span>
                             </a>
-                            <a class="footer_contacts_item" href="tel:+74952294280">
+                            <a class="footer_contacts_item" href="tel:+74952294280"
+                                onclick={() => {
+                                    let insert = {
+                                        insert: {
+                                            title: "название",
+                                            description: "текст описание",
+                                            city: "Краснодар",
+                                            programms: []
+                                        }
+                                    }
+                                    fetch("/api/user/vuz/set", {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                        },
+                                        body: JSON.stringify(insert),
+                                    })
+                                        .then((response) => response.json())
+                                        .then((data) => {
+                                            console.log(data);
+                                        });
+                                }}>
                                 {/* <img src={phone}></img> */}
                                 <span>+74952294280</span>
                             </a>
