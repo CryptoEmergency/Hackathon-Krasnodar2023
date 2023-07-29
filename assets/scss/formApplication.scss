@@ -67,6 +67,13 @@
         }
     }
 }
+@media ( max-width:600px ) {
+    .enter__data{
+        width: 200px;
+        height: 40px;
+    }
+}
+
 .enter__data_1{
     display:flex;
     justify-content: center;
@@ -85,5 +92,12 @@
         &:hover {
             opacity: 0.7;
         }
+
+        @media ( max-width:600px ) {
+                width: 200px;
+                height: 40px;
+            
+        }
     }
 }
+
