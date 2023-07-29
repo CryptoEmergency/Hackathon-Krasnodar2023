@@ -130,7 +130,7 @@ const start = async function () {
                 }
             })
 
-            if (!haveChange && req.url !== "/esbuild" && !req.url.startsWith("/assets/") && req.url !== "/favicon.ico") {
+            if (!haveChange && req.url !== "/esbuild" && !req.url.startsWith("/assets/") && req.url !== "/favicon.ico" && req.url !== "/Uchis.pro.apk") {
                 options.path = "/"
             }
 
