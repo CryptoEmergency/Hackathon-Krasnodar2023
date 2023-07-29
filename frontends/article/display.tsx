@@ -12,15 +12,15 @@ export const display = function () {
 
     let nameArticle = window.location.pathname.split("/article/")[1]
 
-    if (nameArticle == "a") {
+    if (nameArticle == "everything_an_applicant_needs_to_know_about_an_educational_loan") {
         return a.bind(this)()
-    } else if (nameArticle == "b") {
+    } else if (nameArticle == "if_you_have_not_enrolled_in_a_budget_form_of_education") {
         return b.bind(this)()
-    } else if (nameArticle == "c") {
+    } else if (nameArticle == "when_it_will_be_clear_whether_I_did_or_not") {
         return c.bind(this)()
-    } else if (nameArticle == "d") {
+    } else if (nameArticle == "in_russia,_there_is_an_opportunity_to_submit_documents_to_universities_through_the_state_key") {
         return d.bind(this)()
-    } else if (nameArticle == "e") {
+    } else if (nameArticle == "enew_rules_for_admission_to_russian_universities_in_2023") {
         return e.bind(this)()
     } else if (nameArticle == "" || !nameArticle) {
         return all.bind(this)()

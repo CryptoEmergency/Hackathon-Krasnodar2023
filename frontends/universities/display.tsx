@@ -13,7 +13,7 @@ const universitiesCards =[
         price_from: "100 000",
         programms_number: "16",
         desc: "Дизайн; реставрация и ещё 9 направлений",
-        picture: {university1}
+        picture: university1
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ const universitiesCards =[
         price_from: "360 000",
         programms_number: "43",
         desc: "Дизайн; реставрация и ещё 9 направлений",
-        picture: {university2}
+        picture: university2
     },
     {
         id: 3,
@@ -31,7 +31,7 @@ const universitiesCards =[
         price_from: "80 000",
         programms_number: "16",
         desc: "Дизайн; реставрация и ещё 9 направлений",
-        picture: {university3}
+        picture: university3
     },
 ]
 
@@ -45,7 +45,7 @@ export const display = function () {
                             {
                             universitiesCards.map((item, index)=>{
                             return(
-                                <div class="universities_item">
+                                <div class="university_item">
                                     <img src={item.picture}></img>
                                     <div class="item_about">
                                         <a>{item.title}</a>
