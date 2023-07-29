@@ -18,6 +18,15 @@ const OpenApi = [
 
 
         }
+    },
+    {
+        method: "post",
+        url: "/open/bank",
+        fn: async (req, res) => {
+            return res.json(await Api.getBank({}));
+
+
+        }
     }
 ]
 
@@ -44,13 +53,28 @@ const UserApi = [
 
 
         }
+    },
+    {
+        method: "post",
+        url: "/user/bank/:type",
+        fn: async (req, res) => {
+            if (req.params.type == "get") {
+                return res.json(await Api.setBank(req.body));
+
+
+            } else if (req.params.type == "set") {
+                return res.json(await Api.getBank({}));
+            }
+
+
+        }
     }
 ]
 
 const BankApi = [
     {
         method: "post",
-        url: "/open/Bank/:type",
+        url: "/Bank/:type",
         fn: async (req, res) => {
             console.log(req.params.type)
             if (req.params?.type == "set") {
