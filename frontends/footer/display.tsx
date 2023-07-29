@@ -56,6 +56,7 @@ export const display = function () {
                             <a href="/article" onclick={this.Fn.link}>Статьи</a>
                             <a href="/test" onclick={this.Fn.link}>Тест на профориентацию</a>
                             <a href="/courses" onclick={this.Fn.link}>Повышение квалификации</a>
+                            
                         </div>
                     </div>
                     <div class="footer_contacts">
@@ -65,10 +66,13 @@ export const display = function () {
                                 {/* <img src={email}></img> */}
                                 <span>support@uchis.pro</span>
                             </a>
-                            <a class="footer_contacts_item" href="tel:+74952294280">
-                                {/* <img src={phone}></img> */}
-                                <span>+74952294280</span>
+                            <a href="/courses" onclick={this.Fn.link}>
+                                Скачать APK  для Android
                             </a>
+                            {/* <a class="footer_contacts_item" href="tel:+74952294280"> */}
+                                {/* <img src={phone}></img> */}
+                                {/* <span>+74952294280</span>
+                            </a> */}
                         </div>
                     </div>
                 </div>
