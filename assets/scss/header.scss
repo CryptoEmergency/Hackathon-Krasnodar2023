@@ -13,7 +13,6 @@
     // overflow: hidden;
 
 
-
     &_inner{
         display: flex;
         justify-content: space-between;
@@ -23,35 +22,30 @@
         // height: 80px;
     }
 
+    .menu_icon {
+        display: none;
+    }
+
     &_logo{
         img{
             width: 150px;
         }
     }
 
-    // &_education{
-    //     display: flex;  
-    //     flex-direction: column;
-    //     gap: 10px;
-
-    //     &_item{
-    //         border-radius: $borderR;
-    //         border: 1px solid $primary;
-    //         padding: 8px 10px;
-    //         text-align: center;
-    //         transition: all ease-in-out 0.35s;
-
-    //         &_active{
-    //             background: $primary;
-    //             color: $white;
-    //         }
-    //     }
-    // }
 
     &_icon{
-        width: 30px;
-        height: 30px;
+        // width: 30px;
+        // height: 30px;
         cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        img{
+            width: 25px;
+            height: 25px;
+        }
     }
 
     &_menu{
@@ -61,7 +55,7 @@
         &_list{
             display: flex;
             gap: 25px;
-            padding-right: 35px;
+            padding-right: 50px;
 
             &_item{
                 font-size: 16px;
@@ -71,11 +65,7 @@
         }
     }
 
-    &_details{
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
+
 
     &_search_box{
         position: relative;
@@ -132,5 +122,148 @@
         visibility: visible;
         transform: translate(0,0);
     }
+
+}
+
+@media (max-width: 767px){
+
+    .header{
+        &_inner{
+            position: relative;
+            height: 75px;
+        }
+
+        &_icon{
+            top: 23px;
+            transform: translate(0, 0);
+        }
+
+        &_logo{
+            position: absolute;
+            left: 50%;
+            top: 15px;
+            transform: translate(-50%, 0);
+        }
+
+        .menu_icon {
+            z-index: 15;
+            display: block;
+            // position: relative;
+            position: absolute;
+            left: 15px;
+            // top: 50%;
+            top: 35px;
+            transform: translate(0, -50%);
+            width: 30px;
+            height: 18px;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+    
+        .menu_icon span,
+        .menu_icon::before,
+        .menu_icon::after {
+            left: 0;
+            position: absolute;
+            height: 10%;
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: $main-text;
+        }
+    
+        .menu_icon::before,
+        .menu_icon::after {
+            content: '';
+        }
+    
+        .menu_icon::before {
+            top: 0;
+        }
+    
+        .menu_icon::after {
+            bottom: 0;
+        }
+    
+        .menu_icon span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+        }
+    
+        .menu_icon {
+            &.active {
+                span {
+                    transform: scale(0) translate(0, -50%);
+                }
+    
+                &::before {
+                    top: 50%;
+                    transform: rotate(-45deg) translate(0, -50%);
+                }
+    
+                &::after {
+                    bottom: 50%;
+                    transform: rotate(45deg) translate(0, 50%);
+                }
+            }
+        }
+
+        &_menu{
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            padding: 100px 20px 30px 20px;
+            background: $white;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            // overflow: auto;
+            overflow: hidden;
+            transition: left 0.3s ease 0s;
+            color: #ffffff;
+            justify-content: flex-start;
+    
+            // nav {
+            //     order: 1;
+            // }
+    
+            &.active::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 90px;
+                background-image: var(--mainGradient);
+                width: 100%;
+                z-index: 3;
+            }
+    
+    
+            &.active {
+                left: 0;
+            }
+        }
+    
+        &_list {
+            flex-direction: column;
+            align-items: center;
+    
+            &_item{
+                text-transform: uppercase;
+                font-size: 18px;
+            }
+        }
+
+        .header_search_box{
+            &_active{
+                transform: translate(0, 55px);
+            }
+        }
+    }
+
+   
 
 }

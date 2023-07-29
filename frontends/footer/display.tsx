@@ -11,14 +11,6 @@ const socials = [
         src: telegram
     },
     {
-        alt: 'Instagram',
-        src: insta
-    },
-    {
-        alt: 'Facebook',
-        src: facebook
-    },
-    {
         alt: 'Vkontakte',
         src: vk
     },
@@ -41,7 +33,7 @@ export const display = function () {
                             {
                                 socials.map((item, index)=>{
                                     return(
-                                        <a class="footer_social_item" href="#" target="_blank">
+                                        <a class="footer_social_item" href="#">
                                             <img src={item.src} alt={item.alt}></img>
                                         </a>
                                     )

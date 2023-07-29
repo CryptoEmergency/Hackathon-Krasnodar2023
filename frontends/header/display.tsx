@@ -33,21 +33,31 @@ export const display = function () {
                     <a href="/" onclick={this.Fn.link} class="header_logo">
                         <img src={logo}></img>
                     </a>
+
+                    <div 
+                        class="header_icon" 
+                        onclick={()=>{
+                            this.Static.search = !this.Static.search;
+                            this.init();
+                        }}>
+                        <img src={search}></img>
+                    </div>
+
+                    <div
+                        class="menu_icon"
+                        ref="burger"
+                        onclick={() => {
+                            this.Static.menuShow = !this.Static.menuShow
+                            this.Ref.menu.classList.toggle('active')
+                            this.Ref.burger.classList.toggle('active')
+                            this.init();
+                        }}
+                    >
+                        <span></span>
+                    </div>
                     
-                    <div class="header_menu">
-                        <div
-                            class="menu_icon"
-                            ref="burger"
-                            // onclick={() => {
-                            //     this.Static.menuShow = !this.Static.menuShow
-                            //     this.Ref.menu.classList.toggle('active')
-                            //     this.Ref.burger.classList.toggle('active')
-                            //     console.log(this.Static.menuShow);
-                            //     this.init();
-                            // }}
-                        >
-                            <span></span>
-                        </div>
+                    <div class="header_menu" ref="menu">
+                        
                         <nav>
                             <ul class="header_menu_list">
                                 <li class="header_menu_list_item">
@@ -69,39 +79,7 @@ export const display = function () {
                                     <a href="#">Статьи</a>
                                 </li>
                             </ul>
-                        </nav>
-                        <div class="header_details">
-                            <div 
-                                class="header_icon" 
-                                onclick={()=>{
-                                    this.Static.search = !this.Static.search;
-                                    this.init();
-                                }}>
-                                <img src={search}></img>
-                            </div>
-                            {/* <div class="header_education">
-                                <span 
-                                    class={["header_education_item", 
-                                    this.Static.education == 'СПО' ? "header_education_item_active" : null]}
-                                    onclick={()=>{
-                                        this.Static.education = 'СПО';
-                                        this.init();
-                                    }}
-                                >
-                                    СПО
-                                </span>
-                                <span 
-                                    class={["header_education_item", 
-                                    this.Static.education == 'Высшее' ? "header_education_item_active" : null]}
-                                    onclick={()=>{
-                                        this.Static.education = 'Высшее';
-                                        this.init();
-                                    }}
-                                >
-                                    Высшее
-                                </span>
-                            </div> */}
-                        </div>
+                        </nav>                      
                     </div>
                 </div>
                 
