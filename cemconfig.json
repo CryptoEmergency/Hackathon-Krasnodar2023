@@ -27,6 +27,30 @@
       ]
     },
     {
+      "url": "/vuz",
+      "front": [
+        "header",
+        "vuz",
+        "footer"
+      ]
+    },
+    {
+      "url": "/vuz/find",
+      "front": [
+        "header",
+        "vuzFind",
+        "footer"
+      ]
+    },
+    {
+      "url": "/training",
+      "front": [
+        "header",
+        "training",
+        "footer"
+      ]
+    },
+    {
       "regex": "/article",
       "front": [
         "header",

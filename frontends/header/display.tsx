@@ -34,9 +34,9 @@ export const display = function () {
                         <img src={logo}></img>
                     </a>
 
-                    <div 
-                        class="header_icon" 
-                        onclick={()=>{
+                    <div
+                        class="header_icon"
+                        onclick={() => {
                             this.Static.search = !this.Static.search;
                             this.init();
                         }}>
@@ -55,34 +55,31 @@ export const display = function () {
                     >
                         <span></span>
                     </div>
-                    
+
                     <div class="header_menu" ref="menu">
-                        
+
                         <nav>
                             <ul class="header_menu_list">
                                 <li class="header_menu_list_item">
-                                    <a href="#">Вузы</a>
+                                    <a href="/vuz" onclick={this.Fn.link}>Вузы</a>
                                 </li>
                                 <li class="header_menu_list_item">
-                                    <a href="#">Банки</a>
+                                    <a href="/banks" onclick={this.Fn.link}>Банки</a>
                                 </li>
                                 <li class="header_menu_list_item">
-                                    <a href="#">Программы</a>
+                                    <a href="/training"  onclick={this.Fn.link}>Повышение квалификации</a>
                                 </li>
                                 <li class="header_menu_list_item">
-                                    <a href="#">Тесты</a>
+                                    <a href="/vuz/find" onclick={this.Fn.link}>Подобрать вуз</a>
                                 </li>
                                 <li class="header_menu_list_item">
-                                    <a href="#">Абиетурентам</a>
-                                </li>
-                                <li class="header_menu_list_item">
-                                    <a href="#">Статьи</a>
+                                    <a href="/article" onclick={this.Fn.link}>Абиетурентам</a>
                                 </li>
                             </ul>
-                        </nav>                      
+                        </nav>
                     </div>
                 </div>
-                
+
             </div>
             <div class={["header_search_box", this.Static.search ? "header_search_box_active" : null]}>
                 <div class="wrapper">
@@ -109,18 +106,18 @@ export const display = function () {
                                     }
                                 </ul>
                             </div> */}
-                            <input 
+                            <input
                                 type="search"
-                                placeholder="Что Вас интересует ?" 
+                                placeholder="Что Вас интересует ?"
                                 class="header_input_search"
                             ></input>
                             <button class="btn search_blue">
                                 <img src={searchWhite}></img>
                             </button>
                         </div>
-                        <button 
+                        <button
                             class="btn btn_close"
-                            onclick={()=>{
+                            onclick={() => {
                                 this.Static.search = !this.Static.search;
                                 this.init();
                             }}
