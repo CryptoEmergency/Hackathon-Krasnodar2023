@@ -10,7 +10,7 @@ export const display = function () {
                 <div class="horizontal-line">
                     <div class="horizontal-line_1"></div>
                 </div>
-                
+
                 <div class="pole__regis">
                     <label class="auth__label">ФИО</label>
                     <input class="auth__input" type="text" placeholder="Ведите ФИО"
@@ -38,7 +38,8 @@ export const display = function () {
                 <div class="enter__data_1">
                     <button class="enter__data"
                         onclick={() => {
-                            let insert = {
+
+                         let insert = {
                                 insert: this.Static.applications
                             }
                             fetch("/api/open/applications/set", {
@@ -52,7 +53,7 @@ export const display = function () {
                                 .then((data) => {
                                     console.log(data);
                                 });
-                            
+
                             this.clearData()
                             this.Fn.initOne({
                                 name: "formResponse"
@@ -61,7 +62,7 @@ export const display = function () {
                     >
                         Внести данные
                     </button>
-                </div>               
+                </div>
             </div>
         </div>
     )

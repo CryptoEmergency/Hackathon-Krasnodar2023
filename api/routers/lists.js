@@ -87,7 +87,7 @@ const BankApi = [
     }
 ]
 
-const VuzApi = [
+const InstituteApi = [
     {
         method: "post",
         url: "/institute",
@@ -112,4 +112,4 @@ const TestBankApi = [
     }
 ]
 
-export default [...OpenApi, ...UserApi, ...BankApi, ...VuzApi, ...TestBankApi]
+export default [...OpenApi, ...UserApi, ...BankApi, ...InstituteApi, ...TestBankApi]
