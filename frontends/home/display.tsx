@@ -117,6 +117,45 @@ const universe = [
     },
 ]
 
+const banks = [
+    {
+        title: 'Сбербанк',
+    },
+    {
+        title: 'ВТБ',
+    },
+    {
+        title: 'Газпромбанк',
+    },
+    {
+        title: 'Альфа-Банк',
+    },
+    {
+        title: 'Россельхозбанк',
+    },
+    {
+        title: 'Райффайзенбанк',
+    },
+    {
+        title: 'Банк Москвы',
+    },
+    {
+        title: 'Банк Возрождение',
+    },
+    {
+        title: 'Банк Уралсиб',
+    },
+    {
+        title: 'Банк Открытие',
+    },
+    {
+        title: 'Банк Санкт-Петербург',
+    },
+    {
+        title: 'Банк Зенит',
+    },
+]
+
 let isDragging = false;
 let startX, startScrollLeft;
 let x1 = null;
@@ -126,9 +165,12 @@ export const display = function () {
     return (
         <main class="home page">
             
+            {/* <section class="main">
+
+            </section> */}
           
             <div class="wrapper">
-                <h2 class="section_title">Вузы</h2>
+                <h2 class="section_title">Высшие учебные заведения России</h2>
             </div>
             <section class="universities">
                 <div class="wrapper">
@@ -205,6 +247,19 @@ export const display = function () {
                 </div>
                 
             </section> 
+            <section class="banks">
+                <div class="wrapper">
+                    <div class="banks_inner">
+                        {
+                            banks.map((item, index)=>{
+                                return(
+                                    <div class="banks_item btn btn_default">{item.title}</div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            </section>
             <section class="courses">
                 <div class="wrapper">
                     <h2 class="section_title">Курсы</h2>
