@@ -34,6 +34,7 @@ export const display = function () {
                         this.records
                             ?
                             this.records.map((item, index) => {
+
                                 return (
                                     <div class="banksPage_item">
                                         <div class="banksPage_item_img">
@@ -46,7 +47,7 @@ export const display = function () {
                                             <p class="banksPage_item_text">Процентная ставка: <span class="main_text">{item.credit[0].interestRate}</span></p>
                                             <p class="banksPage_item_text">Сумма кредита: <span class="main_text">{item.credit[0].amountOfCredit}</span></p>
                                             <div class="f-center">
-                                                <a href="/form" onclick={()=>{this.Fn.link}} class="btn btn_default">
+                                                <a href="/form" onclick={this.Fn.link} class="btn btn_default">
                                                     <span>Подать заявку</span>
                                                     <img src={arrowBtn}></img>
                                                 </a>

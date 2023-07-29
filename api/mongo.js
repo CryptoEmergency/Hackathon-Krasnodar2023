@@ -34,29 +34,22 @@ db.on('open', function () {
     console.log('mongo db open');
 })
 
-const connectMongo = async function () {
-    mongoose.connect('mongodb://' + process.env.MDNAME + '@' + process.env.MDSERVER + '/' + process.env.MDBASE, options).then(() => {
-        console.log("Подключено к базе")
-        return true
-    }).catch((err) => {
-        console.error("Mongo err", err)
-        return false
-    });
-}
-const schemaMongo = async function () {
-    Object.keys(schemaLists).map((key) => {
-        Api[`get${key}`] = {}
-        Api[`set${key}`] = {}
-        if (schemaLists[key].get) {
-            Api[`get${key}`] = schemaLists[key].get
-        }
-        if (schemaLists[key].set) {
-            Api[`set${key}`] = schemaLists[key].set
-        }
-    })
-
+Object.keys(schemaLists).map((key) => {
+    Api[`get${key}`] = {}
+    Api[`set${key}`] = {}
+    if (schemaLists[key].get) {
+        Api[`get${key}`] = schemaLists[key].get
+    }
+    if (schemaLists[key].set) {
+        Api[`set${key}`] = schemaLists[key].set
+    }
+})
+mongoose.connect('mongodb://' + process.env.MDNAME + '@' + process.env.MDSERVER + '/' + process.env.MDBASE, options).then(() => {
+    console.log("Подключено к базе")
     return true
-}
-schemaMongo()
+}).catch((err) => {
+    console.error("Mongo err", err)
+    return false
+});
 
-export { Api, connectMongo, mongoose }
+export { Api, mongoose }
