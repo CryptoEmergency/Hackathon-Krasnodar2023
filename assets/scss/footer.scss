@@ -82,3 +82,14 @@
     }
   }
 }
+
+@media (max-width: 767px){
+  .footer{
+    &_inner{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 0 10px;
+    }
+  }
+}

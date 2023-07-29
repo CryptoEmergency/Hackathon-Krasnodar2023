@@ -266,15 +266,26 @@
             }
         }
 
-        
-
         .header_search_box{
             &_active{
                 transform: translate(0, 55px);
             }
         }
     }
+  
+}
 
-   
+@media (max-width: 600px){
+    .header{
+        &_menu{
+            &_list{
+                gap: 10px;
 
+                &_item{
+                    font-size: 14px;
+                }
+            }
+            
+        }
+    }
 }

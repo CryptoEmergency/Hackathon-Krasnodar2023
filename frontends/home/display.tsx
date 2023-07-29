@@ -128,6 +128,9 @@ const universe = [
 
 const banks = [
     {
+        title: 'Банк ЦЕНТР-ИНВЕСТ',
+    },
+    {
         title: 'Сбербанк',
     },
     {

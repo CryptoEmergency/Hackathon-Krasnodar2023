@@ -44,9 +44,12 @@ body {
     margin: 0px;
     padding: 0 !important;
     overflow: overlay;
+    overflow-x: hidden;
     color: $main-text;
     width: 100%;
     font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
 
     &::-webkit-scrollbar {
         width: 6px;

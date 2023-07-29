@@ -261,4 +261,20 @@ $backUniverse:(
     
   }
 }
-@media (max-width: 464px){}
+@media (max-width: 600px){
+  .universities{
+    &_item{
+      padding: 30px;
+    }
+    
+    &_prev, &_next{
+      display: none;
+    }
+  }
+
+  .courses{
+    &_wrap{
+      grid-template-columns: 1fr;
+    }
+  }
+}
