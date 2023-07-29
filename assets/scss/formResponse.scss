@@ -1,0 +1,43 @@
+.spinner {
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #1E90FF;
+    --_m: 
+        conic-gradient(#0000 10%,#000),
+        linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+    animation: s3 1s infinite linear;
+}
+@keyframes s3 {to{transform: rotate(1turn)}}
+
+.modal {
+    &__bank {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &_item {
+            margin-top: 20px;
+            
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        span {
+            margin-right: 30px;
+        }
+        
+        img {
+            width: 80px;
+        }
+    }
+}

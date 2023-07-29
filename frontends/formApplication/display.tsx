@@ -28,7 +28,6 @@ export const display = function () {
                         Внести данные
                     </button>
                 </div>               
-                <div class="loader"></div>                
             </div>
         </div>
     )
