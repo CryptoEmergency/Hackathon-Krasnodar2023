@@ -82,17 +82,20 @@ export const display = function () {
                             this.records
                                 ?
                                 this.records.map((item, index) => {
+                                    // console.log(index)
                                     return (
+                                        
                                         <div class="bank_item">
-                                            {/* <a href=""><img src={item.picture}></img></a>
+                                            
+                                            <a href=""><img src={item.picture}></img></a>
                                     <div class="item_about">
-                                        <span>{item.city}</span>
-                                        <a>{item.title}</a>
+                                        {/* <span>{item.city}</span> */}
+                                        <a>{item[index].credit[0].nameCredit}</a>
                                         <span>{item.programms_number}</span>
                                         <div class= "price-offer">
                                             <p>о{item.price_from}р</p>
                                             <p><span>{item.bank}</span></p>
-                                        </div> */}
+                                        </div>
 
                                         </div>
 
