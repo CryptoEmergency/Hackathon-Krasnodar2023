@@ -1,22 +1,24 @@
 import { Api } from '../mongo.js';
+import * as crypto from 'crypto';
 
 const checkApi = async (req) => {
-    if (!req.headers["x-key"] || !req.headers["x-sign"] || !req.headers["x-timmestamp"]) {
+    if (!req.headers["x-key"] || !req.headers["x-sign"] || !req.headers["x-timestamp"]) {
         return false
     }
-    let item = await Api.getBank({ filter: { api: req.headers["x-key"] } })
-    console.log("checkApi", item)
 
-    let hmac = crypto.createHmac("sha256", item?.secretApi);
-    let str = req.headers["x-timmestamp"] + "#" + JSON.stringify(req.body)
+    let item = await Api.getBank({ filter: { api: req.headers["x-key"] } })
+    if (!item || !item[0]?.secretApi) {
+        return false
+    }
+    let secretApi = item[0]?.secretAp
+
+    let hmac = crypto.createHmac("sha256", secretApi);
+    let str = req.headers["x-timestamp"] + "#" + JSON.stringify(req.body)
     let signature = hmac.update(Buffer.from(str, 'utf-8')).digest("hex");
 
     if (signature != req.headers["x-sign"]) {
         return false
     }
-    console.log("item", item)
-
-
     return true
 }
 
@@ -97,4 +99,17 @@ const VuzApi = [
     }
 ]
 
-export default [...OpenApi, ...UserApi, ...BankApi, ...VuzApi]
+const TestBankApi = [
+    {
+        method: "post",
+        url: "/TestBank",
+        fn: async (req, res) => {
+            if (await checkApi(req) === false) {
+                return res.json({ error: "Доступ запрещен" });
+            }
+            return res.json({ status: "ok" });
+        }
+    }
+]
+
+export default [...OpenApi, ...UserApi, ...BankApi, ...VuzApi, ...TestBankApi]

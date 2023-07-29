@@ -27,8 +27,8 @@ data.schema = new mongoose.Schema(
 
 const model = mongoose.model(data.collection, data.schema);
 
-data.get = async function () {
-    const query = model.find({});
+data.get = async function ({ filter = {} }) {
+    const query = model.find(filter);
     return await query.exec();
 }
 
