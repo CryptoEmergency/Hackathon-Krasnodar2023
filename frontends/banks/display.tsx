@@ -3,7 +3,11 @@ import arrowBtn from '@svg/icons/arrowBtn.svg'
 import university1 from '@images/universities/1.jpg'
 import university2 from '@images/universities/2.jpg'
 import university3 from '@images/universities/3.jpg'
-
+import sber from '@svg/banks/sber.svg'
+import alfa from '@svg/banks/alfa.png'
+import rnkb from '@svg/banks/rnkb.svg'
+import vtb from '@svg/banks/vtb.png'
+import raiffeisen from '@svg/banks/raiff.png'
 
 // const universitiesCards =[
 //     {
@@ -70,6 +74,24 @@ import university3 from '@images/universities/3.jpg'
 
 // ]
 
+const banks_logo=[
+    {
+        'sber' : sber
+    },
+    {
+        'alfa' :alfa
+    },
+    {
+        'rnkb' :  rnkb
+    },
+    {
+        'vtb' :vtb
+    },
+    {
+        'raiffeisen' : raiffeisen
+    },
+]
+
 export const display = function () {
     console.log(this.records)
     return (
@@ -77,7 +99,10 @@ export const display = function () {
             <div class="wrapper">
                 <h2 class="section_banks">Банки</h2>
                 <section class="banks">
-                    <div class="universities_list">
+                    <div class="banks_list">
+                        <div class="logo">
+                           
+                        </div>
                         {
                             this.records
                                 ?
@@ -86,26 +111,25 @@ export const display = function () {
                                     return (
                                         
                                         <div class="bank_item">
-                                            
-                                            <a href=""><img src={item.picture}></img></a>
+                
+                                            <a href=""><img src={sber}></img></a>
                                     <div class="item_about">
-                                        {/* <span>{item.city}</span> */}
-                                        <a>{item[index].credit[0].nameCredit}</a>
-                                        <span>{item.programms_number}</span>
+                                        <a>{item.credit[0].nameCredit}</a>
+                                        <a>{item.name}</a>
                                         <div class= "price-offer">
-                                            <p>о{item.price_from}р</p>
-                                            <p><span>{item.bank}</span></p>
+                                            {/* <p>{item.price_from}</p> */}
+                                            {/* <p><span>{item.bank}</span></p> */}
+                                        </div>
                                         </div>
 
-                                        </div>
-
-                                        // </div>
+                                    </div>
                                     )
                                 })
 
                                 :
                                 null
                         }
+
                     </div>
                 </section>
             </div>

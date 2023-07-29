@@ -1,0 +1,123 @@
+@import 'utils/variables.scss';
+.section_banks{
+    margin-top: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: xxx-large;
+}
+
+
+.banks{
+    display: flex;
+    justify-content: center;
+    margin-inline: 15px;
+}
+
+
+
+.banks_list{
+    display: grid;
+    grid-template-columns: repeat(1, 1000px);
+    gap: 20px;
+    min-height: 208px;
+
+    .bank_item{
+        // min-height: 208px;
+        display: flex;
+        box-shadow: 5px 10px 20px rgba(0,0,0,0.25);
+        border-radius: $borderR ;
+        
+    img{
+        height:200px;
+        float:left;
+        margin-right: 1em;
+        border-radius: $borderR 0 0 $borderR;
+    }
+    
+    .item_about{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 20px;
+        justify-content: space-between;
+
+        .price-offer{
+            display: flex;
+            justify-content: space-between;
+
+            p span{
+                color: #1454F2;
+            }
+        }
+
+
+        a {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+            cursor: pointer;
+        }
+    }
+}   
+}
+
+
+
+
+@media(max-width: 992px) {
+    .banks{
+        margin-inline: 10px
+    }
+    .banks_list{
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr); 
+        .university_item{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+
+
+
+            .item_about{
+                min-height: 230px;
+            }
+            img{
+                height: none;
+                width: 100%;
+                border-radius: $borderR $borderR 0 0;
+                margin :0;
+            }
+        }
+    }
+}
+
+  @media(max-width: 767px) {
+    .banks{
+        margin-inline: 10px
+    }
+    .banks_list{
+        grid-template-columns: repeat(1, 1fr); 
+        .university_item{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+
+
+            .item_about{
+                min-height: 230px;
+            }
+            img{
+                height: none;
+                width: 100%;
+                border-radius: $borderR $borderR 0 0;
+                margin :0;
+            }
+        }
+    }
+}
+//   @media(max-width: 464px) {
+//     .article_list{
+//         ; 
+//     }
+//   }
