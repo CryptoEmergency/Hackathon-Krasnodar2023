@@ -4,8 +4,8 @@ const checkApi = async (req) => {
     if (!req.headers["x-key"] || !req.headers["x-sign"] || !req.headers["x-timmestamp"]) {
         return false
     }
-    let item = await Api.getOrganization({ filter: { api: req.headers["x-key"] } })
-
+    let item = await Api.getBank({ filter: { api: req.headers["x-key"] } })
+    console.log("checkApi", item)
 
     let hmac = crypto.createHmac("sha256", item?.secretApi);
     let str = req.headers["x-timmestamp"] + "#" + JSON.stringify(req.body)
@@ -96,20 +96,11 @@ const BankApi = [
 const VuzApi = [
     {
         method: "post",
-        url: "/vuz",
+        url: "/institute",
         fn: async (req, res) => {
             if (!checkApi(req)) {
                 return res.json({ error: "Доступ запрещен" });
             }
-
-            if (req.params?.type == "set") {
-                console.log("request.body", req.body);
-                return res.json(await Api.setBank(req.body));
-            } else {
-                console.log("request.body get", req.params);
-                return res.json(await Api.getBank({}));
-            }
-            console.log("req.params", req.params)
 
         }
     }
