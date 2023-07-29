@@ -56,7 +56,8 @@ export const display = function () {
 
                             this.clearData()
                             this.Fn.initOne({
-                                name: "formResponse"
+                                name: "formResponse",
+                                data:{item:insert}
                             })
                         }}
                     >

@@ -1,4 +1,5 @@
 export const loader = function () {
+    console.log(this.Static.item)
     this.Static.sber = {
         active: false,
         approved: false,

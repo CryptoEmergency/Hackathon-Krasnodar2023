@@ -1,6 +1,20 @@
 import { Api } from '../mongo.js';
 import * as crypto from 'crypto';
 
+const makeSign = (data) => {
+    const timestamp = new Date().getTime()
+    let hmac = crypto.createHmac("sha256", process.env.BANKSECRETKEY);
+    let str = timestamp + "#" + JSON.stringify(data)
+    let signature = hmac.update(Buffer.from(str, 'utf-8')).digest("hex");
+    const headersOpt = {
+        "content-type": "application/json",
+        'X-KEY': process.env.BANKAPIKEY,
+        'X-SIGN': signature,
+        'X-TIMESTAMP': timestamp
+    };
+    return headersOpt
+}
+
 const checkApi = async (req) => {
     if (!req.headers["x-key"] || !req.headers["x-sign"] || !req.headers["x-timestamp"]) {
         return false
@@ -118,16 +132,28 @@ const TestBankApi = [
             if (await checkApi(req) === false) {
                 return res.json({ error: "Доступ запрещен" });
             }
+            let tim = Math.floor(Math.random() * 6000)
+            setTimeout(() => {
+                let data = { action: "get", data: { filter: { g: 1 } } }
+                let headersOpt = makeSign(data)
+
+                fetch("http://127.0.0.1:5678/api/FromBank", {
+                    method: "POST",
+                    headers: headersOpt,
+                    body: JSON.stringify(data),
+                })
+            }, tim);
             return res.json({ status: "ok" });
         }
     },
     {
         method: "post",
-        url: "/TestBank",
+        url: "/FromBank",
         fn: async (req, res) => {
             if (await checkApi(req) === false) {
                 return res.json({ error: "Доступ запрещен" });
             }
+            console.log("FromBank", req.body)
             return res.json({ status: "ok" });
         }
     }
