@@ -86,6 +86,9 @@ const banks_logo =
 
 }
 
+const slicedArray = universitiesCards.slice(2)
+// console.log(slicedArray)
+
 export const display = function () {
     return (
         <main class="recommendation page">
@@ -97,50 +100,52 @@ export const display = function () {
                         <img src={arrowBtn}></img>
                     </a>
                 </div>
-                
-                <div class="univer_list">
-                        {
-                            universitiesCards.map((item, index)=>{
-                                return(
-                                    <div class="univer_item">
-                                        <div class="univer_item_img">
-                                            <img src={item.picture}></img>
-                                        </div>
-                                        <div class="univer_item_info">
-                                            <h5 class="univer_item_title">{item.title}</h5>
-                                            <div class="f-col2">
-                                                <span>{item.city}</span>
-                                                <span>Специальностей: {item.programms_number}</span>
+                <div class = "recommendation_univer">
+                    <div class="recommendation_univer_list">
+                            {
+                                slicedArray.map((item, index)=>{
+                                    return(
+                                        <div class="recommendation_univer_item">
+                                            <div class="recommendation_univer_item_img">
+                                                <img src={item.picture}></img>
                                             </div>
-                                            <div>
-                                                <p> от <span class="main_text">{item.price_from}</span> р/год</p>
-                                                <p>Лучшее предложение от банка <span class="main_text">{item.bank}</span></p>
+                                            <div class="recommendation_univer_item_info">
+                                                <h5 class="recommendation_univer_item_title">{item.title}</h5>
+                                                <div class="f-col2">
+                                                    <span>{item.city}</span>
+                                                    <span>Специальностей: {item.programms_number}</span>
+                                                </div>
+                                                <div>
+                                                    <p> от <span class="main_text">{item.price_from}</span> р/год</p>
+                                                    <p>Лучшее предложение от банка <span class="main_text">{item.bank}</span></p>
+                                                </div>
                                             </div>
+                    
                                         </div>
-                
-                                    </div>
-                                  
-                                )
-                            })
-                        }
+                                    
+                                    )
+                                })
+                            }
+                    </div>
                 </div>
 
-                <section class="recommendation_inner">
+                <section class="bank_offer_inner">
+                <h2>Предложения банков</h2>
                     {
                         this.records
                             ?
                             this.records.map((item, index) => {
                                 return (
-                                    <div class="recommendation_item">
-                                        <div class="banksPage_item_img">
+                                    <div class="bank_offer_item">
+                                        <div class="bank_offer_item_img">
                                             <img src={banks_logo[item.logo]}></img>
                                         </div>
-                                        <div class="recommendation_item_info">
-                                            <h5 class="recommendation_item_title">{item.name}</h5>
-                                            <span class="recommendation_item_text">{item.credit[0].nameCredit}</span>
-                                            <p class="recommendation_item_text">Срок: <span class="main_text">{item.credit[0].creditTerm}</span></p>
-                                            <p class="recommendation_item_text">Процентная ставка: <span class="main_text">{item.credit[0].interestRate}</span></p>
-                                            <p class="recommendation_item_text">Сумма кредита: <span class="main_text">{item.credit[0].amountOfCredit}</span></p>
+                                        <div class="bank_offer_item_info">
+                                            <h5 class="bank_offer_item_title">{item.name}</h5>
+                                            <span class="bank_offer_item_text">{item.credit[0].nameCredit}</span>
+                                            <p class="bank_offer_item_text">Срок: <span class="main_text">{item.credit[0].creditTerm}</span></p>
+                                            <p class="bank_offer_item_text">Процентная ставка: <span class="main_text">{item.credit[0].interestRate}</span></p>
+                                            <p class="bbank_offer_item_text">Сумма кредита: <span class="main_text">{item.credit[0].amountOfCredit}</span></p>
                                         </div>
 
                                     </div>
