@@ -1,0 +1,49 @@
+@import 'utils/variables.scss';
+
+.coursePage{
+  .courses_wrap{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .course{
+      padding-bottom: 50px;
+      height: auto;
+
+      &_desc{
+        margin: 15px 0;
+      }
+
+      &_img{
+        top: auto;
+        bottom: 10px;
+        transform: translate(0);
+      }
+
+
+      .btn_circle{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        padding: 10px;
+
+        img{
+          width: 20px;
+          height: 20px;
+          
+        }
+      }
+
+    }
+
+    @media (max-width: 767px){
+      grid-template-columns: 1fr;
+    }
+  }
+    
+}
+
+@media (max-width: 1239px){
+  .coursePage{
+    padding: 100px 10px 25px 10px;
+  }
+}

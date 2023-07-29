@@ -195,6 +195,10 @@ section{
     }
 }
 
+.btn_circle{
+    border-radius: $ellipse;
+}
+
 .dropdown{
     background: $white;
     // display: flex;
@@ -299,6 +303,68 @@ section{
     }
 
     
+}
+
+.popup_wrapper {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 5;
+  
+    .item_popup {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 30px;
+        background-color: #fff;
+        width: 50px;
+        max-height: 50px;
+        transition: width .3s .5s ease-in-out, max-height .5s ease-in-out;
+
+        .popup_button {
+            box-sizing: border-box;
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 0 10px 0 0;
+            color: #fff;
+            background-color: #ff5252;
+            font-size: 35px;
+            font-family: Montserrat;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+            border: 5px solid #fff;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            transition: .2s ease-in-out;
+        }
+        .popup_content {        
+            margin: 0;
+            padding: 17px 22px;   
+            color: transparent;
+            font-size: 0;
+            line-height: 1.25;
+            font-family: Montserrat;
+            transition: font-size .5s .3s, color .3s;            
+        }
+      
+        &:hover {
+            width: 310px;
+            min-height: 50px;
+            max-height: 5000px;
+            transition: .5s ease-in-out;
+            
+            .popup_button {
+                transform: rotate(45deg);
+            }
+            .popup_content {
+                font-size: 14px;                
+                transition: font-size .5s .3s, color .5s .8s;
+                color: #3f3f3f;
+            }
+        }
+    }
 }
 
 // beauty

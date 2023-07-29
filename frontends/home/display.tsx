@@ -184,6 +184,19 @@ export const display = function () {
                 </div>
             </section>
           
+            <section class="about">
+                <div class="wrapper">
+                    <h2 class="section_title">Финансовая онлайн платформа для абитуриентов</h2>
+                    <div class="about_inner">
+                        <div class="about_item">
+                            <div>
+                                <img></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <div class="wrapper title_wrap">
                 <div class="circle_effect lightPink">
                     <img src={brain}></img>
