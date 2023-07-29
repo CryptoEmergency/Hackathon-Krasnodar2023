@@ -72,7 +72,7 @@ const universitiesCards =[
 
 export const display = function () {
     return (
-        <main class="home page">
+        <main class="univer page">
             <div class="wrapper">
                 <div class="main_title_wrap">
                     <h2 class="section_title">Вузы</h2>
@@ -81,32 +81,32 @@ export const display = function () {
                         <img src={arrowBtn}></img>
                     </a>
                 </div>
-                    <section class="univer">
-                        <div class="universities_list">
-                            {
-                                universitiesCards.map((item, index)=>{
-                                    return(
-                                        <div class="university_item">
-                                            <a href=""><img src={item.picture}></img></a>
-                                            <div class="item_about">
-                                                <a href="">{item.title}</a>
-                                                <div class="">
-                                                    <span>{item.city}</span>
-                                                    <span>Специальностей:{item.programms_number}</span>
-                                                </div>
-                                                
-                                                <div class= "price-offer">
-                                                    <p>от {item.price_from}р/год</p>
-                                                    <p>Лучшее предложение от банка <span>{item.bank}</span></p>
-                                                </div>
-                                            </div>
-
+                    <div class="univer_list">
+                        {
+                            universitiesCards.map((item, index)=>{
+                                return(
+                                    <div class="univer_item">
+                                        <div class="univer_item_img">
+                                            <img src={item.picture}></img>
                                         </div>
-                                    )
-                                })
-                            }
-                        </div>
-                </section> 
+                                        <div class="univer_item_info">
+                                            <h5 class="univer_item_title">{item.title}</h5>
+                                            <div class="f-col2">
+                                                <span>{item.city}</span>
+                                                <span>Специальностей: {item.programms_number}</span>
+                                            </div>
+                                            <div>
+                                                <p> от <span class="main_text">{item.price_from}</span> р/год</p>
+                                                <p>Лучшее предложение от банка <span class="main_text">{item.bank}</span></p>
+                                            </div>
+                                        </div>
+                
+                                    </div>
+                                  
+                                )
+                            })
+                        }
+                    </div>
             </div>
         </main>
     )

@@ -21,6 +21,10 @@
             flex-direction: column;
             justify-content: space-between;
             gap: 15px;
+
+            .btn{
+                padding: 10px 20px;
+            }
         }
 
         &_title{

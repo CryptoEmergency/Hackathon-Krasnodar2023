@@ -93,6 +93,12 @@
       "front": [
         "formApplication"
       ]
+    },
+    {
+      "url": "/form/response",
+      "front": [
+        "formResponse"
+      ]
     }
   ],
   "hook": {

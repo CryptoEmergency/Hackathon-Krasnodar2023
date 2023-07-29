@@ -90,7 +90,13 @@ export const display = function () {
     return (
         <main class="courses coursePage page">
             <div class="wrapper">
-                <h2 class="section_title">Курсы повышения квалицикации</h2>
+                <div class="main_title_wrap">
+                    <h2 class="section_title">Курсы повышения квалицикации</h2>
+                    <a href="/form" onclick={()=>{this.Fn.link}} class="btn btn_default">
+                        <span>Подать заявку</span>
+                        <img src={arrowBtn}></img>
+                    </a>
+                </div>
                 <div class="courses_wrap coursePage_wrap">
                     {
                         courses.map((item, index) => {
