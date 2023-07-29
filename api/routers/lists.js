@@ -1,6 +1,16 @@
 import { Api } from '../mongo.js';
 
 
+const checkApi = async (req) => {
+    console.log("request.body", req.body, req.headers);
+    if (!req.headers["x-key"] || !req.headers["x-sign"] || !req.headers["x-timmestamp"]) {
+        return false
+    }
+    let item = await Api.getOrganization({ filter: {} })
+    console.log("item", item)
+    return true
+}
+
 const OpenApi = [
     {
         method: "post",
@@ -101,7 +111,26 @@ const BankApi = [
 ]
 
 const VuzApi = [
+    {
+        method: "post",
+        url: "/vuz",
+        fn: async (req, res) => {
+            console.log("1111")
+            if (!checkApi(req)) {
+                return res.json({ error: "Доступ запрещен" });
+            }
 
+            if (req.params?.type == "set") {
+                console.log("request.body", req.body);
+                return res.json(await Api.setBank(req.body));
+            } else {
+                console.log("request.body get", req.params);
+                return res.json(await Api.getBank({}));
+            }
+            console.log("req.params", req.params)
+
+        }
+    }
 ]
 
 export default [...OpenApi, ...UserApi, ...BankApi, ...VuzApi]

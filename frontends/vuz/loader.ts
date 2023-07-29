@@ -1,5 +1,5 @@
 export const loader = function () {
-  
+
     fetch("/api/open/vuz", {
         method: "POST",
         headers: {
