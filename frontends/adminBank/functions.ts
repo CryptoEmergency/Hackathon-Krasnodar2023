@@ -8,9 +8,13 @@ const fn = {
             result += characters.charAt(Math.floor(Math.random() * charactersLength));
             counter += 1;
         }
-        
-        return this.Static.key = result
+
+        if(result.length > 30) {
+            return this.Static.key.secretKey = result
+        } else {
+            return this.Static.key.api = result
+        }
     }
 }
 
-export default fn 
+export { fn }

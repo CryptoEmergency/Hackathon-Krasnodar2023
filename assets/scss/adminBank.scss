@@ -12,15 +12,26 @@
         }
     }
 
-    &_key {
+    &_keys {
         position: absolute;
         top: 40px;
         right: 0;
-        width: 26px;
-        cursor: pointer;
-        
-        &:hover {
-            opacity: 0.8;
+
+        img {
+            position: absolute;
+            right: 0;
+            width: 26px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        & .keys {
+            padding-top: 60px;
+            font-size: 14px;
+            font-weight: 600;
         }
     }
 

@@ -9,14 +9,51 @@ export const display = function () {
                 style={this.Static.bank?.credit.length == 0 ? "height: 100vh" : "height: 100%"}
             >
                 <div class="admin__container admin__bank">
-                    <img class="admin__bank_key" src={key} 
-                        onclick={() => {
-                            this.fn("makeKey", 16)
-                            this.Fn.initOne({
-                                name: "formForKey"
-                            })
-                        }}
-                    />
+                    <div class="admin__bank_keys">
+                        <img src={key} 
+                            onclick={() => {
+                                if (this.Static.count > 0) {
+                                    this.fn("makeKey", 32)
+                                    this.fn("makeKey", 16)
+                                    this.Static.count--
+                                    this.Static.key.type = "bank"
+                                    this.Static.key.idType = this.records[0]._id
+                                    let insert = {
+                                        insert: this.Static.key
+                                    }
+                                    // fetch("/api/user/key/set", {
+                                    //     method: "POST",
+                                    //     headers: {
+                                    //         "Content-Type": "application/json",
+                                    //     },
+                                    //     body: JSON.stringify(insert),
+                                    // })
+                                    //     .then((response) => response.json())
+                                    //     .then((data) => {
+                                    //         console.log(data);
+                                    //     });
+
+                                    this.init()
+                                }
+                            }}
+                        />
+                        {
+                            this.Static.key.secretKey && this.Static.key.api
+                            ?
+                            <div class="keys">
+                                <div>
+                                    Secret key: {this.Static.key.secretKey}
+                                </div>
+                                <div>
+                                    API: {this.Static.key.api}
+                                </div>
+                            </div>
+                            :
+                            null
+                        }
+                        
+                    </div>
+                    
                     <h2 style="padding-bottom:20px">Административная панель</h2>
                     <div class="admin__wrapper">
                         <div class="admin__bank_title">

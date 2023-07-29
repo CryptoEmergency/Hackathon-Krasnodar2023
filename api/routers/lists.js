@@ -70,6 +70,17 @@ const UserApi = [
                 return res.json(await Api.setInstitute(req.body));
             }
         }
+    },
+    {
+        method: "post",
+        url: "/user/key/:type",
+        fn: async (req, res) => {
+            if (req.params?.type == "get") {
+                return res.json(await Api.getKey());
+            } else if (req.params?.type == "set") {
+                return res.json(await Api.setKey(req.body));
+            }
+        }
     }
 ]
 
