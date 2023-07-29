@@ -85,3 +85,42 @@
         }
     }
 }
+@media (max-width:500px){
+    .modal__conteiner{
+        width: 375px;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }   
+    .title__st{
+        font-size: 25px;
+    }
+    .modal_span{
+        display: none;
+    }
+    .modal__bank_logo{
+        width: 80px;
+    }
+    .modal__bank_item{
+        font-size: 15px;
+
+    }
+    .modal__bank_img{
+        width: 25px;
+    }
+    // .modal__bank_approved{
+    //     width: 80px;
+    //     font-size:10px;
+    // }
+}
+@media(min-width:500px) and (max-width:600px){
+    .modal_span{
+        font-size: 18px;        
+    }
+    .modal__bank_img{
+        right: -4px;
+    }
+    .modal__bank_approved{
+        right: 40px;
+    }
+}

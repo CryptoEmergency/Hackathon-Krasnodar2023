@@ -19,7 +19,7 @@ export const display = function () {
 
                 <div class="modal__bank">
                     <div class="modal__bank_item">
-                        <span>Сбербанк</span>
+                        <span class="modal_span">Сбербанк</span>
                         <img class="modal__bank_logo" src={sber} />
                     </div>
                     {
@@ -42,7 +42,7 @@ export const display = function () {
 
                 <div class="modal__bank">
                     <div class="modal__bank_item">
-                        <span>Альфа-Банк</span>
+                        <span class="modal_span">Альфа-Банк</span>
                         <img class="modal__bank_logo" src={alfa} />
                     </div>
                     {
@@ -66,7 +66,7 @@ export const display = function () {
 
                 <div class="modal__bank">
                     <div class="modal__bank_item">
-                        <span>Райффайзенбанк</span>
+                        <span class="modal_span">Райффайзенбанк</span>
                         <img class="modal__bank_logo" src={raiffeisen} />
                     </div>
                     {
