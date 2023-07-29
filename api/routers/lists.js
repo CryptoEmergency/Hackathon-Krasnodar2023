@@ -39,8 +39,7 @@ const OpenApi = [
         method: "post",
         url: "/open/applications/:type",
         fn: async (req, res) => {
-
-            if (req.params.type == "set") {
+            if (req.params?.type == "set") {
                 return res.json(await Api.setApplications(req.body));
             }
         }
@@ -52,10 +51,9 @@ const UserApi = [
         method: "post",
         url: "/user/bank/:type",
         fn: async (req, res) => {
-            if (req.params.type == "get") {
+            if (req.params?.type == "get") {
                 return res.json(await Api.getBank());
-
-            } else if (req.params.type == "set") {
+            } else if (req.params?.type == "set") {
                 return res.json(await Api.setBank(req.body));
             }
         }
@@ -64,10 +62,9 @@ const UserApi = [
         method: "post",
         url: "/user/institute/:type",
         fn: async (req, res) => {
-            if (req.params.type == "get") {
+            if (req.params?.type == "get") {
                 return res.json(await Api.getInstitute());
-
-            } else if (req.params.type == "set") {
+            } else if (req.params?.type == "set") {
                 return res.json(await Api.setInstitute(req.body));
             }
         }
@@ -79,16 +76,11 @@ const BankApi = [
         method: "post",
         url: "/Bank/:type",
         fn: async (req, res) => {
-            console.log(req.params.type)
             if (req.params?.type == "set") {
-                console.log("request.body", req.body);
                 return res.json(await Api.setBank(req.body));
             } else {
-                console.log("request.body get", req.params);
                 return res.json(await Api.getBank({}));
             }
-            // console.log("req.params", req.params)
-
         }
     }
 ]
@@ -101,7 +93,6 @@ const VuzApi = [
             if (!checkApi(req)) {
                 return res.json({ error: "Доступ запрещен" });
             }
-
         }
     }
 ]
