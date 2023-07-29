@@ -165,9 +165,9 @@ export const display = function () {
     return (
         <main class="home page">
             
-            {/* <section class="main">
+            <section class="main">
 
-            </section> */}
+            </section>
           
             <div class="wrapper">
                 <h2 class="section_title">Высшие учебные заведения России</h2>

@@ -18,6 +18,26 @@ $backCourses: (
   padding-top: 20%;
   transform-style: inherit;
   width: 100vw;
+
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+    transform-origin: center;
+    min-height: 100vh;
+    background-image: url('images/mainBack.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s;
+    /* Параллакс */
+    transform: translateZ(-1px);
+
+  }
 }
 
 .universities{
@@ -191,6 +211,16 @@ $backCourses: (
         width: 20px;
         height: 20px;
       }
+    }
+  }
+
+  .banks{
+    &_inner{
+      gap: 15px;
+    }
+    &_item{
+      font-size: 14px;
+      padding: 12px 22px;
     }
   }
 
