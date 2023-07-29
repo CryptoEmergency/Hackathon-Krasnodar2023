@@ -95,6 +95,12 @@
       "front": [
         "adminRegistration"
       ]
+    },
+    {
+      "url": "/form",
+      "front": [
+        "formApplication"
+      ]
     }
   ],
   "hook": {
