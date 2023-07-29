@@ -43,6 +43,14 @@
       ]
     },
     {
+      "url": "/vuz/find/test_response",
+      "front": [
+        "header",
+        "vuzFind",
+        "footer"
+      ]
+    },
+    {
       "regex": "/article",
       "front": [
         "header",
