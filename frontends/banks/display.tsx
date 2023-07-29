@@ -6,70 +6,6 @@ import rnkb from '@svg/banks/rnkb.svg'
 import vtb from '@svg/banks/vtb.png'
 import raiffeisen from '@svg/banks/raiff2.png'
 
-// const universitiesCards =[
-//     {
-//         id: 1,
-//         title: "Санкт-Петербургский реставрационно-строительный институт",
-//         city: "Санкт-Петербург",
-//         price_from: "100 000",
-//         programms_number: "16",
-//         desc: "Дизайн; реставрация и ещё 9 направлений",
-//         picture: university1,
-//         bank: "ЦЕНТР-ИНВЕСТ"
-//     },
-//     {
-//         id: 2,
-//         title: "Санкт-Петербургский филиал Национального исследовательского университета «Высшая школа экономики»",
-//         city: "Санкт-Петербург",
-//         price_from: "360 000",
-//         programms_number: "43",
-//         desc: "Дизайн; реставрация и ещё 9 направлений",
-//         picture: university2,
-//         bank: "Тинькоф"
-//     },
-//     {
-//         id: 3,
-//         title: "Московский технический университет связи и информатики",
-//         city: "Санкт-Петербург",
-//         price_from: "80 000",
-//         programms_number: "16",
-//         desc: "Дизайн; реставрация и ещё 9 направлений",
-//         picture: university3,
-//         bank: "Райффайзен"
-//     },
-//     {
-//         id: 1,
-//         title: "Санкт-Петербургский реставрационно-строительный институт",
-//         city: "Санкт-Петербург",
-//         price_from: "100 000",
-//         programms_number: "16",
-//         desc: "Дизайн; реставрация и ещё 9 направлений",
-//         picture: university1,
-//         bank: "ЦЕНТР-ИНВЕСТ"
-//     },
-//     {
-//         id: 2,
-//         title: "Санкт-Петербургский филиал Национального исследовательского университета «Высшая школа экономики»",
-//         city: "Санкт-Петербург",
-//         price_from: "360 000",
-//         programms_number: "43",
-//         desc: "Дизайн; реставрация и ещё 9 направлений",
-//         picture: university2,
-//         bank: "Сбербанк"
-//     },
-//     {
-//         id: 3,
-//         title: "Московский технический университет связи и информатики",
-//         city: "Санкт-Петербург",
-//         price_from: "80 000",
-//         programms_number: "16",
-//         desc: "Дизайн; реставрация и ещё 9 направлений",
-//         picture: university3,
-//         bank: "Альфа Банк"
-//     },
-
-
-// ]
 
 const banks_logo =
 {
@@ -82,46 +18,42 @@ const banks_logo =
 }
 
 export const display = function () {
-    // console.log(this.records)
     return (
-        <main class="home page">
+        <main class="banksPage page">
             <div class="wrapper">
-                <h2 class="section_banks">Банки</h2>
-                <section class="banks">
-                    <div class="banks_list">
-                        <div class="logo">
-
-                        </div>
-                        {
-                            this.records
-                                ?
-                                this.records.map((item, index) => {
-                                    // console.log(item, banks_logo[item.logo])
-                                    return (
-
-                                        <div class="bank_item">
-
+                <div class="main_title_wrap">
+                    <h2 class="section_title">Банки</h2>
+                    <a href="/form" onclick={()=>{this.Fn.link}} class="btn btn_default">
+                        <span>Подать заявку</span>
+                        <img src={arrowBtn}></img>
+                    </a>
+                </div>
+                <section class="banksPage_inner">
+                    {
+                        this.records
+                            ?
+                            this.records.map((item, index) => {
+                                return (
+                                    <div class="banksPage_item">
+                                        <div class="banksPage_item_img">
                                             <img src={banks_logo[item.logo]}></img>
-                                            <div class="item_about">
-                                                <span>{item.name}</span>
-                                                <a>{item.credit[0].nameCredit}</a>
-
-                                                {/* <a>Валюта: {item.credit[0].currency}</a> */}
-                                                <a>Срок: {item.credit[0].creditTerm}</a>
-                                                <a>Процентная ставка: {item.credit[0].interestRate}</a>
-                                                <a>Сумма кредита: {item.credit[0].amountOfCredit}</a>
-
-                                            </div>
-
                                         </div>
-                                    )
-                                })
+                                        <div class="banksPage_item_info">
+                                            <h5 class="banksPage_item_title">{item.name}</h5>
+                                            <span class="banksPage_item_text">{item.credit[0].nameCredit}</span>
+                                            <p class="banksPage_item_text">Срок: <span class="main_text">{item.credit[0].creditTerm}</span></p>
+                                            <p class="banksPage_item_text">Процентная ставка: <span class="main_text">{item.credit[0].interestRate}</span></p>
+                                            <p class="banksPage_item_text">Сумма кредита: <span class="main_text">{item.credit[0].amountOfCredit}</span></p>
+                                        </div>
 
-                                :
-                                null
-                        }
+                                    </div>
+                                )
+                            })
 
-                    </div>
+                            :
+                            null
+                    }
+
                 </section>
             </div>
         </main>

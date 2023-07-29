@@ -74,7 +74,13 @@ export const display = function () {
     return (
         <main class="home page">
             <div class="wrapper">
-                <h2 class="section_vusi">Вузы</h2>
+                <div class="main_title_wrap">
+                    <h2 class="section_title">Вузы</h2>
+                    <a href="/form" onclick={()=>{this.Fn.link}} class="btn btn_default">
+                        <span>Подать заявку</span>
+                        <img src={arrowBtn}></img>
+                    </a>
+                </div>
                     <section class="univer">
                         <div class="universities_list">
                             {
