@@ -362,10 +362,10 @@ export const display = function () {
                     </div>
                 </div>
                 <div class="f-center">
-                    <button class="btn btn_default">
+                    <a href="/vuz/recommendation " onclick={this.Fn.link} class="btn btn_default">
                         <span>Получить ответ</span>
-                        <img src={arrowBtn}></img>
-                    </button>
+                        <img src={arrowBtn}  ></img>
+                    </a>
                 </div>
             </div>
         </main>
