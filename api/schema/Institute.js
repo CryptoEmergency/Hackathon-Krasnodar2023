@@ -21,7 +21,6 @@ data.schema = new mongoose.Schema(
             percent: { type: Number },
             monthlyPayment: { type: Number }
         }],
-        orgId: { type: mongoose.Schema.Types.ObjectId, ref: "uchis_organization" },
     },
     standartDate
 );
