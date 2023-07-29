@@ -27,7 +27,8 @@ export const display = function () {
                     <button class="enter__data">
                         Внести данные
                     </button>
-                </div>
+                </div>               
+                <div class="loader"></div>                
             </div>
         </div>
     )
