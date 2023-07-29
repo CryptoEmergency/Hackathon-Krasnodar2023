@@ -25,6 +25,13 @@ const universe = [
 
 
 export const display = function () {
+
+    const linkClose = (e) => {
+        this.Ref.menu.classList.toggle('active')
+        this.Ref.burger.classList.toggle('active')
+        this.Fn.link(e)
+    }
+
     return (
         <header class="header">
             <div class="wrapper">
@@ -47,10 +54,10 @@ export const display = function () {
                         class="menu_icon"
                         ref="burger"
                         onclick={() => {
-                            this.Static.menuShow = !this.Static.menuShow
+                            // this.Static.menuShow = !this.Static.menuShow
                             this.Ref.menu.classList.toggle('active')
                             this.Ref.burger.classList.toggle('active')
-                            this.init();
+                            // this.init();
                         }}
                     >
                         <span></span>
@@ -61,19 +68,29 @@ export const display = function () {
                         <nav>
                             <ul class="header_menu_list">
                                 <li class="header_menu_list_item">
-                                    <a href="/vuz" onclick={this.Fn.link}>Вузы</a>
+                                    <a href="/vuz" onclick={(e) => {
+                                        linkClose(e)
+                                    }}>Вузы</a>
                                 </li>
                                 <li class="header_menu_list_item">
-                                    <a href="/banks" onclick={this.Fn.link}>Банки</a>
+                                    <a href="/banks" onclick={(e) => {
+                                        linkClose(e)
+                                    }}>Банки</a>
                                 </li>
                                 <li class="header_menu_list_item">
-                                    <a href="/courses" onclick={this.Fn.link}>Повышение квалификации</a>
+                                    <a href="/courses" onclick={(e) => {
+                                        linkClose(e)
+                                    }}>Повышение квалификации</a>
                                 </li>
                                 <li class="header_menu_list_item">
-                                    <a href="/test" onclick={this.Fn.link}>Подобрать вуз</a>
+                                    <a href="/test" onclick={(e) => {
+                                        linkClose(e)
+                                    }}>Подобрать вуз</a>
                                 </li>
                                 <li class="header_menu_list_item">
-                                    <a href="/article" onclick={this.Fn.link}>Абитуриентам</a>
+                                    <a href="/article" onclick={(e) => {
+                                        linkClose(e)
+                                    }}>Абитуриентам</a>
                                 </li>
                             </ul>
                         </nav>
