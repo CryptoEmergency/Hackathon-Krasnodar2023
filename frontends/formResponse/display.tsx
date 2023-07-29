@@ -25,7 +25,14 @@ export const display = function () {
                     {
                         this.Static.sber.approved
                         ?
-                        <button class="modal__bank_approved">
+                        <button class="modal__bank_approved"
+                            onclick={() => {
+                                this.clearData()
+                                this.Fn.initOne({
+                                    name: "formConfirm"
+                                })
+                            }}
+                        >
                             <span>подтвердить</span>
                         </button>
                         :
@@ -48,7 +55,14 @@ export const display = function () {
                     {
                         this.Static.alfa.approved
                         ?
-                        <button class="modal__bank_approved">
+                        <button class="modal__bank_approved"
+                            onclick={() => {
+                                this.clearData()
+                                this.Fn.initOne({
+                                    name: "formConfirm"
+                                })
+                            }}
+                        >
                             <span>подтвердить</span>
                         </button>
                         :
@@ -72,7 +86,14 @@ export const display = function () {
                     {
                         this.Static.raiffeisen.approved
                         ?
-                        <button class="modal__bank_approved">
+                        <button class="modal__bank_approved"
+                            onclick={() => {
+                                this.clearData()
+                                this.Fn.initOne({
+                                    name: "formConfirm"
+                                })
+                            }}
+                        >
                             <span>подтвердить</span>
                         </button>
                         :

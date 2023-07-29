@@ -54,7 +54,7 @@ const OpenApi = [
 
     {
         method: "post",
-        url: "/open/Applications/:type",
+        url: "/open/applications/:type",
         fn: async (req, res) => {
 
             if (req.params.type == "set") {
