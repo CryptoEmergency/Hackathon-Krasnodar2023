@@ -32,7 +32,7 @@ const getProfession = () => {
     })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data, "gggg");
+            console.log(data);
         });
 }
 

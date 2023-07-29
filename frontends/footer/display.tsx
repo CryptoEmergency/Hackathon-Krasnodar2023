@@ -55,7 +55,7 @@ export const display = function () {
                         <div class="footer_interesting_wrap">
                             <a href="/article" onclick={this.Fn.link}>Статьи</a>
                             <a href="/test" onclick={this.Fn.link}>Тест на профориентацию</a>
-                            <a href="/training" onclick={this.Fn.link}>Повышение квалификации</a>
+                            <a href="/courses" onclick={this.Fn.link}>Повышение квалификации</a>
                         </div>
                     </div>
                     <div class="footer_contacts">
@@ -63,30 +63,9 @@ export const display = function () {
                         <div class="footer_contacts_wrap">
                             <a class="footer_contacts_item" href="mailto:example@gmsal.com">
                                 {/* <img src={email}></img> */}
-                                <span>uchim.support@info.com</span>
+                                <span>support@uchim.pro</span>
                             </a>
-                            <a class="footer_contacts_item" href="tel:+74952294280"
-                                onclick={() => {
-                                    let insert = {
-                                        insert: {
-                                            title: "название",
-                                            description: "текст описание",
-                                            city: "Краснодар",
-                                            programms: []
-                                        }
-                                    }
-                                    fetch("/api/user/vuz/set", {
-                                        method: "POST",
-                                        headers: {
-                                            "Content-Type": "application/json",
-                                        },
-                                        body: JSON.stringify(insert),
-                                    })
-                                        .then((response) => response.json())
-                                        .then((data) => {
-                                            console.log(data);
-                                        });
-                                }}>
+                            <a class="footer_contacts_item" href="tel:+74952294280">
                                 {/* <img src={phone}></img> */}
                                 <span>+74952294280</span>
                             </a>

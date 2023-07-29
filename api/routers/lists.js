@@ -37,6 +37,16 @@ const OpenApi = [
 
 
         }
+    },
+    {
+        method: "post",
+        url: "/open/test",
+        fn: async (req, res) => {
+            
+            return res.json(await Api.getBank({}));
+
+
+        }
     }
 ]
 
