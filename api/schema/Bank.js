@@ -31,9 +31,8 @@ data.get = async function () {
     return await query.exec();
 }
 
-data.set = async function ({action, insert = {}}) {
-    console.log(action)
-    if (action == "insert") {
+data.set = async function ({ insert, filter = {}, update }) {
+    if (insert) {
         let record = new model();
         Object.assign(record, insert)
         const result = await record.save()

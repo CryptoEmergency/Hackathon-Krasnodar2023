@@ -4,15 +4,15 @@ export const loader = function () {
         credit: []
     }
 
-    fetch("/api/open/Bank/set", {
+    fetch("/api/open/bank", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ action: "insert", insert: {} }),
+        body: JSON.stringify({ filter: {} }),
     })
         .then((response) => response.json())
         .then((data) => {
-            console.log("=Bank=", data);
+            console.log(data);
         });
 }

@@ -92,7 +92,20 @@ export const display = function () {
                                     </div>
                                     <button class="admin__bank_button"
                                         onclick={() => {
-
+                                            let insert = {
+                                                insert: this.Static.bank
+                                            }
+                                            fetch("/api/open/bank/set", {
+                                                method: "POST",
+                                                headers: {
+                                                    "Content-Type": "application/json",
+                                                },
+                                                body: JSON.stringify(insert),
+                                            })
+                                                .then((response) => response.json())
+                                                .then((data) => {
+                                                    console.log(data);
+                                                });
                                         }}
                                     >
                                         <span>Добавить</span>
