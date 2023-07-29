@@ -63,7 +63,7 @@ export const display = function () {
                         <div class="footer_contacts_wrap">
                             <a class="footer_contacts_item" href="mailto:example@gmsal.com">
                                 {/* <img src={email}></img> */}
-                                <span>support@uchim.pro</span>
+                                <span>support@uchis.pro</span>
                             </a>
                             <a class="footer_contacts_item" href="tel:+74952294280">
                                 {/* <img src={phone}></img> */}
