@@ -1,3 +1,10 @@
+$loader-style: double; 
+$loader-width: 0.5em;
+$loader-color: blue;
+$loader-size: 150px;
+$loader-speed: 1s;
+$body-bg: #e74c3c;
+
 .main__modal{
     display: flex;
     justify-content: center;
@@ -71,4 +78,47 @@
             border-radius: 50px;
             color: white;
     }
+}
+    
+
+// colors by http://flatuicolors.com/
+
+.loader {
+    left: 680px;
+  width: 1em;
+  height: 1em;
+  font-size: $loader-size;
+  position: absolute;
+//   @media (max-width: $loader-size * 1.5), (max-height: $loader-size * 1.5) {
+//     font-size: $loader-size/2;
+//   }
+  &:before, &:after {
+    content: "";
+    top: 0;
+    display: block;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    border-width: $loader-width;
+    border-style: $loader-style;
+    border-color: transparent;
+    box-sizing: border-box;
+    border-radius: 1em;
+    animation: spin $loader-speed infinite;
+  }
+  &:after {
+    left: 0;
+    border-left-color: $loader-color;
+  }
+  &:before {
+    right: 0;
+    border-right-color: $loader-color;
+    animation-delay: $loader-speed;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(360deg);
+  }
 }
