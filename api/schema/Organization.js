@@ -13,6 +13,8 @@ data.schema = new mongoose.Schema(
     {
         name: { type: String },
         type: { type: String },
+        api: { type: String },
+        secretApi: { type: String },
         verification: { type: Boolean },
     },
     standartDate
