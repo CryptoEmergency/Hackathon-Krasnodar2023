@@ -11,18 +11,12 @@ const standartDate = {
 
 data.schema = new mongoose.Schema(
     {
-        name: { type: String },
+        title: { type: String },
+        description: { type: String },
         city: { type: String },
-        profession: [{
-            name: { type: String },
-        }],
-        speciality: [{
-            name: { type: String },
-            numberOfSeats: { type: Number },  // количество мест
-            formOfEducation: { type: String }, // форма обучения
-            trainingPeriod: { type: Number },  // срок обучения,
-            price: { type: Number }, // стоимость
-        }],
+        price_from: { type: Number },
+        programms: [],
+        orgId: { type: mongoose.Schema.Types.ObjectId, ref: "uchis_organization" },
     },
     standartDate
 );
