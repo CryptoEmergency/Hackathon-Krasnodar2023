@@ -242,11 +242,44 @@ $backUniverse:(
 
 }
 
+@media (max-width: 1239px){
+  .about{
+    &_inner{
+      padding: 0 10px;
+    }
+  }
+
+  .section_title{
+    padding: 0 10px;
+  }
+  .banks{
+    &_inner{
+      padding: 0 10px;
+    }
+  }
+  .courses{
+    &_wrap{
+      padding: 0 10px;
+    }
+  }
+}
 
 @media (max-width: 992px){
 
 }
 @media (max-width: 767px){
+
+  .about{
+    &_inner{
+      grid-template-columns: 1fr;
+    }
+
+    .f-center{
+      justify-content: flex-start;
+      padding: 0 10px;
+    }
+  }
+
   .universeTitle{
     padding: 0 10px;
   }
@@ -257,13 +290,14 @@ $backUniverse:(
     padding-right: 10px;
 
     &_carousel{
-        gap: 15px;
-        max-width: 500px;
+        gap: 25px;
+        max-width: 100%;
+        width: 100%;
         // margin: 0 25px;
     }
 
     &_item{
-      padding: 10px;
+      padding: 30px;
 
       img{
         width: 50px;
@@ -271,12 +305,7 @@ $backUniverse:(
     }
 
     &_prev, &_next{
-      padding: 10px;
-
-      img{
-        width: 20px;
-        height: 20px;
-      }
+      display: none;
     }
   }
 
@@ -337,6 +366,12 @@ $backUniverse:(
 }
 
 @media (max-width: 464px){
+  .title_wrap{
+    .circle_effect{
+      top: -50px;
+    }
+  }
+
   .main{
     margin-bottom: 35px;
   }
@@ -351,6 +386,14 @@ $backUniverse:(
     &_item{
       font-size: 12px;
       padding: 10px 15px;
+    }
+  }
+  .courses{
+    &_wrap{
+      &::before{
+        left: auto;
+        right: -10px;
+      }
     }
   }
 }

@@ -3,7 +3,9 @@ import deleteIcon from "@svg/delete_icon.svg"
 
 export const display = function () {
     return (
-        <div class="admin">
+        <div class="admin"
+            style={this.Static.bank?.credit.length == 0 ? "height: 100%" : "height: auto"}
+        >
             <div class="admin__container admin__bank">
                 <h2 style="padding-bottom:20px">Административная панель</h2>
                 <div class="admin__wrapper">
