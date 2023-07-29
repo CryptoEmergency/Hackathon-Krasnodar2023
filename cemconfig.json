@@ -43,14 +43,6 @@
       ]
     },
     {
-      "url": "/training",
-      "front": [
-        "header",
-        "training",
-        "footer"
-      ]
-    },
-    {
       "regex": "/article",
       "front": [
         "header",
