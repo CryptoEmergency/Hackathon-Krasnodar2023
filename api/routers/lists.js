@@ -24,7 +24,7 @@ const OpenApi = [
         method: "post",
         url: "/open/vuz",
         fn: async (req, res) => {
-            return res.json(await Api.getVuz({}));
+            return res.json(await Api.getInstitute({}));
 
 
         }
@@ -42,7 +42,7 @@ const OpenApi = [
         method: "post",
         url: "/open/test",
         fn: async (req, res) => {
-            
+
             return res.json(await Api.getBank({}));
 
 
@@ -66,10 +66,10 @@ const UserApi = [
         url: "/user/vuz/:type",
         fn: async (req, res) => {
             if (req.params.type == "get") {
-                return res.json(await Api.getVuz({}));
+                return res.json(await Api.getInstitute({}));
 
             } else if (req.params.type == "set") {
-                return res.json(await Api.setVuz(req.body));
+                return res.json(await Api.setInstitute(req.body));
             }
         }
     },
