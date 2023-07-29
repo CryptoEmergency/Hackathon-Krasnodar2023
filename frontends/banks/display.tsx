@@ -5,6 +5,7 @@ import alfa from '@svg/banks/alfa1.png'
 import rnkb from '@svg/banks/rnkb.svg'
 import vtb from '@svg/banks/vtb.png'
 import raiffeisen from '@svg/banks/raiff2.png'
+import centr_invest from '@svg/banks/centr_invest.svg'
 
 
 const banks_logo =
@@ -13,7 +14,8 @@ const banks_logo =
     'sber': sber,
     'rnkb': rnkb,
     'vtb': vtb,
-    'raiffeisen': raiffeisen
+    'raiffeisen': raiffeisen,
+    'centr_invest': centr_invest,
 
 }
 
