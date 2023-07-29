@@ -66,7 +66,7 @@ export const display = function () {
                                 {/* <img src={email}></img> */}
                                 <span>support@uchis.pro</span>
                             </a>
-                            <a href="/courses" onclick={this.Fn.link}>
+                            <a href="https://uchis.pro/Uchis.pro.apk">
                                 Скачать APK  для Android
                             </a>
                             {/* <a class="footer_contacts_item" href="tel:+74952294280"> */}
