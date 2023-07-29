@@ -128,9 +128,9 @@ export const display = function () {
                             }
                     </div>
                 </div>
-
-                <section class="bank_offer_inner">
                 <h2>Предложения банков</h2>
+                <section class="bank_offer_inner">
+                
                     {
                         this.records
                             ?
