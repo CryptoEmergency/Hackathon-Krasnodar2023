@@ -212,6 +212,8 @@ export const display = function () {
                         <div class="circle_effect green">
                             <img src={laptop}></img>
                         </div>
+                        
+
                         {
                             courses.map((item, index)=>{
                                 return(
