@@ -24,7 +24,7 @@ import brain from '@svg/iconEffect/brain.svg'
 const courses = [
     {
         title: 'Веб дизайнер',
-        price: '199 ₽',
+        price: '30 000 ₽',
         direction: 'Дизайн',
         lessons: 10,
         tasks: 12,
@@ -32,7 +32,7 @@ const courses = [
     },
     {
         title: 'Интернет-маркетолог',
-        price: '215 ₽',
+        price: '21 500 ₽',
         direction: 'Фото и видео',
         lessons: 19,
         tasks: 14,
@@ -40,7 +40,7 @@ const courses = [
     },
     {
         title: 'Видеосъмка и видеомонтаж',
-        price: '115 ₽',
+        price: '11 500 ₽',
         direction: 'Фото и видео',
         lessons: 10,
         tasks: 12, 
@@ -48,7 +48,7 @@ const courses = [
     },
     {
         title: 'Frontend-разработчик',
-        price: '119 ₽',
+        price: '50 000 ₽',
         direction: 'Программирование',
         lessons: 20,
         tasks: 30,
@@ -56,7 +56,7 @@ const courses = [
     },
     {
         title: 'Бизнес-аналитик',
-        price: '119 ₽',
+        price: '35 000 ₽',
         direction: 'Управление',
         lessons: 3,
         tasks: 9,
@@ -64,7 +64,7 @@ const courses = [
     },
     {
         title: 'Правильное питание',
-        price: '216 ₽',
+        price: '21 600 ₽',
         direction: 'Питание',
         lessons: 5,
         tasks: 7,
@@ -72,7 +72,7 @@ const courses = [
     },
     {
         title: 'Разработчик игр на Unreal Engine',
-        price: '99 ₽',
+        price: '90 000 ₽',
         direction: 'Игры',
         lessons: 2,
         tasks: 5,
@@ -80,7 +80,7 @@ const courses = [
     },
     {
         title: 'Детская психология',
-        price: '216 ₽',
+        price: '25 000 ₽',
         direction: 'Психология',
         lessons: 2,
         tasks: 5,
@@ -346,14 +346,10 @@ export const display = function () {
                             })
                         }
                         <div class="f-center">
-                            {/* <div class="circle_effect fiolet">
-                                <img src={laptop}></img>
-                            </div> */}
-
-                            <button class="btn btn_default">
+                            <a href="/courses" onclick={this.Fn.link} class="btn btn_default">
                                 <span>Посмотреть все курсы</span>
                                 <img src={arrowBtn}></img>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

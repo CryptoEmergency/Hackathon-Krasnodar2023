@@ -183,6 +183,10 @@ section{
 
     span{
         margin-right: 20px;
+        
+        @media (max-width: 992px){
+            margin-right: 10px;
+        }
     }
 
     &:hover{

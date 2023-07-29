@@ -270,7 +270,11 @@ $backUniverse:(
 }
 
 @media (max-width: 992px){
-
+  .universities{
+    &_next, &_prev{
+      display: none;
+    }
+  }
 }
 @media (max-width: 767px){
 

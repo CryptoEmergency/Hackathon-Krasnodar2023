@@ -1,6 +1,7 @@
 @import 'utils/variables.scss';
 
 .coursePage{
+  padding-bottom: 25px;
   .courses_wrap{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
