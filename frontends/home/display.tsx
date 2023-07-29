@@ -21,6 +21,8 @@ import universe8 from '@images/universe/8.png'
 import arrowPrev from '@svg/icons/arrowPrev.svg'
 import arrowNext from '@svg/icons/arrowNext.svg'
 
+import laptop from '@svg/iconEffect/laptop.svg'
+
 const courses = [
     {
         title: 'Веб дизайнер',
@@ -207,6 +209,9 @@ export const display = function () {
                 <div class="wrapper">
                     <h2 class="section_title">Курсы</h2>
                     <div class="courses_wrap">
+                        <div class="circle_effect green">
+                            <img src={laptop}></img>
+                        </div>
                         {
                             courses.map((item, index)=>{
                                 return(

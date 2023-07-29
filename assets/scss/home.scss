@@ -74,6 +74,8 @@ $backCourses: (
 }
 
 .courses{
+  position: relative;
+
   &_wrap{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -159,6 +161,11 @@ $backCourses: (
         .f-center{
           justify-content: flex-start;
         }
+    }
+
+    .circle_effect{
+      top: 15%;
+      left: -25px;
     }
   }
 }
