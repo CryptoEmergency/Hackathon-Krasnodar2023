@@ -2,12 +2,22 @@ import { Api } from '../mongo.js';
 
 
 const checkApi = async (req) => {
-    console.log("request.body", req.body, req.headers);
     if (!req.headers["x-key"] || !req.headers["x-sign"] || !req.headers["x-timmestamp"]) {
         return false
     }
-    let item = await Api.getOrganization({ filter: {} })
+    let item = await Api.getOrganization({ filter: { api: req.headers["x-key"] } })
+
+
+    let hmac = crypto.createHmac("sha256", item?.secretApi);
+    let str = req.headers["x-timmestamp"] + "#" + JSON.stringify(req.body)
+    let signature = hmac.update(Buffer.from(str, 'utf-8')).digest("hex");
+
+    if (signature != req.headers["x-sign"]) {
+        return false
+    }
     console.log("item", item)
+
+
     return true
 }
 
@@ -143,7 +153,6 @@ const VuzApi = [
         method: "post",
         url: "/vuz",
         fn: async (req, res) => {
-            console.log("1111")
             if (!checkApi(req)) {
                 return res.json({ error: "Доступ запрещен" });
             }
