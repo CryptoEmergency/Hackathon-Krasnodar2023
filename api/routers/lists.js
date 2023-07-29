@@ -6,13 +6,13 @@ const checkApi = async (req) => {
         return false
     }
 
-    let item = await Api.getBank({ filter: { api: req.headers["x-key"] } })
-    if (!item || !item[0]?.secretApi) {
+    let item = await Api.getKey({ filter: { api: req.headers["x-key"] } })
+    if (!item || !item[0]?.secretKey) {
         return false
     }
-    let secretApi = item[0]?.secretAp
+    let secretKey = item[0]?.secretKey
 
-    let hmac = crypto.createHmac("sha256", secretApi);
+    let hmac = crypto.createHmac("sha256", secretKey);
     let str = req.headers["x-timestamp"] + "#" + JSON.stringify(req.body)
     let signature = hmac.update(Buffer.from(str, 'utf-8')).digest("hex");
 
@@ -111,6 +111,16 @@ const InstituteApi = [
 ]
 
 const TestBankApi = [
+    {
+        method: "post",
+        url: "/TestBank",
+        fn: async (req, res) => {
+            if (await checkApi(req) === false) {
+                return res.json({ error: "Доступ запрещен" });
+            }
+            return res.json({ status: "ok" });
+        }
+    },
     {
         method: "post",
         url: "/TestBank",
