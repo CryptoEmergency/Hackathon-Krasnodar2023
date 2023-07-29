@@ -29,33 +29,28 @@ $backUniverse:(
   14: url('images/universe/16.png'),
 );
 
+.home{
+  padding-top: 75px;
+}
+
 .main{
-  box-sizing: border-box;
-  min-height: 100vh;
-  text-align: center;
-  padding-top: 20%;
-  transform-style: inherit;
-  width: 100vw;
+  height: 600px;
+  background-image: url('images/mainBack.jpg');
+  z-index: -1;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
 
-  &::before{
-    content: '';
-    display: block;
+  &_desc{
+    max-width: 800px;
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    z-index: -1;
-    transform-origin: center;
-    min-height: 100vh;
-    background-image: url('images/mainBack.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 1s;
-    /* Параллакс */
-    transform: translateZ(-1px);
-
+    top: 20%;
+    left: 20%;
+    transform: translate(-20%, -20%);
+    color: $white;
   }
+
 }
 
 .universities{
@@ -71,15 +66,15 @@ $backUniverse:(
     top: 50%;
     transform: translate(0, -50%);
     border-radius: $ellipse;
-    padding: 15px;
+    padding: 10px;
     background: $white;
     display: flex;
     justify-content: center;
     align-items: center;
 
     img{
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
     }
 
     // &:hover{
@@ -210,6 +205,10 @@ $backUniverse:(
 
 }
 @media (max-width: 767px){
+  .universeTitle{
+    padding: 0 10px;
+  }
+
   .universities{
     padding: 30px 0;
     padding-left: 10px;
@@ -262,11 +261,27 @@ $backUniverse:(
   }
 }
 @media (max-width: 600px){
+
+  .main{
+    height: 400px;
+
+    &_desc{
+      max-width: 100%;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    &_title{
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+
   .universities{
     &_item{
       padding: 30px;
     }
-    
+
     &_prev, &_next{
       display: none;
     }
@@ -275,6 +290,25 @@ $backUniverse:(
   .courses{
     &_wrap{
       grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 464px){
+  .main{
+    margin-bottom: 35px;
+  }
+  .universities{
+    &_item{
+      padding: 25px;
+      width: auto;
+      height: auto;
+    }
+  }
+  .banks{
+    &_item{
+      font-size: 12px;
+      padding: 10px 15px;
     }
   }
 }

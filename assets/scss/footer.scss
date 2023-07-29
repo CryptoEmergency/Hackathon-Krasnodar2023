@@ -93,3 +93,20 @@
     }
   }
 }
+
+@media (max-width: 464px){
+  .footer{
+    &_inner{
+      gap: 20px;
+    }
+    &_subtitle{
+      font-size: 14px;
+    }
+
+    &_general_wrap, 
+    &_interesting,
+    &_contscts{
+      font-size: 12px;
+    }
+  }
+}

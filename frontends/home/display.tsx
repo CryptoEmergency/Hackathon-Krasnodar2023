@@ -175,14 +175,16 @@ let y1 = null;
 
 export const display = function () {
     return (
-        <main class="home page">
+        <main class="home">
             
             <section class="main">
-
+                <div class="main_desc">
+                    <h1 class="main_title">Учись, подбор лучших условий для обучения!</h1>
+                </div>
             </section>
           
             <div class="wrapper">
-                <h2 class="section_title">Высшие учебные заведения России</h2>
+                <h2 class="section_title universeTitle">Высшие учебные заведения России</h2>
             </div>
             <section class="universities">
                 <div class="wrapper">
@@ -190,7 +192,7 @@ export const display = function () {
                         <button 
                             class="btn universities_prev"
                             onclick={()=>{
-                                this.Ref.universeCarousel.scrollLeft -= this.Ref.universeSlide.offsetWidth + 20;
+                                this.Ref.universeCarousel.scrollLeft -= this.Ref.universeSlide.offsetWidth + 35;
                             }}
                         >
                             <img src={arrowPrev}></img>
@@ -198,7 +200,7 @@ export const display = function () {
                         <button 
                             class="btn universities_next"
                             onclick={()=>{
-                                this.Ref.universeCarousel.scrollLeft += this.Ref.universeSlide.offsetWidth + 20;
+                                this.Ref.universeCarousel.scrollLeft += this.Ref.universeSlide.offsetWidth + 35;
                             }}
                         >
                             <img src={arrowNext}></img>
@@ -248,9 +250,7 @@ export const display = function () {
                             {
                                 universe.map((item, index)=>{
                                 return(
-                                    <div class={["universities_item", `universities_item_${index}`]} ref="universeSlide">
-                                        {/* <img src={item.img}></img> */}
-                                    </div>
+                                    <div class={["universities_item", `universities_item_${index}`]} ref="universeSlide"></div>
                                 )
                                 }) 
                             }
@@ -274,7 +274,7 @@ export const display = function () {
             </section>
             <section class="courses">
                 <div class="wrapper">
-                    <h2 class="section_title">Курсы</h2>
+                    <h2 class="section_title">Курсы повышения квалицикации</h2>
                     <div class="courses_wrap">
                         <div class="circle_effect green">
                             <img src={laptop}></img>

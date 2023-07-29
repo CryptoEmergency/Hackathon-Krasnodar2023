@@ -289,3 +289,11 @@
         }
     }
 }
+
+@media (max-width: 464px){
+    .header{
+        &_menu{
+            width: 100%;
+        }
+    }
+}

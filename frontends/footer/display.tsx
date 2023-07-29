@@ -45,17 +45,17 @@ export const display = function () {
                     <div class="footer_general">
                         <span class="footer_subtitle">Основное</span>
                         <div class="footer_general_wrap">
-                            <a href="#">Вузы</a>
-                            <a href="#">Банки</a>
-                            <a href="#">Абиетурентам</a>
+                            <a href="/vuz" onclick={this.Fn.link}>Вузы</a>
+                            <a href="/banks" onclick={this.Fn.link}>Банки</a>
+                            <a href="/article" onclick={this.Fn.link}>Абитурентам</a>
                         </div>
                     </div>
                     <div class="footer_interesting">
                         <span class="footer_subtitle">Интересно</span>
                         <div class="footer_interesting_wrap">
-                            <a>Статьи</a>
-                            <a>Тест на профориентацию</a>
-                            <a>Программы</a>
+                            <a href="/article" onclick={this.Fn.link}>Статьи</a>
+                            <a href="/test" onclick={this.Fn.link}>Тест на профориентацию</a>
+                            <a href="/training" onclick={this.Fn.link}>Повышение квалификации</a>
                         </div>
                     </div>
                     <div class="footer_contacts">
