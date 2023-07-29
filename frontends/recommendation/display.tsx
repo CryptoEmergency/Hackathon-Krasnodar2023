@@ -95,7 +95,7 @@ export const display = function () {
             <div class="wrapper">
                 <div class="main_title_wrap">
                     <h2 class="section_title">Вам рекомендованы следующие университеты:</h2>
-                    <a href="/form" onclick={()=>{this.Fn.link}} class="btn btn_default">
+                    <a href="/form" onclick={this.Fn.link} class="btn btn_default">
                         <span>Подать заявку</span>
                         <img src={arrowBtn}></img>
                     </a>
