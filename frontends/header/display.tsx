@@ -37,8 +37,8 @@ export const display = function () {
                     <div
                         class="header_icon"
                         onclick={() => {
-                            this.Static.search = !this.Static.search;
-                            this.init();
+                            // this.Static.search = !this.Static.search;
+                            // this.init();
                         }}>
                         <img src={search}></img>
                     </div>
