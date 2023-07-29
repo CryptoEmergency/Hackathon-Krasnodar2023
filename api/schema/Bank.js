@@ -12,7 +12,8 @@ const standartDate = {
 data.schema = new mongoose.Schema(
     {
         name: { type: String },
-        credit: [{ 
+        logo: { type: String },
+        credit: [{
             nameCredit: { type: String },
             amountOfCredit: { type: String }, // сумма кредита
             creditTerm: { type: String }, // срок

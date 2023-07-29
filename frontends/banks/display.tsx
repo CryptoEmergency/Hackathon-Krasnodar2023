@@ -1,7 +1,7 @@
 import { Cemjsx } from "cemjs-all"
 import arrowBtn from '@svg/icons/arrowBtn.svg'
 import sber from '@svg/banks/sber.svg'
-// import alfa from '@svg/banks/alfa.png'
+import alfa from '@svg/banks/alfa.png'
 import rnkb from '@svg/banks/rnkb.svg'
 import vtb from '@svg/banks/vtb.png'
 import raiffeisen from '@svg/banks/raiff.png'
@@ -71,26 +71,18 @@ import raiffeisen from '@svg/banks/raiff.png'
 
 // ]
 
-const banks_logo=[
-    {
-        'sber' : sber
-    },
-    // {
-    //     'alfa' :alfa
-    // },
-    {
-        'rnkb' :  rnkb
-    },
-    {
-        'vtb' :vtb
-    },
-    {
-        'raiffeisen' : raiffeisen
-    },
-]
+const banks_logo =
+{
+    'alfa': alfa,
+    'sber': sber,
+    'rnkb': rnkb,
+    'vtb': vtb,
+    'raiffeisen': raiffeisen
+
+}
 
 export const display = function () {
-    console.log(this.records)
+    // console.log(this.records)
     return (
         <main class="home page">
             <div class="wrapper">
@@ -98,30 +90,30 @@ export const display = function () {
                 <section class="banks">
                     <div class="banks_list">
                         <div class="logo">
-                           
+
                         </div>
                         {
                             this.records
                                 ?
                                 this.records.map((item, index) => {
-                                    // console.log(index)
+                                    // console.log(item, banks_logo[item.logo])
                                     return (
-                                        
-                                    <div class="bank_item">
-                
-                                        <a href=""><img src={sber}></img></a>
-                                    <div class="item_about">
-                                        <span>{item.name}</span>
-                                        <a>{item.credit[0].nameCredit}</a>
-                                        
-                                        {/* <a>Валюта: {item.credit[0].currency}</a> */}
-                                        <a>Срок: {item.credit[0].creditTerm}</a>
-                                        <a>Процентная ставка: {item.credit[0].interestRate}</a>
-                                        <a>Сумма кредита: {item.credit[0].amountOfCredit}</a>
-                
-                                    </div>
 
-                                    </div>
+                                        <div class="bank_item">
+
+                                            <img src={banks_logo[item.logo]}></img>
+                                            <div class="item_about">
+                                                <span>{item.name}</span>
+                                                <a>{item.credit[0].nameCredit}</a>
+
+                                                {/* <a>Валюта: {item.credit[0].currency}</a> */}
+                                                <a>Срок: {item.credit[0].creditTerm}</a>
+                                                <a>Процентная ставка: {item.credit[0].interestRate}</a>
+                                                <a>Сумма кредита: {item.credit[0].amountOfCredit}</a>
+
+                                            </div>
+
+                                        </div>
                                     )
                                 })
 
