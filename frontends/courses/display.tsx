@@ -80,20 +80,20 @@ const courses = [
 
 export const display = function () {
     return (
-        <main class="coursePage">
+        <main class="coursePage page">
             <div class="wrapper">
                 <h2>Курсы повышения квалификации</h2>
                 <div class="coursePage_inner">
                     {
                         courses.map((item, index)=>{
                             return(
-                                <div class="coursePage_item">
+                                <div class={["coursePage_item", `coursePage_item_${index}`]}>
                                     <h5 class="coursePage_item_title">{item.title}</h5>
-                                    <span></span>
+                                    <span>{item.price}</span>
                                     <ul>
                                         <li>{item.direction}</li>
-                                        <li></li>
-                                        <li></li>
+                                        <li>{`${item.lessons} уроков`}</li>
+                                        <li>{`${item.tasks} заданий`}</li>
                                     </ul>
                                 </div> 
                             )

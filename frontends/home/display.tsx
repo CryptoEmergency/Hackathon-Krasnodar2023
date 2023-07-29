@@ -13,6 +13,7 @@ import arrowPrev from '@svg/icons/arrowPrev.svg'
 import arrowNext from '@svg/icons/arrowNext.svg'
 
 import laptop from '@svg/iconEffect/laptop.svg'
+import brain from '@svg/iconEffect/brain.svg'
 
 const courses = [
     {
@@ -183,7 +184,10 @@ export const display = function () {
                 </div>
             </section>
           
-            <div class="wrapper">
+            <div class="wrapper title_wrap">
+                <div class="circle_effect lightPink">
+                    <img src={brain}></img>
+                </div>
                 <h2 class="section_title universeTitle">Высшие учебные заведения России</h2>
             </div>
             <section class="universities">
@@ -279,8 +283,6 @@ export const display = function () {
                         <div class="circle_effect green">
                             <img src={laptop}></img>
                         </div>
-                        
-
                         {
                             courses.map((item, index)=>{
                                 return(
@@ -298,6 +300,10 @@ export const display = function () {
                             })
                         }
                         <div class="f-center">
+                            {/* <div class="circle_effect fiolet">
+                                <img src={laptop}></img>
+                            </div> */}
+
                             <button class="btn btn_default">
                                 <span>Посмотреть все курсы</span>
                                 <img src={arrowBtn}></img>

@@ -33,6 +33,15 @@ $backUniverse:(
   padding-top: 75px;
 }
 
+.title_wrap{
+  position: relative;
+
+  .circle_effect{
+    top: -2%;
+    right: 3%;
+  }
+}
+
 .main{
   height: 600px;
   background-image: url('images/mainBack.jpg');
@@ -141,6 +150,15 @@ $backUniverse:(
     grid-template-columns: repeat(3, 1fr);
     position: relative;
     gap: 15px;
+
+    // .f-center{
+    //   position: relative;
+
+    //   .circle_effect{
+    //     top: 1%;
+    //     right: 1%;
+    //   }
+    // }
 
     &::before {
       content: '';
