@@ -1,6 +1,6 @@
 export const loader = function () {
-
-    fetch("/api/open/Bank", {
+  
+    fetch("/api/open/vuz", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -10,9 +10,5 @@ export const loader = function () {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
-            this.records=data
-            this.init()
         });
-
-
 }
