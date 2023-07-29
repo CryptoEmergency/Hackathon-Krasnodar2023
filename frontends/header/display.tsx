@@ -70,7 +70,7 @@ export const display = function () {
                                     <a href="/courses" onclick={this.Fn.link}>Повышение квалификации</a>
                                 </li>
                                 <li class="header_menu_list_item">
-                                    <a href="/vuz/find" onclick={this.Fn.link}>Подобрать вуз</a>
+                                    <a href="/test" onclick={this.Fn.link}>Подобрать вуз</a>
                                 </li>
                                 <li class="header_menu_list_item">
                                     <a href="/article" onclick={this.Fn.link}>Абитуриентам</a>
@@ -85,27 +85,6 @@ export const display = function () {
                 <div class="wrapper">
                     <div class="header_search_box_inner">
                         <div class="search_box">
-                            {/* <div 
-                                class="dropdown"
-                                onclick={()=>{
-                                    this.Static.dropdown = !this.Static.dropdown;
-                                    this.init();
-                                }} 
-                            >
-                                <div class="dropdown_header">{this.Static.dropdownHeader}</div>
-                                <ul 
-                                    class={["dropdown_list", 
-                                    this.Static.dropdown ? "dropdown_list_open" : null]}
-                                >
-                                    {
-                                        universe.map((item, index)=>{
-                                            return(
-                                                <li class="dropdown_list_item">{item.name}</li>
-                                            )
-                                        })
-                                    }
-                                </ul>
-                            </div> */}
                             <input
                                 type="search"
                                 placeholder="Что Вас интересует ?"

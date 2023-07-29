@@ -21,13 +21,14 @@ export const display = function () {
     return (
         <main class="banksPage page">
             <div class="wrapper">
-                <div class="main_title_wrap">
-                    <h2 class="section_title">Банки</h2>
+                <h2 class="section_title">Банки</h2>
+
+                {/* <div class="main_title_wrap">
                     <a href="/form" onclick={()=>{this.Fn.link}} class="btn btn_default">
                         <span>Подать заявку</span>
                         <img src={arrowBtn}></img>
                     </a>
-                </div>
+                </div> */}
                 <section class="banksPage_inner">
                     {
                         this.records
@@ -44,8 +45,13 @@ export const display = function () {
                                             <p class="banksPage_item_text">Срок: <span class="main_text">{item.credit[0].creditTerm}</span></p>
                                             <p class="banksPage_item_text">Процентная ставка: <span class="main_text">{item.credit[0].interestRate}</span></p>
                                             <p class="banksPage_item_text">Сумма кредита: <span class="main_text">{item.credit[0].amountOfCredit}</span></p>
+                                            <div class="f-center">
+                                                <a href="/form" onclick={()=>{this.Fn.link}} class="btn btn_default">
+                                                    <span>Подать заявку</span>
+                                                    <img src={arrowBtn}></img>
+                                                </a>
+                                            </div>
                                         </div>
-
                                     </div>
                                 )
                             })
