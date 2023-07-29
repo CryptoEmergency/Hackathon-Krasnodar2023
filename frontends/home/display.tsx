@@ -24,7 +24,7 @@ import brain from '@svg/iconEffect/brain.svg'
 const courses = [
     {
         title: 'Веб дизайнер',
-        price: '30 000 ₽',
+        price: '130 900 ₽',
         direction: 'Дизайн',
         lessons: 10,
         tasks: 12,
@@ -32,7 +32,7 @@ const courses = [
     },
     {
         title: 'Интернет-маркетолог',
-        price: '21 500 ₽',
+        price: '105 900 ₽',
         direction: 'Фото и видео',
         lessons: 19,
         tasks: 14,
@@ -40,7 +40,7 @@ const courses = [
     },
     {
         title: 'Видеосъмка и видеомонтаж',
-        price: '11 500 ₽',
+        price: '115 900 ₽',
         direction: 'Фото и видео',
         lessons: 10,
         tasks: 12, 
@@ -48,7 +48,7 @@ const courses = [
     },
     {
         title: 'Frontend-разработчик',
-        price: '50 000 ₽',
+        price: '150 900 ₽',
         direction: 'Программирование',
         lessons: 20,
         tasks: 30,
@@ -56,7 +56,7 @@ const courses = [
     },
     {
         title: 'Бизнес-аналитик',
-        price: '35 000 ₽',
+        price: '130 900 ₽',
         direction: 'Управление',
         lessons: 3,
         tasks: 9,
@@ -64,7 +64,7 @@ const courses = [
     },
     {
         title: 'Правильное питание',
-        price: '21 600 ₽',
+        price: '91 900 ₽',
         direction: 'Питание',
         lessons: 5,
         tasks: 7,
@@ -72,7 +72,7 @@ const courses = [
     },
     {
         title: 'Разработчик игр на Unreal Engine',
-        price: '90 000 ₽',
+        price: '160 000 ₽',
         direction: 'Игры',
         lessons: 2,
         tasks: 5,
@@ -80,7 +80,7 @@ const courses = [
     },
     {
         title: 'Детская психология',
-        price: '25 000 ₽',
+        price: '84 900 ₽',
         direction: 'Психология',
         lessons: 2,
         tasks: 5,

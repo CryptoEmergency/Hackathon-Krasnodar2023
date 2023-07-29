@@ -25,8 +25,6 @@ const OpenApi = [
         url: "/open/vuz",
         fn: async (req, res) => {
             return res.json(await Api.getInstitute({}));
-
-
         }
     },
     {
@@ -34,8 +32,6 @@ const OpenApi = [
         url: "/open/bank",
         fn: async (req, res) => {
             return res.json(await Api.getBank({}));
-
-
         }
     },
     {
@@ -44,10 +40,19 @@ const OpenApi = [
         fn: async (req, res) => {
 
             return res.json(await Api.getBank({}));
-
-
         }
-    }
+    },
+
+    {
+        method: "post",
+        url: "/open/Applications/:type",
+        fn: async (req, res) => {
+
+            if (req.params.type == "set") {
+                return res.json(await Api.setApplications(req.body));
+            }
+        }
+    },
 ]
 
 const UserApi = [
