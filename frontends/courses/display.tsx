@@ -26,7 +26,7 @@ const courses = [
         direction: 'Фото и видео',
         lessons: 19,
         tasks: 14,
-        img: internetMarketer, 
+        img: internetMarketer,
         info: 'Интернет-маркетолог — универсальный и высокооплачиваемый специалист. Он владеет всеми каналами продвижения, запускает рекламные кампании и привлекает клиентов для любого бизнеса. Интернет-маркетолог, который специализируется на одном из каналов, ещё более востребован и может вести несколько проектов сразу.'
     },
     {
@@ -34,7 +34,7 @@ const courses = [
         price: '115 ₽',
         direction: 'Фото и видео',
         lessons: 10,
-        tasks: 12, 
+        tasks: 12,
         img: video,
         info: 'Это универсальный специалист, который умеет работать с видео разных жанров и форматов — от рекламных роликов до репортажей и документальных фильмов. Он занимается стилизацией, цветокоррекцией, визуальными эффектами и даже саунд-дизайном. Хороший режиссёр монтажа нужен на YouTube-проектах, телевидении, в рекламных агентствах и кинокомпаниях. Задача этого курса — помочь вам стать таким специалистом.'
     },
@@ -88,13 +88,13 @@ const courses = [
 
 export const display = function () {
     return (
-        <main class="courses coursePage">
+        <main class="courses coursePage page">
             <div class="wrapper">
                 <h2 class="section_title">Курсы повышения квалицикации</h2>
                 <div class="courses_wrap coursePage_wrap">
                     {
-                        courses.map((item, index)=>{
-                            return(
+                        courses.map((item, index) => {
+                            return (
                                 <div class={["course", `course_${index}`]}>
                                     {/* <div class="popup_wrapper">
                                         <div class="item_popup">
