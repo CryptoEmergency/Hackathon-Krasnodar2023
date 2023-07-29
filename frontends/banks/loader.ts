@@ -1,5 +1,4 @@
 export const loader = function () {
-
     fetch("/api/open/Bank", {
         method: "POST",
         headers: {
@@ -9,8 +8,7 @@ export const loader = function () {
     })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
-            this.records=data
+            this.records = data
             this.init()
         });
 

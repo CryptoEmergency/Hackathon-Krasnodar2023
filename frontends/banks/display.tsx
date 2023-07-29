@@ -66,8 +66,8 @@ import university3 from '@images/universities/3.jpg'
 //         picture: university3,
 //         bank: "Альфа Банк"
 //     },
-    
-    
+
+
 // ]
 
 export const display = function () {
@@ -76,13 +76,15 @@ export const display = function () {
         <main class="home page">
             <div class="wrapper">
                 <h2 class="section_banks">Банки</h2>
-                    <section class="banks">
-                        <div class="universities_list">
-                            {
-                            this.records.map((item, index)=>{
-                            return(
-                                <div class="bank_item">
-                                    {/* <a href=""><img src={item.picture}></img></a>
+                <section class="banks">
+                    <div class="universities_list">
+                        {
+                            this.records
+                                ?
+                                this.records.map((item, index) => {
+                                    return (
+                                        <div class="bank_item">
+                                            {/* <a href=""><img src={item.picture}></img></a>
                                     <div class="item_about">
                                         <span>{item.city}</span>
                                         <a>{item.title}</a>
@@ -91,15 +93,18 @@ export const display = function () {
                                             <p>о{item.price_from}р</p>
                                             <p><span>{item.bank}</span></p>
                                         </div> */}
-                                        
-                                    </div>
 
-                                // </div>
-                            )
-                            })
-                            }
-                        </div>
-                </section> 
+                                        </div>
+
+                                        // </div>
+                                    )
+                                })
+
+                                :
+                                null
+                        }
+                    </div>
+                </section>
             </div>
         </main>
     )
