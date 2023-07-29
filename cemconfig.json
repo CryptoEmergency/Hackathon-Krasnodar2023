@@ -35,6 +35,14 @@
       ]
     },
     {
+      "url": "/banks",
+      "front": [
+        "header",
+        "banks",
+        "footer"
+      ]
+    },
+    {
       "url": "/personal/admin",
       "front": [
         "adminPersonal"
