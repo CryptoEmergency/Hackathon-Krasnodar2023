@@ -27,6 +27,14 @@
       ]
     },
     {
+      "url": "/courses",
+      "front": [
+        "header",
+        "courses",
+        "footer"
+      ]
+    },
+    {
       "url": "/vuz",
       "front": [
         "header",
