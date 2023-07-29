@@ -43,22 +43,6 @@
       ]
     },
     {
-      "url": "/vuz/find",
-      "front": [
-        "header",
-        "vuzFind",
-        "footer"
-      ]
-    },
-    {
-      "url": "/vuz/find/test_response",
-      "front": [
-        "header",
-        "vuzFind",
-        "footer"
-      ]
-    },
-    {
       "regex": "/article",
       "front": [
         "header",
@@ -90,18 +74,6 @@
       "url": "/personal/university",
       "front": [
         "adminUniversity"
-      ]
-    },
-    {
-      "url": "/personal/authorization",
-      "front": [
-        "adminLogin"
-      ]
-    },
-    {
-      "url": "/personal/registration",
-      "front": [
-        "adminRegistration"
       ]
     },
     {
