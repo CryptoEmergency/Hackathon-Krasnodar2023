@@ -78,24 +78,26 @@ export const display = function () {
                     <section class="univer">
                         <div class="universities_list">
                             {
-                            universitiesCards.map((item, index)=>{
-                            return(
-                                <div class="university_item">
-                                    <a href=""><img src={item.picture}></img></a>
-                                    <div class="item_about">
-                                        <span>{item.city}</span>
-                                        <a>{item.title}</a>
-                                        <span>Специальностей:{item.programms_number}</span>
-                                        <div class= "price-offer">
-                                            <p>от {item.price_from}р/год</p>
-                                            <p>Лучшее предложение от банка <span>{item.bank}</span></p>
-                                        </div>
-                                        
-                                    </div>
+                                universitiesCards.map((item, index)=>{
+                                    return(
+                                        <div class="university_item">
+                                            <a href=""><img src={item.picture}></img></a>
+                                            <div class="item_about">
+                                                <a href="">{item.title}</a>
+                                                <div class="">
+                                                    <span>{item.city}</span>
+                                                    <span>Специальностей:{item.programms_number}</span>
+                                                </div>
+                                                
+                                                <div class= "price-offer">
+                                                    <p>от {item.price_from}р/год</p>
+                                                    <p>Лучшее предложение от банка <span>{item.bank}</span></p>
+                                                </div>
+                                            </div>
 
-                                </div>
-                            )
-                            })
+                                        </div>
+                                    )
+                                })
                             }
                         </div>
                 </section> 

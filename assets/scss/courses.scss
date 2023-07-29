@@ -11,12 +11,15 @@
 
       &_desc{
         margin: 15px 0;
+        font-size: 16px;
+        z-index: 1;
       }
 
       &_img{
         top: auto;
         bottom: 10px;
         transform: translate(0);
+        filter: blur(1px)
       }
 
 

@@ -131,6 +131,7 @@ $backUniverse:(
     scroll-behavior: smooth;
     scrollbar-width: 0;
     transition: all 0.4s linear;
+    // -webkit-transition-property: transition;
     max-width: 800px;
     margin: 0 auto;
   }
@@ -222,6 +223,9 @@ $backUniverse:(
         font-size: 12px;
         display: flex;
         gap: 15px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
       }
 
       &_img{
@@ -229,6 +233,7 @@ $backUniverse:(
         right: 5px;
         top: 50%;
         transform: translate(0, -50%);
+        z-index: 0;
       }
     }
 
@@ -394,6 +399,10 @@ $backUniverse:(
         left: auto;
         right: -10px;
       }
+
+    }
+    .course_img{
+      filter: blur(1px);
     }
   }
 }
