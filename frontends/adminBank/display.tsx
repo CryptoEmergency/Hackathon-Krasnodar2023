@@ -11,8 +11,7 @@ export const display = function () {
                         <label  class="auth-label">Название банка</label>
                         <input class="auth-input" type="text" placeholder="Введите назвнание банка"
                             oninput={(e) => {
-                                console.log(e.target.value)
-                                // this.Static.bank.name = e.target.value
+                                this.Static.bank.name = e.target.value
                             }}
                         ></input>
                     </div>
@@ -91,7 +90,11 @@ export const display = function () {
                                             }}
                                         ></input>
                                     </div>
-                                    <button class="admin__bank_button">
+                                    <button class="admin__bank_button"
+                                        onclick={() => {
+
+                                        }}
+                                    >
                                         <span>Добавить</span>
                                     </button>
                                 </div>
