@@ -15,9 +15,9 @@ data.schema = new mongoose.Schema(
         credit: [{ 
             nameCredit: { type: String },
             amountOfCredit: { type: String }, // сумма кредита
-            creditTerm: { type: Number }, // срок
-            monthlyPayment: { type: Number }, // ежемесячный платёж
-            interestRate: { type: Number }, // процентная ставка
+            creditTerm: { type: String }, // срок
+            monthlyPayment: { type: String }, // ежемесячный платёж
+            interestRate: { type: String }, // процентная ставка
             currency: { type: String }, // валюта
         }],
     },

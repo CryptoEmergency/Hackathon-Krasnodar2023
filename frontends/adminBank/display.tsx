@@ -46,7 +46,7 @@ export const display = function () {
                                     </div>
                                     <div  class="admin__bank_input" >
                                         <label  class="auth-label">Сумма кредита</label>
-                                        <input class="auth-input" type="number" placeholder="Введите сумму кредита"
+                                        <input class="auth-input" type="text" placeholder="Введите сумму кредита"
                                             oninput={(e) => {
                                                 this.Static.bank.credit[i].amountOfCredit = e.target.value
                                                 this.init()
@@ -55,7 +55,7 @@ export const display = function () {
                                     </div>
                                     <div  class="admin__bank_input" >
                                         <label  class="auth-label">Срок кредита (в месяцах)</label>
-                                        <input class="auth-input" type="number" placeholder="Введите срок кредита"
+                                        <input class="auth-input" type="text" placeholder="Введите срок кредита"
                                             oninput={(e) => {
                                                 this.Static.bank.credit[i].creditTerm = e.target.value
                                                 this.init()
@@ -64,7 +64,7 @@ export const display = function () {
                                     </div>
                                     <div  class="admin__bank_input" >
                                         <label  class="auth-label">Ежемесячный платёж</label>
-                                        <input class="auth-input" type="number" placeholder="Введите ежемесячный платёж"
+                                        <input class="auth-input" type="text" placeholder="Введите ежемесячный платёж"
                                             oninput={(e) => {
                                                 this.Static.bank.credit[i].monthlyPayment = e.target.value
                                                 this.init()
@@ -73,7 +73,7 @@ export const display = function () {
                                     </div>
                                     <div  class="admin__bank_input" >
                                         <label  class="auth-label">Процентная ставка</label>
-                                        <input class="auth-input" type="number" placeholder="Введите процентную ставку"
+                                        <input class="auth-input" type="text" placeholder="Введите процентную ставку"
                                             oninput={(e) => {
                                                 this.Static.bank.credit[i].interestRate = e.target.value
                                                 this.init()
@@ -95,7 +95,7 @@ export const display = function () {
                                             let insert = {
                                                 insert: this.Static.bank
                                             }
-                                            fetch("/api/open/Bank/set", {
+                                            fetch("/api/user/Bank/set", {
                                                 method: "POST",
                                                 headers: {
                                                     "Content-Type": "application/json",
