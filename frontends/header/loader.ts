@@ -3,4 +3,5 @@ export const loader = function () {
   this.Static.search = false;
   this.Static.dropdown = false;
   this.Static.dropdownHeader = 'Выбрать курсы';
+  this.Static.menuShow = false;
 }
