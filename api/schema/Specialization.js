@@ -1,8 +1,8 @@
 import { mongoose } from '../mongo.js'
 
 const data = {};
-data.name = "Institute";
-data.collection = "uchis_institute";
+data.name = "Specialization";
+data.collection = "uchis_specialization";
 
 const standartDate = {
     timestamps: { createdAt: "dateCreate", updatedAt: "dateUpdate" },
@@ -11,19 +11,20 @@ const standartDate = {
 
 data.schema = new mongoose.Schema(
     {
-        title: { type: String },
-        description: { type: String },
-        city: { type: String },
-        price_from: { type: Number },
-        orgId: { type: mongoose.Schema.Types.ObjectId, ref: "uchis_organization" },
+        name: { type: String },
+        numberOfSeats: { type: Number },
+        type: { type: String },
+        formOfEducation: { type: String },
+        trainingPeriod: { type: Number },  
+        price: { type: Number }, 
     },
     standartDate
 );
 
 const model = mongoose.model(data.collection, data.schema);
 
-data.get = async function ({ filter = {} }) {
-    const query = model.find(filter);
+data.get = async function () {
+    const query = model.find({});
     return await query.exec();
 }
 

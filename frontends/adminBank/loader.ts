@@ -4,7 +4,7 @@ export const loader = function () {
         credit: []
     }
 
-    fetch("/api/user/Bank/set", {
+    fetch("/api/user/bank/set", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

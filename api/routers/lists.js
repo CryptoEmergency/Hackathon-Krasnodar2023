@@ -40,6 +40,7 @@ const UserApi = [
             return res.json(await Api.getBank({}));
         }
     },
+
     {
         method: "post",
         url: "/user/vuz/:type",
@@ -50,23 +51,32 @@ const UserApi = [
             } else if (req.params.type == "set") {
                 return res.json(await Api.setVuz(req.body));
             }
-
-
         }
     },
+
     {
         method: "post",
         url: "/user/bank/:type",
         fn: async (req, res) => {
             if (req.params.type == "get") {
-                return res.json(await Api.setBank(req.body));
-
+                return res.json(await Api.getBank());
 
             } else if (req.params.type == "set") {
-                return res.json(await Api.getBank({}));
+                return res.json(await Api.setBank(req.body));
             }
+        }
+    },
 
+    {
+        method: "post",
+        url: "/user/specialization/:type",
+        fn: async (req, res) => {
+            if (req.params.type == "get") {
+                return res.json(await Api.getBank());
 
+            } else if (req.params.type == "set") {
+                return res.json(await Api.setBank(req.body));
+            }
         }
     }
 ]

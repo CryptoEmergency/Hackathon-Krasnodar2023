@@ -18,9 +18,7 @@ export const display = function () {
                     <button class="admin__bank_add"
                         onclick={ async() => {
                             this.Static.bank.credit.push({})
-                            
                             this.init()
-                            console.log(this.Static.credit)
                         }}
                     >
                         <span>Добавить кредит</span>
@@ -106,6 +104,12 @@ export const display = function () {
                                                 .then((data) => {
                                                     console.log(data);
                                                 });
+                                            
+                                                this.Static.bank = {
+                                                    name: "",
+                                                    credit: []
+                                                }
+                                            this.init()
                                         }}
                                     >
                                         <span>Добавить</span>
