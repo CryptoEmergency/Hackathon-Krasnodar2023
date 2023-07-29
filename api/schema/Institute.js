@@ -14,7 +14,7 @@ data.schema = new mongoose.Schema(
         title: { type: String },
         description: { type: String },
         city: { type: String },
-        price_from: { type: Number },
+        priceFrom: { type: Number },
         orgId: { type: mongoose.Schema.Types.ObjectId, ref: "uchis_organization" },
     },
     standartDate
@@ -27,8 +27,13 @@ data.get = async function ({ filter = {} }) {
     return await query.exec();
 }
 
-data.set = async function () {
-
+data.set = async function ({ insert, filter = {}, update }) {
+    if (insert) {
+        let record = new model();
+        Object.assign(record, insert)
+        const result = await record.save()
+        return result
+    }
 };
 
 export default data

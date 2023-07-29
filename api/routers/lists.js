@@ -92,10 +92,23 @@ const UserApi = [
         url: "/user/specialization/:type",
         fn: async (req, res) => {
             if (req.params.type == "get") {
-                return res.json(await Api.getBank());
+                return res.json(await Api.getSpecialization());
 
             } else if (req.params.type == "set") {
-                return res.json(await Api.setBank(req.body));
+                return res.json(await Api.setSpecialization(req.body));
+            }
+        }
+    },
+
+    {
+        method: "post",
+        url: "/user/institute/:type",
+        fn: async (req, res) => {
+            if (req.params.type == "get") {
+                return res.json(await Api.getInstitute());
+
+            } else if (req.params.type == "set") {
+                return res.json(await Api.setInstitute(req.body));
             }
         }
     }

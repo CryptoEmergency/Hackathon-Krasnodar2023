@@ -28,8 +28,13 @@ data.get = async function () {
     return await query.exec();
 }
 
-data.set = async function () {
-
+data.set = async function ({ insert, filter = {}, update }) {
+    if (insert) {
+        let record = new model();
+        Object.assign(record, insert)
+        const result = await record.save()
+        return result
+    }
 };
 
 export default data
