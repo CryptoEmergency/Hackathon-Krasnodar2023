@@ -103,19 +103,6 @@ const UserApi = [
 
     {
         method: "post",
-        url: "/user/specialization/:type",
-        fn: async (req, res) => {
-            if (req.params.type == "get") {
-                return res.json(await Api.getSpecialization());
-
-            } else if (req.params.type == "set") {
-                return res.json(await Api.setSpecialization(req.body));
-            }
-        }
-    },
-
-    {
-        method: "post",
         url: "/user/institute/:type",
         fn: async (req, res) => {
             if (req.params.type == "get") {
