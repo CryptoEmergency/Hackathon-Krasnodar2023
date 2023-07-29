@@ -9,6 +9,12 @@ import frontend from '@svg/courses/frontend.svg'
 import food from '@svg/courses/food.svg'
 import psychology from '@svg/courses/psychology.svg'
 
+import bank from '@svg/advantages/bank.svg'
+import credit from '@svg/advantages/credit.svg'
+import student from '@svg/advantages/student.svg'
+import relationship from '@svg/advantages/relationship.svg'
+import statistics from '@svg/advantages/statistics.svg'
+
 import arrowPrev from '@svg/icons/arrowPrev.svg'
 import arrowNext from '@svg/icons/arrowNext.svg'
 
@@ -189,9 +195,36 @@ export const display = function () {
                     <h2 class="section_title">Финансовая онлайн платформа для абитуриентов</h2>
                     <div class="about_inner">
                         <div class="about_item">
-                            <div>
-                                <img></img>
+                            <div class="circle_blue">
+                                <img src={bank}></img>
                             </div>
+                            <span>Предоставляет информацию о ВУЗах и образовательных программах</span>
+                        </div>
+                        <div class="about_item">
+                            <div class="circle_blue">
+                                <img src={student}></img>
+                            </div>
+                            <span>Проводит тестирование знаний абитуриентов</span>
+                        </div>
+                        <div class="about_item">
+                            <div class="circle_blue">
+                                <img src={credit}></img>
+                            </div>
+                            <span>Предлагает информацию о кредитных продуктах и позволяет отправлять заявки на кредит</span>
+                        </div>
+                        <div class="about_item">
+                            <div class="circle_blue">
+                                <img src={relationship}></img>
+                            </div>
+                            <span>Обеспечивает взаимосвязь между абитуриентами, ВУЗами и банками.</span>
+                        </div>
+                    </div>
+                    <div class="f-center">
+                        <div class="about_item">
+                            <div class="circle_blue">
+                                <img src={statistics}></img>
+                            </div>
+                            <span>Обеспечивает взаимосвязь между абитуриентами, ВУЗами и банками.</span>
                         </div>
                     </div>
                 </div>

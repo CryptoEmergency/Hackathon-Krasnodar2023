@@ -3,7 +3,7 @@ import arrowBtn from '@svg/icons/arrowBtn.svg'
 
 export default function () {
     return (
-        <div class="page">
+        <div class="article page">
             <div class="wrapper">
                 <h1>Полезная информация поступающим в вузы</h1>
                 <div class="article_wrapper">
