@@ -12,6 +12,17 @@ const standartDate = {
 data.schema = new mongoose.Schema(
     {
         name: { type: String },
+        city: { type: String },
+        profession: [{
+            name: { type: String },
+        }],
+        speciality: [{
+            name: { type: String },
+            numberOfSeats: { type: Number },  // количество мест
+            formOfEducation: { type: String }, // форма обучения
+            trainingPeriod: { type: Number },  // срок обучения,
+            price: { type: Number }, // стоимость
+        }],
     },
     standartDate
 );

@@ -12,8 +12,9 @@ export const display = function () {
                         <input class="auth-input" type="text" placeholder="Введите назвнание банка"></input>
                     </div>
                     <button class="admin__bank_add"
-                        onclick={() => {
+                        onclick={ async() => {
                             this.Static.credit.push({})
+                            
                             this.init()
                             console.log(this.Static.credit)
                         }}
