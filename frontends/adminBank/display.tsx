@@ -1,5 +1,6 @@
 import { Cemjsx } from "cemjs-all"
 import deleteIcon from "@svg/delete_icon.svg"
+import key from "@svg/key.svg"
 
 export const display = function () {
     return (
@@ -8,6 +9,14 @@ export const display = function () {
                 style={this.Static.bank?.credit.length == 0 ? "height: 100vh" : "height: 100%"}
             >
                 <div class="admin__container admin__bank">
+                    <img class="admin__bank_key" src={key} 
+                        onclick={() => {
+                            this.fn("makeKey", 16)
+                            this.Fn.initOne({
+                                name: "formForKey"
+                            })
+                        }}
+                    />
                     <h2 style="padding-bottom:20px">Административная панель</h2>
                     <div class="admin__wrapper">
                         <div class="admin__bank_title">

@@ -1,4 +1,5 @@
 .admin__bank {
+    position: relative;
 
     &_input {
         display: flex;
@@ -8,6 +9,18 @@
         &.white {
             background-color: #ffffff;
             border-radius: 8px;
+        }
+    }
+
+    &_key {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 26px;
+        cursor: pointer;
+        
+        &:hover {
+            opacity: 0.8;
         }
     }
 

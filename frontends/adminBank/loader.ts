@@ -16,8 +16,9 @@ export const loader = function () {
         name: "",
         credit: []
     }
+
+    this.Static.key = ""
     
-    console.log(makeid(16))
     fetch("/api/open/Bank", {
         method: "POST",
         headers: {
