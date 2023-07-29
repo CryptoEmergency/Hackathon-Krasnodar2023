@@ -15,6 +15,12 @@ data.schema = new mongoose.Schema(
         description: { type: String },
         city: { type: String },
         priceFrom: { type: Number },
+        address: { type: String },
+        bankCredit: [{
+            nameBank: { type: String },
+            percent: { type: Number },
+            monthlyPayment: { type: Number }
+        }],
         orgId: { type: mongoose.Schema.Types.ObjectId, ref: "uchis_organization" },
     },
     standartDate
