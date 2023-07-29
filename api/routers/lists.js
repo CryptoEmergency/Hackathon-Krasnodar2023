@@ -23,15 +23,7 @@ const checkApi = async (req) => {
 const OpenApi = [
     {
         method: "post",
-        url: "/open/Institute",
-        fn: async (req, res) => {
-            // let tmp = await Api.getInstitute({})
-            return res.json(await Api.getInstitute({}));
-        }
-    },
-    {
-        method: "post",
-        url: "/open/vuz",
+        url: "/open/institute",
         fn: async (req, res) => {
             return res.json(await Api.getInstitute({}));
         }
@@ -43,15 +35,6 @@ const OpenApi = [
             return res.json(await Api.getBank({}));
         }
     },
-    {
-        method: "post",
-        url: "/open/test",
-        fn: async (req, res) => {
-
-            return res.json(await Api.getBank({}));
-        }
-    },
-
     {
         method: "post",
         url: "/open/applications/:type",
@@ -67,29 +50,6 @@ const OpenApi = [
 const UserApi = [
     {
         method: "post",
-        url: "/user/Org/:type",
-        fn: async (req, res) => {
-            console.log("req.params", req.params)
-            console.log("request.body", req.body);
-            return res.json(await Api.getBank({}));
-        }
-    },
-
-    {
-        method: "post",
-        url: "/user/vuz/:type",
-        fn: async (req, res) => {
-            if (req.params.type == "get") {
-                return res.json(await Api.getInstitute({}));
-
-            } else if (req.params.type == "set") {
-                return res.json(await Api.setInstitute(req.body));
-            }
-        }
-    },
-
-    {
-        method: "post",
         url: "/user/bank/:type",
         fn: async (req, res) => {
             if (req.params.type == "get") {
@@ -100,7 +60,6 @@ const UserApi = [
             }
         }
     },
-
     {
         method: "post",
         url: "/user/institute/:type",
