@@ -95,7 +95,7 @@ export const display = function () {
                                             let insert = {
                                                 insert: this.Static.bank
                                             }
-                                            fetch("/api/open/bank/set", {
+                                            fetch("/api/open/Bank/set", {
                                                 method: "POST",
                                                 headers: {
                                                     "Content-Type": "application/json",
