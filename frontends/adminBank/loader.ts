@@ -9,7 +9,7 @@ export const loader = function () {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ insert: {} }),
+        body: JSON.stringify({ action: "insert", insert: {} }),
     })
         .then((response) => response.json())
         .then((data) => {
