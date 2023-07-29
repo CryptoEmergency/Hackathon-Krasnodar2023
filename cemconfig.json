@@ -19,14 +19,6 @@
       ]
     },
     {
-      "url": "/universities",
-      "front": [
-        "header",
-        "universities",
-        "footer"
-      ]
-    },
-    {
       "url": "/courses",
       "front": [
         "header",

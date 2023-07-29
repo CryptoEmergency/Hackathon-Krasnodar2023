@@ -85,11 +85,12 @@ export const display = function () {
                                     <div class="item_about">
                                         <span>{item.city}</span>
                                         <a>{item.title}</a>
+                                        <span>Специальностей:{item.programms_number}</span>
                                         <div class= "price-offer">
                                             <p>от {item.price_from}р/год</p>
-                                            <p>Лучшее предложение от банка {item.bank}</p>
+                                            <p>Лучшее предложение от банка <span>{item.bank}</span></p>
                                         </div>
-                                        {/* <span>{item.programms_number}</span> */}
+                                        
                                     </div>
 
                                 </div>

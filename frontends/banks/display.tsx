@@ -111,8 +111,9 @@ export const display = function () {
                 
                                             <a href=""><img src={sber}></img></a>
                                     <div class="item_about">
+                                        <h2><a>{item.name}</a></h2>
                                         <a>{item.credit[0].nameCredit}</a>
-                                        <a>{item.name}</a>
+                                        
                                         <a>Валюта: {item.credit[0].currency}</a>
                                         <a>Срок: {item.credit[0].creditTerm}</a>
                                         <a>Процентная ставка: {item.credit[0].interestRate}</a>
