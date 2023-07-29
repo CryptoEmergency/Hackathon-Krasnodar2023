@@ -13,7 +13,8 @@ const universitiesCards =[
         price_from: "100 000",
         programms_number: "16",
         desc: "Дизайн; реставрация и ещё 9 направлений",
-        picture: university1
+        picture: university1,
+        bank: "ЦЕНТР-ИНВЕСТ"
     },
     {
         id: 2,
@@ -22,7 +23,8 @@ const universitiesCards =[
         price_from: "360 000",
         programms_number: "43",
         desc: "Дизайн; реставрация и ещё 9 направлений",
-        picture: university2
+        picture: university2,
+        bank: "Тинькоф"
     },
     {
         id: 3,
@@ -31,27 +33,63 @@ const universitiesCards =[
         price_from: "80 000",
         programms_number: "16",
         desc: "Дизайн; реставрация и ещё 9 направлений",
-        picture: university3
+        picture: university3,
+        bank: "Райффайзен"
     },
+    {
+        id: 1,
+        title: "Санкт-Петербургский реставрационно-строительный институт",
+        city: "Санкт-Петербург",
+        price_from: "100 000",
+        programms_number: "16",
+        desc: "Дизайн; реставрация и ещё 9 направлений",
+        picture: university1,
+        bank: "ЦЕНТР-ИНВЕСТ"
+    },
+    {
+        id: 2,
+        title: "Санкт-Петербургский филиал Национального исследовательского университета «Высшая школа экономики»",
+        city: "Санкт-Петербург",
+        price_from: "360 000",
+        programms_number: "43",
+        desc: "Дизайн; реставрация и ещё 9 направлений",
+        picture: university2,
+        bank: "Сбербанк"
+    },
+    {
+        id: 3,
+        title: "Московский технический университет связи и информатики",
+        city: "Санкт-Петербург",
+        price_from: "80 000",
+        programms_number: "16",
+        desc: "Дизайн; реставрация и ещё 9 направлений",
+        picture: university3,
+        bank: "Альфа Банк"
+    },
+    
+    
 ]
 
 export const display = function () {
     return (
         <main class="home page">
             <div class="wrapper">
-                <h2 class="section_title">Вузы</h2>
+                <h2 class="section_vusi">Вузы</h2>
                     <section class="univer">
                         <div class="universities_list">
                             {
                             universitiesCards.map((item, index)=>{
                             return(
                                 <div class="university_item">
-                                    <img src={item.picture}></img>
+                                    <a href=""><img src={item.picture}></img></a>
                                     <div class="item_about">
-                                        <a>{item.title}</a>
                                         <span>{item.city}</span>
-                                        <p>{item.price_from}</p>
-                                        <a href="">{item.programms_number}</a>
+                                        <a>{item.title}</a>
+                                        <div class= "price-offer">
+                                            <p>от {item.price_from}р/год</p>
+                                            <p>Лучшее предложение от банка {item.bank}</p>
+                                        </div>
+                                        {/* <span>{item.programms_number}</span> */}
                                     </div>
 
                                 </div>
