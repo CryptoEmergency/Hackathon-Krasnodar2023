@@ -16,22 +16,6 @@ const makeSign = (data) => {
     return headersOpt
 }
 
-
-const getProfession = () => {
-    let data = { action: "get", data: { filter: {} } }
-    let headersOpt = makeSign(data)
-
-    fetch("http://127.0.0.1:5678/api/Bank/get", {
-        method: "POST",
-        headers: headersOpt,
-        body: JSON.stringify(data),
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-        });
-}
-
 const SendApplication = () => {
     let data = { action: "get", data: { filter: {} } }
     let headersOpt = makeSign(data)
@@ -41,10 +25,6 @@ const SendApplication = () => {
         headers: headersOpt,
         body: JSON.stringify(data),
     })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-        });
 }
-// getProfession()
+
 SendApplication()
