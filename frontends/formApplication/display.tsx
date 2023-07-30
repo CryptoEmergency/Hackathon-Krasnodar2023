@@ -39,20 +39,9 @@ export const display = function () {
                     <button class="enter__data"
                         onclick={() => {
 
-                         let insert = {
+                            let insert = {
                                 insert: this.Static.applications
                             }
-                            fetch("/api/open/applications/set", {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type": "application/json",
-                                },
-                                body: JSON.stringify(insert),
-                            })
-                                .then((response) => response.json())
-                                .then((data) => {
-                                    console.log(data);
-                                });
 
                             this.clearData()
                             this.Fn.initOne({
