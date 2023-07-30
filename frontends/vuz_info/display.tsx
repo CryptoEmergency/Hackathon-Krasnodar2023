@@ -1,8 +1,15 @@
 import { Cemjsx } from "cemjs-all"
 import arrowBtn from '@svg/icons/arrowBtn.svg'
+import sber from '@svg/banks/sber.svg'
+import alfa from '@svg/banks/alfa1.png'
+import rnkb from '@svg/banks/rnkb.svg'
+import vtb from '@svg/banks/vtb.png'
+
+import raiffeisen from '@svg/banks/raiff2.png'
 import university1 from '@images/universities/1.jpg'
 import university2 from '@images/universities/2.jpg'
 import university3 from '@images/universities/3.jpg'
+import center_invest from '@svg/banks/centr_invest.svg'
 
 
 
@@ -71,6 +78,17 @@ const universitiesCards =[
     
 ]
 
+const banks_logo =
+{
+    'alfa': alfa,
+    'sber': sber,
+    'rnkb': rnkb,
+    'vtb': vtb,
+    'raiffeisen': raiffeisen,
+    'center_invest': center_invest
+
+}
+
 export const display = function () {
     return (
         <main class="univer_info page">
@@ -115,7 +133,43 @@ export const display = function () {
 
                         </div>
                     </div>
-                {/* </div> */}
+                    <div class ="banks_section">
+                        <h2>Предложения банков</h2>
+                        <a href="/form" onclick={this.Fn.link} class="btn btn_default">
+                            <span>Подать заявку во все банки</span>
+                            <img src={arrowBtn}></img>
+                        </a>
+                    </div>
+                    <section class="bank_offer_inner">
+                
+                    {
+                        this.records
+                            ?
+                            this.records.map((item, index) => {
+                                return (
+                                    <div class="bank_offer_item">
+                                        <div class="bank_offer_item_img">
+                                            <img src={banks_logo[item.logo]}></img>
+                                        </div>
+                                        <div class="bank_offer_item_info">
+                                            <h5 class="bank_offer_item_title">{item.name}</h5>
+                                            <span class="bank_offer_item_text">{item.credit[0].nameCredit}</span>
+                                            <p class="bank_offer_item_text">Срок: <span class="main_text">{item.credit[0].creditTerm}</span></p>
+                                            <p class="bank_offer_item_text">Процентная ставка: <span class="main_text">{item.credit[0].interestRate}</span></p>
+                                            <p class="bbank_offer_item_text">Сумма кредита: <span class="main_text">{item.credit[0].amountOfCredit}</span></p>
+                                        </div>
+
+                                    </div>
+                                )
+                            })
+
+                            :
+                            null
+                    }
+
+                </section>
+
+
             </div>
         </main>
     )

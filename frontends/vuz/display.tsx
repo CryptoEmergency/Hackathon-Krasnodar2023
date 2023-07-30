@@ -87,10 +87,10 @@ export const display = function () {
                                 return(
                                     <div class="univer_item">
                                         <div class="univer_item_img">
-                                            <img src={item.picture}></img>
+                                            <a href="/vuz_info" onclick={this.Fn.link} ><img src={item.picture}></img></a>
                                         </div>
                                         <div class="univer_item_info">
-                                            <a href="/banks" onclick={this.Fn.link}>
+                                            <a href="/vuz_info" onclick={this.Fn.link}>
                                                 <h5 class="univer_item_title">{item.title}</h5>
                                                 </a>
                                             <div class="f-col2">

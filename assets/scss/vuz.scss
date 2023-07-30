@@ -15,6 +15,9 @@
     gap: 25px;
     border-radius: $borderR;
     height: 170px;
+    a{
+      cursor: pointer;
+    }
 
 
     &_title{
@@ -111,7 +114,9 @@
     &_item{
       grid-template-rows: 300px 1fr;
     }
+
   }
+  
 }
 
 @media (max-width: 600px){

@@ -5,6 +5,7 @@ import alfa from '@svg/banks/alfa1.png'
 import rnkb from '@svg/banks/rnkb.svg'
 import vtb from '@svg/banks/vtb.png'
 import raiffeisen from '@svg/banks/raiff2.png'
+import center_invest from '@svg/banks/centr_invest.svg'
 
 import university1 from '@images/universities/1.jpg'
 import university2 from '@images/universities/2.jpg'
@@ -82,12 +83,12 @@ const banks_logo =
     'sber': sber,
     'rnkb': rnkb,
     'vtb': vtb,
-    'raiffeisen': raiffeisen
-
+    'raiffeisen': raiffeisen,
+    'center_invest': center_invest
 }
 
 const slicedArray = universitiesCards.slice(2)
-// console.log(slicedArray)
+
 
 export const display = function () {
     return (
@@ -107,10 +108,10 @@ export const display = function () {
                                     return(
                                         <div class="recommendation_univer_item">
                                             <div class="recommendation_univer_item_img">
-                                                <img src={item.picture}></img>
+                                            <a href="/vuz_info" onclick={this.Fn.link}><img src={item.picture}></img></a>
                                             </div>
                                             <div class="recommendation_univer_item_info">
-                                                <h5 class="recommendation_univer_item_title">{item.title}</h5>
+                                                <a href="/vuz_info" ><h5 class="recommendation_univer_item_title">{item.title}</h5></a>
                                                 <div class="f-col2">
                                                     <span>{item.city}</span>
                                                     <span>Специальностей: {item.programms_number}</span>

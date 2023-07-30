@@ -43,7 +43,7 @@
         border-radius: $borderR;
         height: fit-content;
         padding: 15px;
-        margin-bottom: 15px;
+        margin-bottom: 50px;
         // .content_item
         .desc{
             display: flex;
@@ -53,9 +53,16 @@
             display: flex;
             flex-direction: column;
             padding-left: 10px;
+            gap: 10px
         }
     }
 
+  }
+
+  .banks_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   @media(max-width: 992px) {
@@ -92,7 +99,9 @@
         }
         
     }
-
+    .banks_section {
+        flex-direction: column;
+    }
   }
 
   @media(max-width: 464px) {
