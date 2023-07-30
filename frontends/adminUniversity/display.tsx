@@ -10,7 +10,7 @@ export const display = function () {
                 <div class="admin__container">
                     <h2>Административная панель</h2>
                         <div class="admin__univer_wrapper">
-                            <div class="input__univer">
+                            <div class="admin__bank_input">
                                 <label  class="auth-label">Название университета</label>
                                 <input class="auth-input" type="text" placeholder="Введите назвнание университета"
                                     oninput={(e) => {
@@ -19,7 +19,7 @@ export const display = function () {
                                     }}
                                 ></input>
                             </div>
-                            <div class="input__univer">
+                            <div class="admin__bank_input">
                                 <label  class="auth-label">Описание</label>
                                 <input class="auth-input" type="text" placeholder="Описание"
                                     oninput={(e) => {
@@ -28,7 +28,7 @@ export const display = function () {
                                     }}
                                 ></input>
                             </div>
-                            <div  class="input__univer">
+                            <div  class="admin__bank_input">
                                 <label  class="auth-label">Город</label>
                                 <input class="auth-input" type="text" placeholder="Введите назвнание города"
                                     oninput={(e) => {
@@ -37,7 +37,7 @@ export const display = function () {
                                     }}
                                 ></input>
                             </div>
-                            <div class="input__univer">
+                            <div class="admin__bank_input">
                                 <label  class="auth-label">Стоимость от</label>
                                 <input class="auth-input" type="number" placeholder="Стоимость от"
                                     oninput={(e) => {
@@ -66,7 +66,7 @@ export const display = function () {
                                                     this.init()
                                                 }}
                                             />
-                                                <div class="input__univer">
+                                                <div class="admin__bank_input">
                                                     <label  class="auth-label">Название банка</label>
                                                     <input class="auth-input" type="text" placeholder="Название банка"
                                                         oninput={(e) => {
@@ -75,7 +75,7 @@ export const display = function () {
                                                         }}
                                                     ></input>
                                                 </div>
-                                                <div  class="input__univer">
+                                                <div  class="admin__bank_input">
                                                     <label  class="auth-label">Ставка</label>
                                                     <input class="auth-input" type="text" placeholder="Ставка"
                                                         oninput={(e) => {
@@ -84,7 +84,7 @@ export const display = function () {
                                                         }}
                                                     ></input>
                                                 </div>
-                                                <div class="input__univer">
+                                                <div class="admin__bank_input">
                                                     <label  class="auth-label">Ежемесячный платеж</label>
                                                     <input class="auth-input" type="number" placeholder="Ежемесячный платеж"
                                                         oninput={(e) => {
@@ -109,7 +109,7 @@ export const display = function () {
                                 ></input>
                             </div> */}
                         </div>
-                        <button class="btn_enter1" id="btn-enter2"
+                        <button class="admin__univer_button1"
                             onclick={()=>{
                                 let insert = {
                                     insert: this.Static.university

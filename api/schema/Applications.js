@@ -23,6 +23,7 @@ const model = mongoose.model(data.collection, data.schema);
 
 data.get = async function () {
     const query = model.find({});
+    query.sort({_id: -1})
     return await query.exec();
 }
 

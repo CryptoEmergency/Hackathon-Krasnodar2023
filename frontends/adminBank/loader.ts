@@ -3,12 +3,13 @@ export const loader = function () {
         name: "",
         credit: []
     }
-    
+
+    this.Static.button = "add"
     this.Static.count = 1
 
     this.Static.key = {}
 
-    fetch("/api/applications/Bank", {
+    fetch("/api/open/applications/get", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

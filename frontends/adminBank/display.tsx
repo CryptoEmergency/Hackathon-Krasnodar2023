@@ -3,11 +3,11 @@ import deleteIcon from "@svg/delete_icon.svg"
 import key from "@svg/key.svg"
 
 export const display = function () {
-    console.log(this.recordsApplications)
+    console.log(this.recordsApplications.length)
     return (
         <div>
             <div class="admin"
-                style={this.Static.bank?.credit.length == 0 ? "height: 100vh" : "height: 100%"}
+                style={this.Static.bank?.credit.length == 0  && this.Static.button == "add" || this.recordsApplications.length < 6 ? "height: 100vh" : "height: auto"}
             >
                 <div class="admin__container admin__bank">
                     <div class="admin__bank_keys">
@@ -61,15 +61,32 @@ export const display = function () {
                             <span class="admin__bank_name">Название банка:</span>
                             <span class="admin__bank_name">{this.records[0].name}</span>
                         </div>
-                        <button class="admin__bank_add"
-                            onclick={ async() => {
-                                this.Static.bank.credit.push({})
-                                this.init()
-                            }}
-                        >
-                            <span>Добавить кредит</span>
-                        </button>
+                        <div class="admin__bank_buttons">
+                            <button class="admin__bank_add"
+                                onclick={ async() => {
+                                    this.Static.button = "add"
+                                    this.Static.bank.credit.push({})
+                                    this.init()
+                                }}
+                            >
+                                <span>Добавить кредит</span>
+                            </button>
+                            <button class="admin__bank_add"
+                                onclick={ async() => {
+                                    this.Static.button = "application"
+                                    this.Static.bank.credit = []
+                                    this.init()
+                                }}
+                            >
+                                <span>{`Заявки на кредит `}
+                                    <span class="amount">({this.recordsApplications.length})</span>
+                                </span>
+                            </button>
+                        </div>
+                        
                         {
+                            this.Static.button == "add"
+                            ?
                             this.Static.bank.credit?.map((item, i) => {
                                 return (
                                     <div class="admin__bank_list">
@@ -163,6 +180,20 @@ export const display = function () {
                                     </div>
                                 )
                             })
+                            :
+                            <ul class="admin__bank_application">
+                                {
+                                    this.recordsApplications.map((item) => {
+                                        return (
+                                            <li>
+                                                <p class="weight">{item.fullName}</p>
+                                                <p>{item.mail}</p>
+                                                <p>{item.phone}</p>
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ul>
                         }            
                     </div>
                 </div>

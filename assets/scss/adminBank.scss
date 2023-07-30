@@ -6,6 +6,23 @@
         flex-direction: column;
         padding: 15px 40px;
 
+        label {
+            margin-bottom: 8px;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        input {
+            padding: 6px 10px;
+            border: 0;
+            border-bottom: 1px solid;
+            font-size: 15px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
         &.white {
             background-color: #ffffff;
             border-radius: 8px;
@@ -64,10 +81,15 @@
             font-size: 16px;
             font-weight: 600;
         }
+
+        & .amount {
+            color: #ff0e0e;
+        }
     }
 
     &_list {
         position: relative;
+        margin-top: 16px;
         margin-bottom: 40px;
         background: #ffffff;
         border-radius: 8px;
@@ -84,6 +106,10 @@
                 opacity: 0.5;
             }
         }
+    }
+    &_buttons {
+        display: flex;
+        gap: 40px;
     }
 
     &_button {
@@ -103,6 +129,32 @@
             color: #ffffff;
         }
     }
+
+    &_application {
+        position: relative;
+        margin-bottom: 40px;
+        
+        background: #ffffff;
+        border-radius: 8px;
+
+        li {
+            padding: 15px 40px;
+            border-bottom: 1px solid rgb(99, 99, 99);
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            p {
+                padding-bottom: 2px;
+
+                &.weight {
+                    padding-bottom: 5px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
 }
 
 .bank__name{
@@ -117,3 +169,4 @@
     width: 1240px;
     background-color: white;
 }
+

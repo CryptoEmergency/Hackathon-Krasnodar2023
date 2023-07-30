@@ -7,6 +7,7 @@ import agree from '@svg/agree.svg'
 import rejection from '@svg/rejection.svg'
 
 export const display = function () {
+    console.log(this.Static.data)
     return (
         <div class="main__modal">
             <div class="modal__conteiner">
@@ -29,6 +30,7 @@ export const display = function () {
                                 <button class="modal__bank_approved"
                                     onclick={() => {
                                         this.Static.data.bank = "Банк Центр-инвест"
+                                        console.log(this.Static.data)
 
                                         let insert = {
                                             insert: this.Static.data
