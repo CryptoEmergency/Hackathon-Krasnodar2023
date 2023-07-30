@@ -1,5 +1,10 @@
 export const loader = function () {
-    console.log(this.Static.item)
+    this.Static.centr = {
+        active: false,
+        approved: false,
+        time: 2000,
+    }
+
     this.Static.sber = {
         active: false,
         approved: false,
@@ -19,6 +24,12 @@ export const loader = function () {
     }
 
     setTimeout(() => {
+        this.Static.centr.active = true
+        this.Static.centr.approved = Math.random() < 0.7
+        this.init()
+    }, this.Static.centr.time);
+
+    setTimeout(() => {
         this.Static.sber.active = true
         this.Static.sber.approved = Math.random() < 0.7
         this.init()
@@ -36,15 +47,15 @@ export const loader = function () {
         this.init()
     }, this.Static.raiffeisen.time);
 
-    // fetch("/api/open/applications/set", {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({ filter: {} }),
-    // })
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         console.log(data);
-    //     });
+    fetch("/api/open/applications/set", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ filter: {} }),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+        });
 }

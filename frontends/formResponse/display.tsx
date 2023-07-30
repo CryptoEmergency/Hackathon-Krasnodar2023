@@ -2,6 +2,7 @@ import { Cemjsx } from "cemjs-all"
 import sber from '@images/sberbank.png'
 import alfa from '@svg/banks/alfa1.png'
 import raiffeisen from '@svg/banks/raiff2.png'
+import centr_invest from '@svg/banks/centr_invest.svg'
 import agree from '@svg/agree.svg'
 import rejection from '@svg/rejection.svg'
 
@@ -16,7 +17,55 @@ export const display = function () {
                 <div class="horizontal-line">
                     <div class="horizontal-line_1"></div>
                 </div>
+                <div class="modal__bank">
+                    <div class="modal__bank_item">
+                    <div>
+                        <span class="modal_span">Банк Центр-инвест</span>
+                        <img class="modal__bank_logo" src={centr_invest} />
+                        </div>
+                            {
+                                this.Static.centr.approved
+                                ?
+                                <button class="modal__bank_approved"
+                                    onclick={() => {
+                                        this.Static.data.bank = "Банк Центр-инвест"
 
+                                        let insert = {
+                                            insert: this.Static.data
+                                        }
+                                    
+                                        fetch("/api/open/applications/set", {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                        },
+                                            body: JSON.stringify(insert),
+                                        })
+                                        .then((response) => response.json())
+                                        .then((data) => {
+                                            console.log(data);
+                                        });
+                                    
+                                        this.clearData()
+                                        this.Fn.initOne({
+                                            name: "formConfirm"
+                                        })
+                                    }}
+                                >
+                                    <span>подтвердить</span>
+                                </button>
+                                :
+                                null
+                            }
+                            {
+                                this.Static.centr.active
+                                ?
+                                <img class="modal__bank_img" src={this.Static.centr.approved ? agree : rejection} />
+                                :
+                                <div class="spinner spinner_pending"></div>
+                            }
+                        </div>
+                </div>
                 <div class="modal__bank">
                     <div class="modal__bank_item">
                         <span class="modal_span">Сбербанк</span>

@@ -3,6 +3,7 @@ import deleteIcon from "@svg/delete_icon.svg"
 import key from "@svg/key.svg"
 
 export const display = function () {
+    console.log(this.recordsApplications)
     return (
         <div>
             <div class="admin"

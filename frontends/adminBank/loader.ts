@@ -6,9 +6,20 @@ export const loader = function () {
     
     this.Static.count = 1
 
+    this.Static.key = {}
 
-    this.Static.key = { }
-
+    fetch("/api/applications/Bank", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ filter: {} }),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            this.recordsApplications = data
+            this.init()
+        });
     
     fetch("/api/open/Bank", {
         method: "POST",
