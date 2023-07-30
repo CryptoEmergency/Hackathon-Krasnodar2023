@@ -38,15 +38,11 @@ export const display = function () {
                 <div class="enter__data_1">
                     <button class="enter__data"
                         onclick={() => {
-
-                            let insert = {
-                                insert: this.Static.applications
-                            }
-
+                            let insert = this.Static.applications
                             this.clearData()
                             this.Fn.initOne({
                                 name: "formResponse",
-                                data:{data:insert}
+                                data:{data: insert}
                             })
                         }}
                     >
