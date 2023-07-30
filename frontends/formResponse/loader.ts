@@ -20,19 +20,31 @@ export const loader = function () {
 
     setTimeout(() => {
         this.Static.sber.active = true
-        this.Static.sber.approved = Math.random() < 0.5
+        this.Static.sber.approved = Math.random() < 0.7
         this.init()
     }, this.Static.sber.time);
 
     setTimeout(() => {
         this.Static.alfa.active = true
-        this.Static.alfa.approved = Math.random() < 0.5
+        this.Static.alfa.approved = Math.random() < 0.7
         this.init()
     }, this.Static.alfa.time);
 
     setTimeout(() => {
         this.Static.raiffeisen.active = true
-        this.Static.raiffeisen.approved = Math.random() < 0.5
+        this.Static.raiffeisen.approved = Math.random() < 0.7
         this.init()
     }, this.Static.raiffeisen.time);
+
+    // fetch("/api/open/applications/set", {
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({ filter: {} }),
+    // })
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         console.log(data);
+    //     });
 }

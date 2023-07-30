@@ -27,6 +27,24 @@ export const display = function () {
                         ?
                         <button class="modal__bank_approved"
                             onclick={() => {
+                                this.Static.data.bank = "Сбербанк"
+                                
+                                let insert = {
+                                    insert: this.Static.data
+                                }
+
+                                fetch("/api/open/applications/set", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                                    body: JSON.stringify(insert),
+                                })
+                                .then((response) => response.json())
+                                .then((data) => {
+                                    console.log(data);
+                                });
+
                                 this.clearData()
                                 this.Fn.initOne({
                                     name: "formConfirm"
@@ -57,6 +75,24 @@ export const display = function () {
                         ?
                         <button class="modal__bank_approved"
                             onclick={() => {
+                                this.Static.data.bank = "Альфа-Банк"
+
+                                let insert = {
+                                    insert: this.Static.data
+                                }
+
+                                fetch("/api/open/applications/set", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                                    body: JSON.stringify(insert),
+                                })
+                                .then((response) => response.json())
+                                .then((data) => {
+                                    console.log(data);
+                                });
+
                                 this.clearData()
                                 this.Fn.initOne({
                                     name: "formConfirm"
@@ -88,6 +124,25 @@ export const display = function () {
                         ?
                         <button class="modal__bank_approved"
                             onclick={() => {
+                                this.Static.data.bank = "Райффайзенбанк"
+                                
+                                let insert = {
+                                    insert: this.Static.data
+                                }
+                                
+                                console.log(insert)
+                                fetch("/api/open/applications/set", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                                    body: JSON.stringify(insert),
+                                })
+                                .then((response) => response.json())
+                                .then((data) => {
+                                    console.log(data);
+                                });
+
                                 this.clearData()
                                 this.Fn.initOne({
                                     name: "formConfirm"
