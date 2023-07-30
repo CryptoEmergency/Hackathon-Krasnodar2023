@@ -21,17 +21,8 @@ export const display = function () {
                 </div>
                 <div class="pole__regis">
                     <label class="auth__label">E-mail</label>
-                    <div class="error">
-                        <span style={this.Static.email?.value.length > 0 && this.Static.email.valid == false ? "display: block" : "display: none"}>Неверный e-mail</span>
-                    </div>
                     <input class="auth__input" type="text" placeholder="Ведите e-mail"
                         oninput={(e) => {
-                            // console.log("123", this.fn("validateEmail", e.target.value))
-                            if (this.fn("validateEmail", e.target.value)) {
-                                this.Static.email.valid = true
-                            } else {
-                                this.Static.email.valid = false
-                            }
                             this.Static.applications.mail = e.target.value
                             this.init()
                         }}
