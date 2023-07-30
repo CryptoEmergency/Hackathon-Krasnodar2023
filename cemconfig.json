@@ -43,6 +43,14 @@
       ]
     },
     {
+      "url": "/vuz_info",
+      "front": [
+        "header",
+        "vuz_info",
+        "footer"
+      ]
+    },
+    {
       "regex": "/article",
       "front": [
         "header",
@@ -79,12 +87,14 @@
     {
       "url": "/form",
       "front": [
+        "header",
         "formApplication"
       ]
     },
     {
       "url": "/form/response",
       "front": [
+        "header",
         "formResponse"
       ]
     }

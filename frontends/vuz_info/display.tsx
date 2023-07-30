@@ -72,17 +72,28 @@ const universitiesCards =[
 
 export const display = function () {
     return (
-        <main class="univer page">
+        <main class="univer_info page">
             <div class="wrapper">
-                <div class="main_title_wrap">
-                    <h2 class="section_title">Вузы</h2>
+                <div class="univer_info_title_wrap">
+                    <div class="logo">
+                        <img src="" alt="logo" />
+                    </div>
+                    
+                    <h2 class="section_title">Гму Ушакова</h2>
+                    <p class="desc">Государственный морской университет имени адмирала Ф.Ф. Ушакова ведет подготовку специалистов в области судовождения, технической эксплуатации и ремонта судового оборудования, технологии транспортных процессов, а также экономистов, юристов, управленцев, таможенников и других специалистов для судоходных компаний, предприятий водного транспорта, кораблестроения, морских и речных портов.</p>
+
                     <a href="/form" onclick={this.Fn.link} class="btn btn_default">
                         <span>Подать заявку</span>
                         <img src={arrowBtn}></img>
                     </a>
+                    
+                    
                 </div>
                     <div class="univer_list">
-                        {
+
+
+
+                        {/* {
                             universitiesCards.map((item, index)=>{
                                 return(
                                     <div class="univer_item">
@@ -107,7 +118,7 @@ export const display = function () {
                                   
                                 )
                             })
-                        }
+                        } */}
                     </div>
             </div>
         </main>

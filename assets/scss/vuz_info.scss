@@ -1,0 +1,30 @@
+@import 'utils/variables.scss';
+
+.univer_info{
+
+    &_title_wrap{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    gap: 0;
+    }
+        .logo{
+        position: relative;
+        overflow: hidden;
+        }
+
+        .logo img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            background-size: cover;
+            border-top-left-radius: $borderR;
+            border-bottom-left-radius: $borderR;
+        
+        }
+  }
+
+
