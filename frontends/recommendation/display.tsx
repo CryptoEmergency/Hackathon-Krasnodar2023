@@ -111,7 +111,7 @@ export const display = function () {
                                             <a href="/vuz_info" onclick={this.Fn.link}><img src={item.picture}></img></a>
                                             </div>
                                             <div class="recommendation_univer_item_info">
-                                                <a href="/vuz_info" ><h5 class="recommendation_univer_item_title">{item.title}</h5></a>
+                                                <a href="/vuz_info" onclick={this.Fn.link}><h5 class="recommendation_univer_item_title">{item.title}</h5></a>
                                                 <div class="f-col2">
                                                     <span>{item.city}</span>
                                                     <span>Специальностей: {item.programms_number}</span>
