@@ -5,6 +5,7 @@ import university2 from '@images/universities/2.jpg'
 import university3 from '@images/universities/3.jpg'
 
 
+
 const universitiesCards =[
     {
         id: 1,
@@ -76,50 +77,45 @@ export const display = function () {
             <div class="wrapper">
                 <div class="univer_info_title_wrap">
                     <div class="logo">
-                        <img src="" alt="logo" />
+                        <img src={university1} alt="logo" />
                     </div>
-                    
-                    <h2 class="section_title">Гму Ушакова</h2>
-                    <p class="desc">Государственный морской университет имени адмирала Ф.Ф. Ушакова ведет подготовку специалистов в области судовождения, технической эксплуатации и ремонта судового оборудования, технологии транспортных процессов, а также экономистов, юристов, управленцев, таможенников и других специалистов для судоходных компаний, предприятий водного транспорта, кораблестроения, морских и речных портов.</p>
-
-                    <a href="/form" onclick={this.Fn.link} class="btn btn_default">
-                        <span>Подать заявку</span>
-                        <img src={arrowBtn}></img>
-                    </a>
-                    
-                    
+                    <div class='title_about'>
+                        <h2 >
+                            Санкт-Петербургский реставрационно-строительный институт
+                        </h2>
+                        <span>Город: Санкт-Петербург</span>
+                        <a href="/form" onclick={this.Fn.link} class="btn btn_default hello" >
+                            <span>Подать заявку</span>
+                            <img src={arrowBtn}></img>
+                        </a>
+                    </div>
                 </div>
-                    <div class="univer_list">
+                <div class="univer_info_content_wrap">
+                    {/* <div class='content_item'> */}
+                        <div class="desc">
+                            <h2>Об учебном заведении</h2>
+                            <p >
+                            Институт осуществляет обучение дипломированных бакалавров по 14 направлениям, подготовку магистров и аспирантов, проводятся курсы повышения квалификации.
+                            Сегодня это динамично развивающийся ВУЗ, поставивший своей задачей объединить как новейшие тенденции в российском высшем образовании, так и традиции, проверенные временем.
+                            </p>
+                        
+                        </div>
+                        <div class ="contacts">
+                            <h2>Контакты</h2>
+                            <p>
+                                <a href="http://pk.aumsu.ru/">http://pk.aumsu.ru/</a>
+                                <p>
+                                    ул.Кавалергардская, д.7
+                                    <br />
+                                    8 (812) 500-51-72
+                                    <br />
+                                    г. Новороссийск, пр. Ленина, д. 93
+                                </p>
+                            </p>
 
-
-
-                        {/* {
-                            universitiesCards.map((item, index)=>{
-                                return(
-                                    <div class="univer_item">
-                                        <div class="univer_item_img">
-                                            <img src={item.picture}></img>
-                                        </div>
-                                        <div class="univer_item_info">
-                                            <a href="/banks" onclick={this.Fn.link}>
-                                                <h5 class="univer_item_title">{item.title}</h5>
-                                                </a>
-                                            <div class="f-col2">
-                                                <span>{item.city}</span>
-                                                <span>Специальностей: {item.programms_number}</span>
-                                            </div>
-                                            <div class="offer">
-                                                <p> от  <span class="main_text">{item.price_from}</span> р/год</p>
-                                                <p>Лучшее предложение от банка <a href="/banks" onclick={this.Fn.link}><span class="main_text">{item.bank}</span></a></p>
-                                            </div>
-                                        </div>
-                
-                                    </div>
-                                  
-                                )
-                            })
-                        } */}
+                        </div>
                     </div>
+                {/* </div> */}
             </div>
         </main>
     )

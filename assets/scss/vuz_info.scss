@@ -1,16 +1,27 @@
 @import 'utils/variables.scss';
 
 .univer_info{
-
+    margin-inline: 10px;
     &_title_wrap{
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: auto;
-    gap: 0;
+        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 25px;
+        border-radius: $borderR;
+        height: fit-content;
+        // padding: 15px;
+        margin-bottom: 20px;
+        
+    }   .title_about{
+        padding: 15px 15px 15px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
         .logo{
-        position: relative;
-        overflow: hidden;
+            position: relative;
+            overflow: hidden;
+            border-bottom-left-radius: $borderR;
         }
 
         .logo img{
@@ -19,12 +30,75 @@
             left: 0;
             bottom: 0;
             right: 0;
-            width: 100%;
+            // width: 100%;
             background-size: cover;
             border-top-left-radius: $borderR;
             border-bottom-left-radius: $borderR;
         
         }
+    &_content_wrap{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #dcdefc;
+        border-radius: $borderR;
+        height: fit-content;
+        padding: 15px;
+        margin-bottom: 15px;
+        // .content_item
+        .desc{
+            display: flex;
+            flex-direction: column;
+        }
+        .contacts{
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+        }
+    }
+
   }
 
+  @media(max-width: 992px) {
+    .univer_info{
 
+        &_content_wrap{
+            display: grid;
+            grid-template-columns: 1fr;
+        
+        .contacts{
+            padding-left: 0;
+        }
+
+    }   
+} 
+}
+
+  @media(max-width: 767px) {
+    .univer_info{
+        &_title_wrap{
+            grid-template-columns: 1fr;
+            grid-template-rows: 300px 1fr;
+            .logo{
+                border-radius: 0;
+            }
+            .logo img{
+                width: -webkit-fill-available;
+                border-radius: 15px 15px 0 0;
+            }
+            .title_about{
+                padding: 15px;
+
+            }
+        }
+        
+    }
+
+  }
+
+  @media(max-width: 464px) {
+    .univer_info{
+        &_title_wrap{
+            grid-template-rows: 250px 1fr;
+  }
+
+    }}
